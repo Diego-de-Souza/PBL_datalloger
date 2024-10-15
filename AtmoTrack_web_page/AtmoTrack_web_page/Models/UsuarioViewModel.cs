@@ -1,4 +1,6 @@
-﻿namespace AtmoTrack_web_page.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace AtmoTrack_web_page.Models
 {
     public class UsuarioViewModel
     {
@@ -17,5 +19,9 @@
         public Int32? CidadeId { get; set; }
         public DateTime DataRegistro { get; set; }
         public DateTime? DataAlteracao { get; set; }
+
+
+        [NotMapped] // Essa propriedade não será salva no banco de dados
+        public string ConfirmacaoSenha { get; set; }
     }
 }

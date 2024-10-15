@@ -470,20 +470,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Mobile\\.nuget\\packages\\": {}
+    "C:\\Users\\082220001\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\AtmoTrack_web_page.csproj",
+      "projectUniqueName": "C:\\Users\\082220001\\Downloads\\PBL-main\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\AtmoTrack_web_page.csproj",
       "projectName": "AtmoTrack_web_page",
-      "projectPath": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\AtmoTrack_web_page.csproj",
-      "packagesPath": "C:\\Users\\Mobile\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\obj\\",
+      "projectPath": "C:\\Users\\082220001\\Downloads\\PBL-main\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\AtmoTrack_web_page.csproj",
+      "packagesPath": "C:\\Users\\082220001\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\082220001\\Downloads\\PBL-main\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Mobile\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\082220001\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -503,11 +511,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -538,7 +541,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

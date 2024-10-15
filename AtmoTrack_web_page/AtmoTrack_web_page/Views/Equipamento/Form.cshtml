@@ -21,10 +21,12 @@
                 {
                     <input type="text" name="Id" value="@Model.Id" class="form-control" readonly />
                 }
+                <span asp-validation-for="Id" class="text-danger"></span>
             </div>
             <div class="col-md-9">
                 <label for="Nome" class="col-form-label">Nome</label>
                 <input type="text" name="Nome" value="@Model.Nome" class="form-control" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
             </div>
         </div>
         <br />
@@ -35,11 +37,13 @@
                 <select asp-for="EmpresaId" class="form-control" asp-items="ViewBag.Empresas">
                     <option value="">Selecione uma Empresa</option>
                 </select>
+                <span asp-validation-for="EmpresaId" class="text-danger"></span>
             </div>
             <!-- MacAddress -->
             <div class="col-md-6">
                 <label for="MacAddress" class="col-form-label">Mac Address</label>
                 <input type="text" name="MacAddress" value="@Model.MacAddress" class="form-control" />
+                <span asp-validation-for="MacAddress" class="text-danger"></span>
             </div>
         </div>
         <br />
@@ -49,11 +53,13 @@
             <div class="col-md-6">
                 <label for="IpAddress" class="col-form-label">IP Address</label>
                 <input type="text" name="IpAddress" value="@Model.IpAddress" class="form-control" />
+                <span asp-validation-for="IpAddress" class="text-danger"></span>
             </div>
             <!-- SSID -->
             <div class="col-md-6">
                 <label for="SSID" class="col-form-label">SSID</label>
                 <input type="text" name="SSID" value="@Model.SSID" class="form-control" />
+                <span asp-validation-for="SSID" class="text-danger"></span>
             </div>
         </div>
         <br />
@@ -63,11 +69,13 @@
             <div class="col-md-6">
                 <label for="SignalStrength" class="col-form-label">Força do Sinal (dBm)</label>
                 <input type="number" name="SignalStrength" value="@Model.SignalStrength" class="form-control" />
+                <span asp-validation-for="SignalStrength" class="text-danger"></span>
             </div>
             <!-- ConnectionStatus -->
             <div class="col-md-6">
                 <label for="ConnectionStatus" class="col-form-label">Status da Conexão</label>
                 <input type="text" name="ConnectionStatus" value="@Model.ConnectionStatus" class="form-control" />
+                <span asp-validation-for="ConnectionStatus" class="text-danger"></span>
             </div>
         </div>
         <br />
@@ -77,6 +85,7 @@
             <div class="col-md-12">
                 <label for="SensorData" class="col-form-label">Dados do Sensor</label>
                 <textarea name="SensorData" class="form-control">@Model.SensorData</textarea>
+                <span asp-validation-for="SensorData" class="text-danger"></span>
             </div>
         </div>
         <br />
@@ -86,11 +95,13 @@
             <div class="col-md-6">
                 <label for="StatusEquipamento" class="col-form-label">Status do Equipamento</label>
                 <input type="text" name="StatusEquipamento" value="@Model.StatusEquipamento" class="form-control" />
+                <span asp-validation-for="StatusEquipamento" class="text-danger"></span>
             </div>
             <!-- AuthToken -->
             <div class="col-md-6">
                 <label for="AuthToken" class="col-form-label">Token de Autenticação</label>
                 <input type="text" name="AuthToken" value="@Model.AuthToken" class="form-control" />
+                <span asp-validation-for="AuthToken" class="text-danger"></span>
             </div>
         </div>
         <br />
@@ -100,11 +111,13 @@
             <div class="col-md-6">
                 <label for="FirmwareVersion" class="col-form-label">Versão do Firmware</label>
                 <input type="text" name="FirmwareVersion" value="@Model.FirmwareVersion" class="form-control" />
+                <span asp-validation-for="FirmwareVersion" class="text-danger"></span>
             </div>
             <!-- LastUpdate -->
             <div class="col-md-6">
                 <label for="LastUpdate" class="col-form-label">Última Atualização</label>
                 <input type="date" name="LastUpdate" value="@Model.LastUpdate.ToString("yyyy-MM-dd")" class="form-control" />
+                <span asp-validation-for="LastUpdate" class="text-danger"></span>
             </div>
         </div>
         <br />
@@ -116,6 +129,7 @@
                 <div class="col-md-6">
                     <label for="DataRegistro" class="col-form-label">Data de Registro</label>
                     <input type="date" name="DataRegistro" value="@Model.DataRegistro.ToString("yyyy-MM-dd")" class="form-control" />
+
                 </div>
                 <!-- Data de Alteração -->
                 <div class="col-md-6">

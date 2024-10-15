@@ -21,10 +21,12 @@
                 {
                     <input type="text" name="id" value="@Model.Id" class="form-control" readonly />
                 }
+                <span asp-validation-for="Id" class="text-danger"></span>
             </div>
             <div class="col-md-9">
                 <label for="RazaoSocial" class="col-form-label">RazaoSocial</label>
                 <input type="text" name="RazaoSocial" value="@Model.RazaoSocial" class="form-control" />
+                <span asp-validation-for="RazaoSocial" class="text-danger"></span>
             </div>
         </div>
         <br />
@@ -34,6 +36,7 @@
             <div class="col-md-12">
                 <label for="NomeFantasia" class="col-form-label">NomeFantasia</label>
                 <input type="text" name="NomeFantasia" value="@Model.NomeFantasia" class="form-control" />
+                <span asp-validation-for="NomeFantasia" class="text-danger"></span>
             </div>
         </div>
         <br />
@@ -41,11 +44,13 @@
         <div class="row">
             <div class="col-md-6">
                 <label for="CNPJ" class="col-form-label">CNPJ</label>
-                <input type="text" name="CNPJ" value="@Model.CNPJ" class="form-control" />
+                <input type="text" name="CNPJ" value="@Model.CNPJ" class="form-control" placeholder="00.000.000/0000-00" />
+                <span asp-validation-for="CNPJ" class="text-danger"></span>
             </div>
             <div class="col-md-6">
                 <label for="InscricaoEstadual" class="col-form-label">InscricaoEstadual</label>
                 <input type="text" name="InscricaoEstadual" value="@Model.InscricaoEstadual" class="form-control" />
+                <span asp-validation-for="InscricaoEstadual" class="text-danger"></span>
             </div>
             
         </div>
@@ -55,6 +60,7 @@
             <div class="col-md-12">
                 <label for="Endereco" class="col-form-label">Endereco</label>
                 <input type="text" name="Endereco" value="@Model.Endereco" class="form-control" />
+                <span asp-validation-for="Endereco" class="text-danger"></span>
             </div>
         </div>
         <br />
@@ -65,13 +71,12 @@
                 <select asp-for="EstadoId" class="form-control" asp-items="ViewBag.Estados">
                     <option value="">Selecione um estado</option>
                 </select>
+                <span asp-validation-for="EstadoId" class="text-danger"></span>
             </div>
             <div class="col-md-6">
-                <label for="CidadeId">Cidade</label>
-                @*<input type="text" name="CidadeId" value="@Model.CidadeId" class="form-control" />*@
-                <select asp-for="CidadeId" class="form-control" id="CidadeId" name="CidadeId">
-                    <option value="">Selecione uma cidade</option>
-                </select>
+                <label for="CidadeId" class="col-form-label">Cidade</label>
+                <input type="number" name="CidadeId" value="@Model.CidadeId" class="form-control" />
+                <span asp-validation-for="CidadeId" class="text-danger"></span>
             </div>
         </div>
         <br />
@@ -80,10 +85,12 @@
             <div class="col-md-6">
                 <label for="Tipo" class="col-form-label">Tipo</label>
                 <input type="text" name="Tipo" value="@Model.Tipo" class="form-control" />
+                <span asp-validation-for="Tipo" class="text-danger"></span>
             </div>
             <div class="col-md-6">
                 <label for="Cep" class="col-form-label">Cep</label>
-                <input type="text" name="Cep" value="@Model.Cep" class="form-control" />
+                <input type="text" name="Cep" value="@Model.Cep" class="form-control" placeholder="00000-000" />
+                <span asp-validation-for="Cep" class="text-danger"></span>
             </div>
         </div>
         <br />
@@ -91,18 +98,21 @@
         <div class="row">
             <div class="col-md-12">
                 <label for="Cep" class="col-form-label">WebSite</label>
-                <input type="text" name="WebSite" value="@Model.WebSite" class="form-control" />
+                <input type="text" name="WebSite" value="@Model.WebSite" class="form-control" placeholder="www.exemplo.com" />
+                <span asp-validation-for="WebSite" class="text-danger"></span>
             </div>
         </div>
 
         <div class="row">
             <div class="col-md-6">
                 <label for="Telefone1" class="col-form-label">Telefone 1</label>
-                <input type="text" name="telefone1" value="@Model.Telefone1" class="form-control" />
+                <input type="text" name="telefone1" value="@Model.Telefone1" class="form-control" placeholder="(00)00000-0000" />
+                <span asp-validation-for="Telefone1" class="text-danger"></span>
             </div>
             <div class="col-md-6">
                 <label for="Telefone2" class="col-form-label">Telefone 2</label>
-                <input type="text" name="telefone2" value="@Model.Telefone2" class="form-control" />
+                <input type="text" name="telefone2" value="@Model.Telefone2" class="form-control" placeholder="(00)00000-0000" />
+                <span asp-validation-for="Telefone2" class="text-danger"></span>
             </div>
         </div>
         <br />
@@ -114,6 +124,7 @@
                 <div class="col-md-12 ">
                     <label for="DataRegistro" class="col-form-label">Data de Registro</label>
                     <input type="date" name="dataRegistro" value="@Model.DataRegistro.ToString("yyyy-MM-dd")" class="form-control" />
+                    <span asp-validation-for="DataRegistro" class="text-danger"></span>
                 </div>
             </div>
             <br />
@@ -128,26 +139,3 @@
     </div>
 </form>
 
-<script>
-    document.getElementById('EstadoId').addEventListener('change', function () {
-        var estadoId = this.value;
-        var cidadeSelect = document.getElementById('CidadeId');
-        cidadeSelect.innerHTML = '<option value="">Selecione uma cidade</option>'; // Reset
-
-        if (estadoId) {
-            fetch('/Usuario/GetCidades?estadoId=' + estadoId)
-                .then(response => response.json())
-                .then(cidades => {
-                    console.log(cidades); // Verifique a estrutura do objeto retornado
-                    cidades.forEach(cidade => {
-                        console.log(cidade); // Verifique a estrutura de cada cidade
-                        var option = document.createElement('option');
-                        option.value = cidade.id;
-                        option.textContent = cidade.cidade;
-                        cidadeSelect.appendChild(option);
-                    });
-                })
-                .catch(error => console.error('Erro ao buscar cidades:', error));
-        }
-    });
-</script>

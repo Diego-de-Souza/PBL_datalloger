@@ -149,7 +149,6 @@ namespace AtmoTrack_web_page.DAO
             {
                 Id = Convert.ToInt32(registro["Id"]),
                 Cidade = registro["Cidaded"].ToString(),
-                EstadoId = Convert.ToInt16(registro["EstadoId"]),
             };
 
             return cidade;
@@ -197,27 +196,6 @@ namespace AtmoTrack_web_page.DAO
             }
 
             return ListaEstados;
-        }
-
-        public List<CidadeViewModel> GetAllCitiesEstadoId(int id)
-        {
-            var ListaCidades = new List<CidadeViewModel>();
-            string sql = "Select * from [dbo].[tbCidade] where estadoId = " + id + "order by Cidade";
-            try
-            {
-                DataTable tabela = HelperDAO.ExecutaSelect(sql, null);
-                foreach (DataRow row in tabela.Rows)
-                {
-                    ListaCidades.Add(MontaViewModelCidade(row));
-                }
-                return ListaCidades;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Erro: " + ex.Message);
-                throw;
-            }
-
         }
 
         public EmpresaViewModel Consulta(int id)

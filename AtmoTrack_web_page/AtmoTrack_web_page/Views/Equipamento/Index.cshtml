@@ -3,42 +3,56 @@
     ViewData["Title"] = "Equipamentos Cadastrados";
 }
 
-<h1>Equipamentos cadastrados</h1>
+<head>
+    <h1 class="title">Equipamentos cadastrados</h1>
+</head>
 
 <a href="/equipamento/NovoRegistro" class="btn btn-info">Novo registro</a>
 <br />
 
-<table class="table">
-    <tr>
-        <th>Ações</th>
-        <th>Id</th>
-        <th>Nome</th>
-        <th>Status Equipamento</th>
-        <th>Mac Address</th>
-        <th>Última atualização</th>
-    </tr>
+<body class="usuario">
+    <div class="container-geral"> 
+        <table class="table">
+            <tr>
+                <th>Ações</th>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Status Equipamento</th>
+                <th>Mac Address</th>
+                <th>Última atualização</th>
+            </tr>
 
-    @for (int i = 0; i < Model.Count; i++)
-    {
-        var eq = Model[i];
-        var rowClass = i % 2 == 0 ? "linha-verde" : "linha-azulescuro";
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                var eq = Model[i];
+                var rowClass = i % 2 == 0 ? "linha-verde" : "linha-azulescuro";
 
-        <tr class="@rowClass">
-            <td>
-                <a href="/equipamento/editar?id=@eq.Id">Editar</a>
-                &nbsp;
-                <a href="javascript:apaga(@eq.Id)">Apagar</a>
-                &nbsp;
-                <a href="/equipamento/exibir?id=@eq.Id">Exibir</a>
-            </td>
-            <td>@eq.Id</td>
-            <td>@eq.Nome</td>
-            <td>@eq.StatusEquipamento</td>
-            <td>@eq.MacAddress </td>
-            <td>@eq.LastUpdate</td>
-        </tr>
-    }
-</table>
+                <tr class="@rowClass">
+                    <td>
+                        <a href="/equipamento/editar?id=@eq.Id">
+                            <img src="/images/edit.png" class="image"/>
+                        </a>
+                        &nbsp;
+                        <a href="javascript:apaga(@eq.Id)">
+                            <img src="/images/del.png" class="image"/>
+                        </a>
+                        &nbsp;
+                        <a href="/equipamento/exibir?id=@eq.Id">
+                            <img src="/images/view.png" class="image"/>
+                        </a>
+                    </td>
+                    <td>@eq.Id</td>
+                    <td>@eq.Nome</td>
+                    <td>@eq.StatusEquipamento</td>
+                    <td>@eq.MacAddress </td>
+                    <td>@eq.LastUpdate</td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+
+
 
 <script>
     function apaga(id) {
@@ -51,6 +65,16 @@
     th{
         color: #0DCAF0;
     }
+
+    .image {
+        width: 25px;
+    }
+
+    .title {
+        padding-top: 2%;
+        padding-bottom: 5%;
+    }
+
     .linha-verde {
         background-color: #0DCAF0;
         color: black; 
@@ -61,14 +85,44 @@
         color: #0DCAF0;
     }
 
-    table {
+    .usuario .container-geral {
+        margin: 0;
+        padding: 0;
         width: 100%;
-        border-collapse: collapse;
+        height: 100%;
+        justify-content: initial;
+    }
+
+    .table {
+        width: 80%;
+        margin-top: 5%;
+        border-collapse: separate;
+        border-radius: 10px;
+        border-spacing: 0px;
+        align-content: center;
+        align-items: center;
+        align-self: center;
+    }
+
+    th:first-child {
+        border-top-left-radius: 10px;
+    }
+
+    th:last-child {
+        border-top-right-radius: 10px;
+    }
+
+    tr:last-child td:first-child {
+        border-bottom-left-radius: 10px;
+    }
+
+    tr:last-child td:last-child {
+        border-bottom-right-radius: 10px;
     }
 
     th, td {
         padding: 8px;
-        text-align: left;
-        border: 1px solid #ddd;
+        text-align: center;
+        border: 1px solid black;
     }
 </style>

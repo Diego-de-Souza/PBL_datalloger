@@ -8,6 +8,10 @@ html {
   }
 }
 
+a {
+    text-decoration: auto;
+}
+
 html {
   position: relative;
   min-height: 100%;

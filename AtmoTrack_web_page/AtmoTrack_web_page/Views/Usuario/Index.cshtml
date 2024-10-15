@@ -2,46 +2,54 @@
 @{
     ViewData["Title"] = "Usuários Cadastrados";
 }
-
-    <h1>usuários Cadastrados</h1>
+<head>
+    <h1 class="title">Usuários Cadastrados</h1>
+</head>
 
 <a href="/usuario/NovoRegistro" class="btn btn-info">Novo registro</a>
 <br />
 
-<table class="table">
-    <tr>
-        <th>Ações</th>
-        <th>Id</th>
-        <th>Nome</th>
-        <th>Email</th>
-        <th>Empresa</th>
-        <th>Cargo</th>
-    </tr>
+<body class="usuario">
+    <div class="container-geral">
+            <table class="table">
+                <tr>
+                    <th>Ações</th>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Empresa</th>
+                    <th>Cargo</th>
+                </tr>
 
-    @for (int i = 0; i < Model.Count; i++)
-    {
-        var us = Model[i];
-        var rowClass = i % 2 == 0 ? "linha-verde" : "linha-azulescuro";
+                @for (int i = 0; i < Model.Count; i++)
+                {
+                    var us = Model[i];
+                    var rowClass = i % 2 == 0 ? "linha-verde" : "linha-azulescuro";
 
-        <tr class="@rowClass">
-            <td>
-                <a href="/usuario/editar?id=@us.Id"><img src="/images/edit.png" class="image"/>
-                </a>
-                &nbsp;
-                <a href="javascript:apaga(@us.Id)"><img src="/images/del.png" class="image"/>
-                </a>
-                &nbsp;
-                <a href="/usuario/exibir?id=@us.Id"><img src="/images/view.png" class="image"/>
-                </a>
-            </td>
-            <td>@us.Id</td>
-            <td>@us.Nome</td>
-            <td>@us.Email</td>
-            <td>@us.Empresa</td>
-            <td>@us.Cargo</td>
-        </tr>
-    }
-</table>
+                    <tr class="@rowClass">
+                        <td>
+                            <a href="/usuario/editar?id=@us.Id">
+                                <img src="/images/edit.png" class="image" />
+                            </a>
+                            &nbsp;
+                            <a href="javascript:apaga(@us.Id)">
+                                <img src="/images/del.png" class="image" />
+                            </a>
+                            &nbsp;
+                            <a href="/usuario/exibir?id=@us.Id">
+                                <img src="/images/view.png" class="image" />
+                            </a>
+                        </td>
+                        <td>@us.Id</td>
+                        <td>@us.Nome</td>
+                        <td>@us.Email</td>
+                        <td>@us.Empresa</td>
+                        <td>@us.Cargo</td>
+                    </tr>
+                }
+            </table>
+    </div>
+</body>
 
 <script>
     function apaga(id) {
@@ -53,6 +61,11 @@
 <style>
     .image {
         width: 25px;
+    }
+
+    .title {
+        padding-top: 2%;
+        padding-bottom: 5%;
     }
 
     th {
@@ -69,15 +82,48 @@
         color: #0DCAF0;
     }
 
-    table {
-        width: 100%;
-        border-collapse: collapse;
+    .table {
+        width: 80%;
+        margin-top: 5%;
+        border-collapse: separate;
+        border-radius: 10px;
+        border-spacing: 0px;
         align-content: center;
+        align-items: center;
+        align-self: center;
+    }
+
+    .usuario .container-geral {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        justify-content: initial;
     }
 
     th, td {
-        padding: 8px;
-        text-align: left;
-        border: 1px solid #ddd;
+        padding: 2px;
+        text-align: center;
+        border: 1px solid black;
+    }
+
+    tr:nth-child(n+1) td:nth-child(5) {
+        width: 25%;
+    }
+
+    th:first-child {
+        border-top-left-radius: 10px;
+    }
+
+    th:last-child {
+        border-top-right-radius: 10px;
+    }
+
+    tr:last-child td:first-child {
+        border-bottom-left-radius: 10px;
+    }
+
+    tr:last-child td:last-child {
+        border-bottom-right-radius: 10px;
     }
 </style>

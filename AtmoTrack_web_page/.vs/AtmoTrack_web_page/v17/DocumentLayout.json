@@ -1,32 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Felipe\\Downloads\\PBL_datalloger-alteracao_estilo\\PBL_datalloger-alteracao_estilo\\AtmoTrack_web_page\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\felipe\\downloads\\pbl_datalloger-alteracao_estilo\\pbl_datalloger-alteracao_estilo\\atmotrack_web_page\\atmotrack_web_page\\controllers\\equipamentocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\controllers\\equipamentocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\felipe\\downloads\\pbl_datalloger-alteracao_estilo\\pbl_datalloger-alteracao_estilo\\atmotrack_web_page\\atmotrack_web_page\\controllers\\empresacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\controllers\\empresacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\felipe\\downloads\\pbl_datalloger-alteracao_estilo\\pbl_datalloger-alteracao_estilo\\atmotrack_web_page\\atmotrack_web_page\\views\\equipamento\\form.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\views\\equipamento\\form.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\felipe\\downloads\\pbl_datalloger-alteracao_estilo\\pbl_datalloger-alteracao_estilo\\atmotrack_web_page\\atmotrack_web_page\\views\\empresa\\form.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\views\\empresa\\form.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\felipe\\downloads\\pbl_datalloger-alteracao_estilo\\pbl_datalloger-alteracao_estilo\\atmotrack_web_page\\atmotrack_web_page\\views\\usuario\\form.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\views\\usuario\\form.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\felipe\\downloads\\pbl_datalloger-alteracao_estilo\\pbl_datalloger-alteracao_estilo\\atmotrack_web_page\\atmotrack_web_page\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -34,85 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": -1,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Form.cshtml",
-              "DocumentMoniker": "C:\\Users\\Felipe\\Downloads\\PBL_datalloger-alteracao_estilo\\PBL_datalloger-alteracao_estilo\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Empresa\\Form.cshtml",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Views\\Empresa\\Form.cshtml",
-              "ToolTip": "C:\\Users\\Felipe\\Downloads\\PBL_datalloger-alteracao_estilo\\PBL_datalloger-alteracao_estilo\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Empresa\\Form.cshtml",
-              "RelativeToolTip": "AtmoTrack_web_page\\Views\\Empresa\\Form.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAH4AAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-15T20:22:26.864Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Form.cshtml",
-              "DocumentMoniker": "C:\\Users\\Felipe\\Downloads\\PBL_datalloger-alteracao_estilo\\PBL_datalloger-alteracao_estilo\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Equipamento\\Form.cshtml",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Views\\Equipamento\\Form.cshtml",
-              "ToolTip": "C:\\Users\\Felipe\\Downloads\\PBL_datalloger-alteracao_estilo\\PBL_datalloger-alteracao_estilo\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Equipamento\\Form.cshtml",
-              "RelativeToolTip": "AtmoTrack_web_page\\Views\\Equipamento\\Form.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHcAAABRAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-15T20:22:24.123Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Form.cshtml",
-              "DocumentMoniker": "C:\\Users\\Felipe\\Downloads\\PBL_datalloger-alteracao_estilo\\PBL_datalloger-alteracao_estilo\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Usuario\\Form.cshtml",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Views\\Usuario\\Form.cshtml",
-              "ToolTip": "C:\\Users\\Felipe\\Downloads\\PBL_datalloger-alteracao_estilo\\PBL_datalloger-alteracao_estilo\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Usuario\\Form.cshtml",
-              "RelativeToolTip": "AtmoTrack_web_page\\Views\\Usuario\\Form.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAAFcAAABnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-15T20:22:17.323Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EquipamentoController.cs",
-              "DocumentMoniker": "C:\\Users\\Felipe\\Downloads\\PBL_datalloger-alteracao_estilo\\PBL_datalloger-alteracao_estilo\\AtmoTrack_web_page\\AtmoTrack_web_page\\Controllers\\EquipamentoController.cs",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Controllers\\EquipamentoController.cs",
-              "ToolTip": "C:\\Users\\Felipe\\Downloads\\PBL_datalloger-alteracao_estilo\\PBL_datalloger-alteracao_estilo\\AtmoTrack_web_page\\AtmoTrack_web_page\\Controllers\\EquipamentoController.cs",
-              "RelativeToolTip": "AtmoTrack_web_page\\Controllers\\EquipamentoController.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAYwPIAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T20:22:08.312Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EmpresaController.cs",
-              "DocumentMoniker": "C:\\Users\\Felipe\\Downloads\\PBL_datalloger-alteracao_estilo\\PBL_datalloger-alteracao_estilo\\AtmoTrack_web_page\\AtmoTrack_web_page\\Controllers\\EmpresaController.cs",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Controllers\\EmpresaController.cs",
-              "ToolTip": "C:\\Users\\Felipe\\Downloads\\PBL_datalloger-alteracao_estilo\\PBL_datalloger-alteracao_estilo\\AtmoTrack_web_page\\AtmoTrack_web_page\\Controllers\\EmpresaController.cs",
-              "RelativeToolTip": "AtmoTrack_web_page\\Controllers\\EmpresaController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAABQBAABXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T20:22:04.322Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UsuarioController.cs",
-              "DocumentMoniker": "C:\\Users\\Felipe\\Downloads\\PBL_datalloger-alteracao_estilo\\PBL_datalloger-alteracao_estilo\\AtmoTrack_web_page\\AtmoTrack_web_page\\Controllers\\UsuarioController.cs",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Controllers\\UsuarioController.cs",
-              "ToolTip": "C:\\Users\\Felipe\\Downloads\\PBL_datalloger-alteracao_estilo\\PBL_datalloger-alteracao_estilo\\AtmoTrack_web_page\\AtmoTrack_web_page\\Controllers\\UsuarioController.cs",
-              "RelativeToolTip": "AtmoTrack_web_page\\Controllers\\UsuarioController.cs",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAkwHIAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T20:20:05.392Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             }
           ]
         }

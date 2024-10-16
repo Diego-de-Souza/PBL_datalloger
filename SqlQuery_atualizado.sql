@@ -40,7 +40,7 @@ CREATE TABLE tbEmpresa (
 	Id INT PRIMARY KEY NOT NULL, 
     RazaoSocial NVARCHAR(100) NOT NULL,
     NomeFantasia NVARCHAR(100) NOT NULL,
-    CNPJ NVARCHAR(15) NOT NULL,
+    CNPJ NVARCHAR(20) NOT NULL,
     InscricaoEstadual NVARCHAR(20),
     WebSite NVARCHAR(50),
     Telefone1 NVARCHAR(15),

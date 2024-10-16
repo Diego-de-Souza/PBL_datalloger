@@ -4,5 +4,6 @@
     {
         public int Id { get; set; }
         public string Cidade { get; set; }
+        public Int16 EstadoId { get; set; }
     }
 }

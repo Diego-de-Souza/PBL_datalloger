@@ -74,8 +74,12 @@
                 <span asp-validation-for="EstadoId" class="text-danger"></span>
             </div>
             <div class="col-md-6">
-                <label for="CidadeId" class="col-form-label">Cidade</label>
-                <input type="number" name="CidadeId" value="@Model.CidadeId" class="form-control" />
+                <label for="CidadeId">Cidade</label>
+                @*<input type="text" name="CidadeId" value="@Model.CidadeId" class="form-control" />*@
+                @*<select asp-for="CidadeId" class="form-control" id="CidadeId" name="CidadeId">*@
+                <select asp-for="CidadeId" class="form-control" asp-items="ViewBag.Cidade">
+                    <option value="">Selecione uma cidade</option>
+                </select>
                 <span asp-validation-for="CidadeId" class="text-danger"></span>
             </div>
         </div>
@@ -139,3 +143,26 @@
     </div>
 </form>
 
+<script>
+    document.getElementById('EstadoId').addEventListener('change', function () {
+        var estadoId = this.value;
+        var cidadeSelect = document.getElementById('CidadeId');
+        cidadeSelect.innerHTML = '<option value="">Selecione uma cidade</option>'; // Reset
+
+        if (estadoId) {
+            fetch('/Usuario/GetCidades?estadoId=' + estadoId)
+                .then(response => response.json())
+                .then(cidades => {
+                    console.log(cidades); // Verifique a estrutura do objeto retornado
+                    cidades.forEach(cidade => {
+                        console.log(cidade); // Verifique a estrutura de cada cidade
+                        var option = document.createElement('option');
+                        option.value = cidade.id;
+                        option.textContent = cidade.cidade;
+                        cidadeSelect.appendChild(option);
+                    });
+                })
+                .catch(error => console.error('Erro ao buscar cidades:', error));
+        }
+    });
+</script>

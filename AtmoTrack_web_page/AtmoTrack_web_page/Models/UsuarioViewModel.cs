@@ -16,7 +16,7 @@ namespace AtmoTrack_web_page.Models
         public string Cargo { get; set; }
         public Int16 EstadoId { get; set; }
 
-        public Int32? CidadeId { get; set; }
+        public Int32 CidadeId { get; set; }
         public DateTime DataRegistro { get; set; }
         public DateTime? DataAlteracao { get; set; }
 

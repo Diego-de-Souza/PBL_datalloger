@@ -158,7 +158,7 @@
                     cidades.forEach(cidade => {
                         console.log(cidade); // Verifique a estrutura de cada cidade
                         var option = document.createElement('option');
-                        option.value = cidade.cidade;
+                        option.value = cidade.id;
                         option.textContent = cidade.cidade;
                         cidadeSelect.appendChild(option);
                     });

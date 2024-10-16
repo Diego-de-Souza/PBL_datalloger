@@ -34,21 +34,23 @@
                         <li class="nav-item me-3">
                             <a class="nav-link" style="color: #4BE2F2;" asp-area="" asp-controller="Home" asp-action="Sobre">Sobre</a>
                         </li>
-                        <li class="nav-item me-4">
-                            <div class="btn-group" role="group">
-                                <button type="button" class="btn dropdown-toggle" style="color: #4BE2F2;" data-bs-toggle="dropdown" aria-expanded="false">
-                                    DashBoards
-                                </button>
-                                <ul class="dropdown-menu" style="color:#4BE2F2; background-color: #112E3C">
-                                    <li><a class="dropdown-item" style="color: #4BE2F2;" asp-controller="Dashboard" asp-action="Dashboard1">DashBoard 1</a></li>
-                                    <li><a class="dropdown-item" style="color: #4BE2F2;" asp-controller="Dashboard" asp-action="Dashboard2">DashBoard 2</a></li>
-                                </ul>
-                            </div>
-
-                        </li>
+                        
 
                         @if (User.Identity.IsAuthenticated)
                         {
+                            <li class="nav-item me-4">
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn dropdown-toggle" style="color: #4BE2F2;" data-bs-toggle="dropdown" aria-expanded="false">
+                                        DashBoards
+                                    </button>
+                                    <ul class="dropdown-menu" style="color:#4BE2F2; background-color: #112E3C">
+                                        <li><a class="dropdown-item" style="color: #4BE2F2;" asp-controller="Dashboard" asp-action="Dashboard1">DashBoard 1</a></li>
+                                        <li><a class="dropdown-item" style="color: #4BE2F2;" asp-controller="Dashboard" asp-action="Dashboard2">DashBoard 2</a></li>
+                                    </ul>
+                                </div>
+
+                            </li>
+
                             <li class="nav-item me-4">
                                 <div class="btn-group" role="group">
                                     <button type="button" class="btn dropdown-toggle" style="color: #4BE2F2;" data-bs-toggle="dropdown" aria-expanded="false">

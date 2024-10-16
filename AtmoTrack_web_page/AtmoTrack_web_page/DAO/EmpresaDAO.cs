@@ -79,7 +79,7 @@ namespace AtmoTrack_web_page.DAO
             parametros[0] = new SqlParameter("@Id", SqlDbType.Int) { Value = em.Id };
             parametros[1] = new SqlParameter("@RazaoSocial", SqlDbType.NVarChar, 100) { Value = (object)em.RazaoSocial };
             parametros[2] = new SqlParameter("@NomeFantasia", SqlDbType.NVarChar, 100) { Value = (object)em.NomeFantasia };
-            parametros[3] = new SqlParameter("@CNPJ", SqlDbType.NVarChar, 15) { Value = (object)em.CNPJ };
+            parametros[3] = new SqlParameter("@CNPJ", SqlDbType.NVarChar, 20) { Value = (object)em.CNPJ };
             parametros[4] = new SqlParameter("@InscricaoEstadual", SqlDbType.NVarChar, 20) { Value = (object)em.InscricaoEstadual };
             parametros[5] = new SqlParameter("@WebSite", SqlDbType.NVarChar, 50) { Value = (object)em.WebSite };
             parametros[6] = new SqlParameter("@Telefone1", SqlDbType.NVarChar, 15) { Value = (object)em.Telefone1 };
@@ -148,7 +148,8 @@ namespace AtmoTrack_web_page.DAO
             var cidade = new CidadeViewModel()
             {
                 Id = Convert.ToInt32(registro["Id"]),
-                Cidade = registro["Cidaded"].ToString(),
+                Cidade = registro["Cidade"].ToString(),
+                EstadoId = Convert.ToInt16(registro["EstadoId"])
             };
 
             return cidade;
@@ -198,6 +199,28 @@ namespace AtmoTrack_web_page.DAO
             return ListaEstados;
         }
 
+        public List<CidadeViewModel> GetAllCitiesEstadoId(int id)
+        {
+            var ListaCidades = new List<CidadeViewModel>();
+            string sql = "Select * from [dbo].[tbCidade] where estadoId = " + id + "order by Cidade";
+            try
+            {
+                DataTable tabela = HelperDAO.ExecutaSelect(sql, null);
+                foreach (DataRow row in tabela.Rows)
+                {
+                    ListaCidades.Add(MontaViewModelCidade(row));
+                }
+                return ListaCidades;
+            }
+            catch (Exception ex)
+            {
+                // Registrar o erro ou exibir em uma view apropriada
+                Console.WriteLine("Erro: " + ex.Message);
+                throw;
+            }
+
+        }
+
         public EmpresaViewModel Consulta(int id)
         {
             string sql = "Select * from [dbo].[tbEmpresa] where id = " + id;
@@ -228,7 +251,7 @@ namespace AtmoTrack_web_page.DAO
 
         public CidadeViewModel ConsultaCidade(int id)
         {
-            string sql = "Select * from [dbo].[tbCidade] where estadoId = " + id;
+            string sql = "Select * from [dbo].[tbCidade] where Id = " + id;
             DataTable tabela = HelperDAO.ExecutaSelect(sql, null);
             if (tabela.Rows.Count == 0)
             {

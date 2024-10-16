@@ -141,6 +141,7 @@ namespace AtmoTrack_web_page.DAO
             {
                 Id = Convert.ToInt32(registro["Id"]),
                 Cidade = registro["Cidade"].ToString(),
+                EstadoId = Convert.ToInt16(registro["EstadoId"])
             };
 
             return cidade;
@@ -243,7 +244,7 @@ namespace AtmoTrack_web_page.DAO
 
         public CidadeViewModel ConsultaCidade(int id)
         {
-            string sql = "Select * from [dbo].[tbCidade] where estadoId = " + id;
+            string sql = "Select * from [dbo].[tbCidade] where Id = " + id;
             DataTable tabela = HelperDAO.ExecutaSelect(sql, null);
             if (tabela.Rows.Count == 0)
             {

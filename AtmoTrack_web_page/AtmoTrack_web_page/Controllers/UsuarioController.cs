@@ -120,26 +120,8 @@ namespace AtmoTrack_web_page.Controllers
                     return RedirectToAction("Index");
                 }
             }
-            //catch (SqlException sqlEx)
-            //{
-            //    // Log or print the specific SQL error message
-            //    //Console.WriteLine(sqlEx.Message);  // ou use um logger apropriado
-            //    //var errorViewModel = new ErrorViewModel
-            //    //{
-            //    //    ErrorMessage = sqlEx.Message,
-            //    //    RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier
-            //    //};
-            //    //return View("Error", errorViewModel);
-            //}
             catch (Exception erro)
             {
-                //var errorViewModel = new ErrorViewModel
-                //{
-                //    ErrorMessage = erro.Message,
-                //    RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier
-                //};
-                //Console.WriteLine(erro.Message);
-                //return View("Error", errorViewModel);
                 return View("Error", erro.ToString());
             }
         }
@@ -200,7 +182,7 @@ namespace AtmoTrack_web_page.Controllers
                     return NotFound();
                 }
 
-                var cidade = dao.ConsultaCidade(estado.Id);
+                var cidade = dao.ConsultaCidade(us.CidadeId);
                 ViewBag.CidadeNome = cidade != null ? cidade.Cidade : "Estado não encontrado";
 
                 return View("VisualizarUsuario", us);

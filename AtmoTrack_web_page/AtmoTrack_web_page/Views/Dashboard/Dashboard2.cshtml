@@ -1,4 +1,4 @@
-﻿@*
+﻿﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
@@ -13,9 +13,9 @@
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
         // Criar dados fake
-        const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+        const labels = ['0', '10', '20', '30', '40', '50', '60'];
         const dataValues = [15, 20, 25, 22, 18, 30, 28]; // Dados fictícios
 
         // Criação de gradiente
@@ -36,7 +36,7 @@
                 pointBorderColor: '#fff', // Cor da borda dos pontos
                 pointHoverBackgroundColor: '#fff', // Cor do ponto ao passar o mouse
                 pointHoverBorderColor: 'rgba(255, 99, 132, 1)', // Cor da borda ao passar o mouse
-                borderWidth: 2, // Espessura da linha
+                borderWidth: 5, // Espessura da linha
                 tension: 0.4 // Suavização da linha
             }]
         };
@@ -56,7 +56,7 @@
                     x: {
                         title: {
                             display: true,
-                            text: 'Meses'
+                            text: 'Segundos'
                         }
                     }
                 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AtmoTrack_web_page")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1506901b8980a10ee96aa8f28f23717bb6c281e6")]
 [assembly: System.Reflection.AssemblyProductAttribute("AtmoTrack_web_page")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AtmoTrack_web_page")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -137,7 +137,7 @@ namespace AtmoTrack_web_page.Controllers
             }
             catch (Exception erro)
             {
-                return View("Erro", erro.ToString());
+                return View("Error", erro.ToString());
             }
         }
 
@@ -151,7 +151,7 @@ namespace AtmoTrack_web_page.Controllers
             }
             catch (Exception erro)
             {
-                return View("Erro", erro.ToString());
+                return View("Error", erro.ToString());
             }
         }
 
@@ -168,13 +168,13 @@ namespace AtmoTrack_web_page.Controllers
 
                 var empresa = dao.ConsultaEmpresa(eq.EmpresaId);
 
-                ViewBag.EmpresaNome = empresa != null ? empresa.NomeFantasia : "Empresa não encontrado";
+                ViewBag.EmpresaNome = empresa != null ? empresa.NomeFantasia : "Equipamento não encontrado";
 
-                return View("ExibirEmpresa", eq);
+                return View("ExibirEquipamento", eq);
             }
             catch (Exception erro)
             {
-                return View("Erro", erro.ToString());
+                return View("Error", erro.ToString());
             }
         }
 

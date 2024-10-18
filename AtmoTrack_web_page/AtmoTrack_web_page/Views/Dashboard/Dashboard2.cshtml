@@ -1,0 +1,71 @@
+﻿﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<h2>Dashboard 2</h2>
+
+<div>
+    <canvas id="myChart" width="1000" height="400"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Criar dados fake
+        const labels = ['0', '10', '20', '30', '40', '50', '60'];
+        const dataValues = [15, 20, 25, 22, 18, 30, 28]; // Dados fictícios
+
+        // Criação de gradiente
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const gradient = ctx.createLinearGradient(0, 0, 0, 400);
+        gradient.addColorStop(0, 'rgba(75,192,192,1)'); // Cor inicial (topo)
+        gradient.addColorStop(1, 'rgba(153,102,255,1)'); // Cor final (baixo)
+
+        const data = {
+            labels: labels,
+            datasets: [{
+                label: 'Temperatura (°C)',
+                data: dataValues,
+                fill: true, // Preencher a área abaixo da linha com o gradiente
+                backgroundColor: gradient, // Aplicar o gradiente ao fundo do gráfico
+                borderColor: 'rgba(75, 192, 192, 1)', // Cor da linha
+                pointBackgroundColor: 'rgba(255, 99, 132, 1)', // Cor dos pontos
+                pointBorderColor: '#fff', // Cor da borda dos pontos
+                pointHoverBackgroundColor: '#fff', // Cor do ponto ao passar o mouse
+                pointHoverBorderColor: 'rgba(255, 99, 132, 1)', // Cor da borda ao passar o mouse
+                borderWidth: 5, // Espessura da linha
+                tension: 0.4 // Suavização da linha
+            }]
+        };
+
+        const config = {
+            type: 'line',
+            data: data,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Temperatura (°C)'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Segundos'
+                        }
+                    }
+                }
+            }
+        };
+
+        const myChart = new Chart(
+            document.getElementById('myChart'),
+            config
+        );
+    });
+</script>

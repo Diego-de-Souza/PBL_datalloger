@@ -1,0 +1,309 @@
+{
+  "Files": [
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\AtmoTrack_web_page.bundle.scp.css",
+      "PackagePath": "staticwebassets\\AtmoTrack_web_page.bundle.scp.css"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\images\\35392.jpg",
+      "PackagePath": "staticwebassets\\images\\35392.jpg"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\images\\Captura de tela 2024-10-04 214709.jpg",
+      "PackagePath": "staticwebassets\\images\\Captura de tela 2024-10-04 214709.jpg"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\images\\WhatsApp Image 2024-10-04 at 12.00.11.jpeg",
+      "PackagePath": "staticwebassets\\images\\WhatsApp Image 2024-10-04 at 12.00.11.jpeg"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\images\\WhatsApp Image 2024-10-04 at 12.00.12 (1).jpeg",
+      "PackagePath": "staticwebassets\\images\\WhatsApp Image 2024-10-04 at 12.00.12 (1).jpeg"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\images\\WhatsApp Image 2024-10-04 at 12.00.12.jpeg",
+      "PackagePath": "staticwebassets\\images\\WhatsApp Image 2024-10-04 at 12.00.12.jpeg"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\images\\del.png",
+      "PackagePath": "staticwebassets\\images\\del.png"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\images\\edit.png",
+      "PackagePath": "staticwebassets\\images\\edit.png"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\images\\grafico_1.jpg",
+      "PackagePath": "staticwebassets\\images\\grafico_1.jpg"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\images\\logo_atmotrack_192x192.png",
+      "PackagePath": "staticwebassets\\images\\logo_atmotrack_192x192.png"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\images\\logo_atmotrack_32x32.png",
+      "PackagePath": "staticwebassets\\images\\logo_atmotrack_32x32.png"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\images\\view.png",
+      "PackagePath": "staticwebassets\\images\\view.png"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "Z:\\2024 - 5S\\PBL\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.AtmoTrack_web_page.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.AtmoTrack_web_page.props",
+      "PackagePath": "build\\AtmoTrack_web_page.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.AtmoTrack_web_page.props",
+      "PackagePath": "buildMultiTargeting\\AtmoTrack_web_page.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.AtmoTrack_web_page.props",
+      "PackagePath": "buildTransitive\\AtmoTrack_web_page.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

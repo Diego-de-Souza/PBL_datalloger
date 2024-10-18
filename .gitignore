@@ -1,0 +1,8 @@
+﻿################################################################################
+# Este arquivo .gitignore foi criado automaticamente pelo Microsoft(R) Visual Studio.
+################################################################################
+
+/AtmoTrack_web_page/.vs/AtmoTrack_web_page/FileContentIndex/f24ba664-85fd-4bab-980d-39c9c0e63442.vsidx
+/AtmoTrack_web_page/.vs/AtmoTrack_web_page/FileContentIndex/8cb22f36-ec8d-4abe-bf08-fdd395ae8ff6.vsidx
+/AtmoTrack_web_page/.vs/AtmoTrack_web_page/FileContentIndex/31a1291c-38ff-46c0-b066-ea54d2c6977e.vsidx
+*.vsidx

@@ -1,0 +1,112 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="container-fluid container_slide">
+    <div class="row">
+        <div class="col-md-6 d-flex align-items-center">
+            <div class="text-section w-100 align-items-center">
+                <h1 class="fade-in delay-1 w-100">Bem-vindo ao AtmoTrack</h1>
+                <p class="fade-in delay-2 w-100 ">Monitoramento de qualidade do ar em tempo real.</p>
+                <p class="fade-in delay-3 w-100 ">Acompanhe nossos sensores espalhados pela cidade.</p>
+            </div>
+            <div class="text-section_2 w-100 align-items-center" style="display: none;">
+                <h1 class="fade-in delay-1 w-100">Sensores em tempo real</h1>
+                <p class="fade-in delay-2 w-100 ">Monitorando dados de poluição do ar</p>
+                <p class="fade-in delay-3 w-100 ">Saiba mais sobre as emissões e impacto ambiental</p>
+            </div>
+        </div>
+        <div class="col-md-6 d-flex align-items-center">
+            <div class="video-section w-100 h-100">
+                <video width="100%" height="100%" autoplay loop muted controls>
+                    <source src="/videos/VID-20240915-WA0008.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<h2 class="h2-home">Medidores</h2>
+<div class="container-servicos d-flex justify-content-center flex-wrap">
+
+    <a href="/Home/RedirectToProperPage" class="card m-5 card-medi" style="width: 30rem;background-color: #4BE2F2;">
+        <img src="/images/Captura de tela 2024-10-04 214709.jpg" alt="Alternate Text" />
+        <div class="card-body d-flex flex-column align-items-center">
+            <h3 class="card-title">Dashboard 1</h3>
+        </div>
+    </a>
+    <a href="/Home/RedirectToProperPage" class="card m-5 card-medi" style="width: 30rem;background-color: #4BE2F2;">
+        <img src="/images/grafico_1.jpg" alt="Alternate Text" />
+        <div class="card-body d-flex flex-column align-items-center">
+            <h3 class="card-title">Dashboard 2</h3>
+        </div>
+    </a>
+</div>
+
+
+<div class="container-fluid container_cards">
+    <h2 class="h2-home">Grandezas Medidas</h2>
+    <div class="container-servicos d-flex justify-content-center flex-wrap">
+        <div class="card m-3 card-medi" style="width: 20rem;background-color: #ADBF24;color: #133340;">
+            <img src="/images/WhatsApp Image 2024-10-04 at 12.00.12 (1).jpeg" class="card-img-top" alt="...">
+            <div class="card-body d-flex flex-column align-items-center">
+                <h5 class="card-title text-center">Temperatura</h5>
+                <p class="card-text text-justify">
+                    A temperatura é uma medida da energia cinética média das partículas em uma substância. Essa medição é realizada através de um sensor de temperatura [nome sensor] conectado ao Arduino, permitindo o monitoramento em tempo real das variações de temperatura em um ambiente.
+                </p>
+                <p class="card-text text-justify">
+                    Grandeza: A temperatura é geralmente expressa em graus Celsius (°C), Fahrenheit (°F) ou Kelvin (K).
+                </p>
+            </div>
+
+        </div>
+        <div class="card m-3 card-medi" style="width: 20rem;background-color: #ADBF24;color: #133340;">
+            <img src="/images/WhatsApp Image 2024-10-04 at 12.00.11.jpeg" class="card-img-top" alt="...">
+            <div class="card-body d-flex flex-column align-items-center">
+                <h5 class="card-title text-center">Luminosidade</h5>
+                <p class="card-text">Luminosidade é a medida da quantidade de luz que incide sobre uma superfície. Essa medição é realizada através de um sensor de luminosidade X, como um LDR (resistor dependente de luz), conectado ao Arduino, permitindo monitorar a intensidade da luz em um ambiente.</p>
+                <p class="card-text">Grandeza: A luminosidade é medida em lux (lx), que representa a quantidade de luz que incide em um metro quadrado, e em lúmens (lm), que mede o fluxo luminoso total emitido por uma fonte.</p>
+
+            </div>
+        </div>
+        <div class="card m-3 card-medi" style="width: 20rem;background-color: #ADBF24;color: #133340;">
+            <img src="/images/WhatsApp Image 2024-10-04 at 12.00.12.jpeg" class="card-img-top" alt="...">
+            <div class="card-body d-flex flex-column align-items-center">
+                <h5 class="card-title text-center">Umidade</h5>
+                <p class="card-text">A umidade refere-se à quantidade de vapor de água presente no ar. A medição é realizada através de um sensor de umidade [nome sensor] conectado ao Arduino, que permite acompanhar a umidade relativa do ar em tempo real.</p>
+                <p class="card-text">Grandeza: A umidade pode ser expressa em umidade relativa (%), que indica a proporção de vapor de água em relação à capacidade máxima do ar a uma determinada temperatura, e em umidade absoluta (g/m³).</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        let activeSection = 0;
+        const sections = [document.querySelector('.text-section'), document.querySelector('.text-section_2')];
+
+        function toggleSections() {
+            sections.forEach((section, index) => {
+                if (index === activeSection) {
+                    section.style.display = 'block';
+                    section.classList.add('active');
+                } else {
+                    section.style.display = 'none';
+                    section.classList.remove('active');
+                }
+            });
+
+            // Alternar a seção ativa
+            activeSection = (activeSection + 1) % sections.length;
+        }
+
+        // Iniciar a alternância
+        toggleSections(); // Mostrar a primeira seção imediatamente
+        setInterval(toggleSections, 5000); // Alternar a cada 5 segundos
+    });
+</script>

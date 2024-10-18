@@ -1,0 +1,70 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+    <div class="card shadow-lg p-4" style="width: 100%; max-width: 600px; border-radius: 10px;">
+        <div class="card-body">
+            <h2 class="text-center mb-4">Login</h2>
+            <form method="post" asp-controller="Login" asp-action="Login" onsubmit="return validateForm();">
+                <div class="form-group mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" name="username" class="form-control" placeholder="Enter your username" required />
+                </div>
+
+                <div class="form-group mb-4">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" name="password" class="form-control" placeholder="Enter your password" required />
+                </div>
+
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary btn-block">Login</button>
+                </div>
+            </form>
+
+            <div class="text-center mt-3">
+                <a href="#">Forgot your password?</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="errorModal" class="modal" style="display:none;">
+    <div class="modal-dialog">
+        <div class="modal-content" style="background-color: #8C888A;">
+            <div class="modal-header">
+                <h5 class="modal-title">Erro de Login</h5>
+                <button type="button" class="close btn-danger" onclick="closeModal()" style="border-radius: 50%">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>As credenciais fornecidas estão incorretas. Tente novamente.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" onclick="closeModal()">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Função para abrir o modal
+    function showModal() {
+        document.getElementById('errorModal').style.display = 'block';
+    }
+
+    // Função para fechar o modal
+    function closeModal() {
+        document.getElementById('errorModal').style.display = 'none';
+    }
+
+    // Verifica se há uma mensagem de erro e, em caso afirmativo, mostra o modal
+    window.onload = function () {
+        var errorMessage = '@ViewBag.ErrorMessage';
+        if (errorMessage) {
+            showModal();
+        }
+    };
+</script>

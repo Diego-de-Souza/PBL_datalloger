@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - AtmoTrack_web_page</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/AtmoTrack_web_page.styles.css" asp-append-version="true" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow mb-3" style="background-color:#14548C;">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="/images/logo_atmotrack_192x192.png" alt="Logo AtmoTrack" class="imgloogo" />
+                </a>
+                <div style="margin-left: 100px;" class="sloganHome">
+                    <h1>AtmoTrack</h1>
+                    <p>O futuro da medição</p>
+                </div>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav ms-auto">
+                        <!-- Aqui adicionamos o 'ms-auto' -->
+                        <li class="nav-item me-3">
+                            <a class="nav-link" style="color: #4BE2F2;" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" style="color: #4BE2F2;" asp-area="" asp-controller="Home" asp-action="Sobre">Sobre</a>
+                        </li>
+                        
+
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item me-4">
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn dropdown-toggle" style="color: #4BE2F2;" data-bs-toggle="dropdown" aria-expanded="false">
+                                        DashBoards
+                                    </button>
+                                    <ul class="dropdown-menu" style="color:#4BE2F2; background-color: #112E3C">
+                                        <li><a class="dropdown-item" style="color: #4BE2F2;" asp-controller="Dashboard" asp-action="Dashboard1">DashBoard 1</a></li>
+                                        <li><a class="dropdown-item" style="color: #4BE2F2;" asp-controller="Dashboard" asp-action="Dashboard2">DashBoard 2</a></li>
+                                    </ul>
+                                </div>
+
+                            </li>
+
+                            <li class="nav-item me-4">
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn dropdown-toggle" style="color: #4BE2F2;" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Registro Usuarios
+                                    </button>
+                                    <ul class="dropdown-menu" style="color:#4BE2F2; background-color: #112E3C">
+                                        <li><a class="dropdown-item" style="color: #4BE2F2;" asp-controller="Usuario" asp-action="Index">Usuarios</a></li>
+                                        <li><a class="dropdown-item" style="color: #4BE2F2;" asp-controller="Usuario" asp-action="NovoRegistro">Cadastro de Usuarios</a></li>
+                                    </ul>
+                                </div>
+
+                            </li>
+                            <li class="nav-item me-4">
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn dropdown-toggle" style="color: #4BE2F2;" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Registro Empresas
+                                    </button>
+                                    <ul class="dropdown-menu" style="color:#4BE2F2; background-color: #112E3C">
+                                        <li><a class="dropdown-item" style="color: #4BE2F2;" asp-controller="Empresa" asp-action="Index">Empresas</a></li>
+                                        <li><a class="dropdown-item" style="color: #4BE2F2;" asp-controller="Empresa" asp-action="NovoRegistro">Cadastro de Empresas</a></li>
+                                    </ul>
+                                </div>
+
+                            </li>
+                            <li class="nav-item me-4">
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn dropdown-toggle" style="color: #4BE2F2;" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Registro Equipamentos
+                                    </button>
+                                    <ul class="dropdown-menu" style="color:#4BE2F2; background-color: #112E3C">
+                                        <li><a class="dropdown-item" style="color: #4BE2F2;" asp-controller="Equipamento" asp-action="Index">Equipamentos</a></li>
+                                        <li><a class="dropdown-item" style="color: #4BE2F2;" asp-controller="Equipamento" asp-action="NovoRegistro">Cadastro de Equipamento</a></li>
+                                    </ul>
+                                </div>
+
+                            </li>
+                        }
+                        
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <button type="button" class="btn btn-danger" onclick="window.location.href='@Url.Action("Logout", "Login")'">Logout</button>
+                            }
+                            else
+                            {
+                                <button type="button" class="btn btn-primary" onclick="window.location.href='@Url.Action("Index", "Login")'">Sign In</button>
+                            }
+                        </div>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <div class="container d-flex justify-content-center" style="min-height: 100vh;">
+        <main role="main" class="pb-3 container-geral">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - AtmoTrack_web_page - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

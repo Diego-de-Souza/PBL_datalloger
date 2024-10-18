@@ -1,0 +1,39 @@
+﻿@model EmpresaViewModel
+
+@{
+    ViewData["Title"] = "Empresa";
+}
+
+<h1>Visualização da Empresa</h1>
+<span class="TituloSublinhado">
+    @Model.NomeFantasia
+</span>
+<hr />
+
+&nbsp;&nbsp; Razão Social: @Model.RazaoSocial
+<br />
+&nbsp;&nbsp; CNPJ: @Model.CNPJ
+<br />
+&nbsp;&nbsp; Inscrição Estadual: @Model.InscricaoEstadual
+<br />
+&nbsp;&nbsp; Web Site: @Model.WebSite
+<br />
+&nbsp;&nbsp; Telefone 1: @Model.Telefone1
+<br />
+&nbsp;&nbsp; Telefone 2: @Model.Telefone2
+<br />
+&nbsp;&nbsp; Endereço: @Model.Endereco
+<br />
+&nbsp;&nbsp; Cep: @Model.Cep
+<br />
+&nbsp;&nbsp; Estado: @ViewBag.EstadoNome
+<br />
+&nbsp;&nbsp; Cidade: @ViewBag.CidadeNome
+<br />
+&nbsp;&nbsp; Tipo: @Model.Tipo
+<br />
+&nbsp;&nbsp; Data de Registro: @Model.DataRegistro.ToString("dd/MM/yyyy")
+<br />
+&nbsp;&nbsp; Data de Alteração: @(Model.DataAlteracao?.ToString("dd/MM/yyyy") ?? "Não alterado")
+<br />
+

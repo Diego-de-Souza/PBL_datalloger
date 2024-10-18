@@ -1,0 +1,41 @@
+﻿@model EquipamentoViewModel
+
+@{
+    ViewData["Title"] = "Equipamento";
+}
+
+<h1>Visualização do Equipamento</h1>
+<span class="TituloSublinhado">
+    @Model.Nome
+</span>
+<hr />
+
+&nbsp;&nbsp; Empresa ID: @ViewBag.EmpresaNome
+<br />
+&nbsp;&nbsp; MAC Address: @Model.MacAddress
+<br />
+&nbsp;&nbsp; IP Address: @Model.IpAddress
+<br />
+&nbsp;&nbsp; SSID: @Model.SSID
+<br />
+&nbsp;&nbsp; Intensidade de Sinal: @Model.SignalStrength dBm
+<br />
+&nbsp;&nbsp; Status de Conexão: @Model.ConnectionStatus
+<br />
+&nbsp;&nbsp; Dados do Sensor: @Model.SensorData
+<br />
+&nbsp;&nbsp; Status do Equipamento: @Model.StatusEquipamento
+<br />
+&nbsp;&nbsp; Token de Autenticação: @Model.AuthToken
+<br />
+&nbsp;&nbsp; Versão do Firmware: @Model.FirmwareVersion
+<br />
+&nbsp;&nbsp; Data de Registro: @Model.DataRegistro.ToString("dd/MM/yyyy")
+<br />
+&nbsp;&nbsp; Última Atualização: @Model.LastUpdate.ToString("dd/MM/yyyy")
+<br />
+&nbsp;&nbsp; Data de Alteração: @(Model.DataAlteracao?.ToString("dd/MM/yyyy") ?? "Não alterado")
+<br />
+
+
+

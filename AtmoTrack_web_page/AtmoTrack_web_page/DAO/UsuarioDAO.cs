@@ -2,75 +2,23 @@
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Runtime.ConstrainedExecution;
 
 namespace AtmoTrack_web_page.DAO
 {
-    public class UsuarioDAO
+    public class UsuarioDAO: PadraoDAO<UsuarioViewModel>
     {
-        public void Inserir(UsuarioViewModel usuario)
+        protected override void SetTabela()
         {
-            usuario.DataRegistro = DateTime.Now;
-            usuario.DataAlteracao = DateTime.Now;
+            Tabela = "Usuario";
+            CamposInsert = "Id, Nome, Email, Senha, Endereco, Cep, Telefone, TelefoneComercial, Empresa, Cargo, EstadoId, CidadeId, DataRegistro, DataAlteracao";
+            ValoresInsert = "@Id, @Nome, @Email, @Senha, @Endereco, @Cep, @Telefone, @TelefoneComercial, @Empresa, @Cargo, @EstadoId, @CidadeId, @DataRegistro, @DataAlteracao";
+            SetCampos = "Nome = @Nome, Email = @Email, Senha = @Senha, Endereco = @Endereco, Cep = @Cep, Telefone = @Telefone, TelefoneComercial = @TelefoneComercial, Empresa = @Empresa, Cargo = @Cargo, EstadoId = @EstadoId, CidadeId = @CidadeId, DataRegistro = @DataRegistro, DataAlteracao = @DataAlteracao";
+            Condicoes = "WHERE Id = @Id";
 
-            string sql = @"INSERT INTO [dbo].[Usuario](
-                            [Id],
-                            [Nome],
-                            [Email],
-                            [Senha],
-                            [Endereco],
-                            [Cep],
-                            [Telefone],
-                            [TelefoneComercial],
-                            [Empresa],
-                            [Cargo],
-                            [EstadoId],
-                            [CidadeId],
-                            [DataRegistro],
-                            [DataAlteracao]
-                        ) Values (
-                            @Id,
-                            @Nome,
-                            @Email,
-                            @Senha,
-                            @Endereco,
-                            @Cep,
-                            @Telefone,
-                            @TelefoneComercial,
-                            @Empresa,
-                            @Cargo,
-                            @EstadoId,
-                            @CidadeId,
-                            @DataRegistro,
-                            @DataAlteracao
-                        )";
-
-            HelperDAO.ExecutaSQL(sql, CriaParamentros(usuario));
         }
 
-        public void Alterar(UsuarioViewModel usuario)
-        {
-            usuario.DataAlteracao = DateTime.Now;
-
-            string sql = @" UPDATE [dbo].[Usuario] set
-                            [Nome] = @Nome,
-                            [Email] = @Email,
-                            [Senha] = @Senha,
-                            [Endereco] = @Endereco,
-                            [Cep] = @Cep,
-                            [Telefone] = @Telefone,
-                            [TelefoneComercial] = @TelefoneComercial,
-                            [Empresa] = @Empresa,
-                            [Cargo] = @Cargo,
-                            [EstadoId] = @EstadoId,
-                            [CidadeId] = @CidadeId,
-                            [DataRegistro] = @DataRegistro,
-                            [DataAlteracao] = @DataAlteracao
-                        WHERE Id = @Id";
-
-            HelperDAO.ExecutaSQL(sql, CriaParamentros(usuario));
-        } 
-
-        private SqlParameter[] CriaParamentros(UsuarioViewModel us)
+        protected override SqlParameter[] CriaParametros(UsuarioViewModel us)
         {
             SqlParameter[] parametros = new SqlParameter[14];
             
@@ -92,7 +40,7 @@ namespace AtmoTrack_web_page.DAO
             return parametros;
         }
 
-        private UsuarioViewModel MontaViewModelUsuario(DataRow registro)
+        protected override UsuarioViewModel MontaModel(DataRow registro)
         {
             var us = new UsuarioViewModel();
 
@@ -147,29 +95,6 @@ namespace AtmoTrack_web_page.DAO
             return cidade;
         }
 
-        public List<UsuarioViewModel> Listagem()
-        {
-            var Lista = new List<UsuarioViewModel>();
-            string sql = "Select * from [dbo].[Usuario] order by nome";
-            DataTable tabela = HelperDAO.ExecutaSelect(sql, null);
-
-            Console.WriteLine($"Número de linhas retornadas: {tabela.Rows.Count}");
-
-            foreach (DataRow row in tabela.Rows)
-            {
-                Lista.Add(MontaViewModelUsuario(row));
-            }
-
-            return Lista; ;
-        }
-
-        public int LastId()
-        {
-            string sql = "select isnull(max(id) +1, 1) as 'MAIOR' from [dbo].[Usuario]";
-            DataTable tabela = HelperDAO.ExecutaSelect(sql, null);
-            return Convert.ToInt32(tabela.Rows[0]["MAIOR"]);
-        }
-
         public List<EstadoViewModel> GetAllStates()
         {
             var ListaEstados = new List<EstadoViewModel>();
@@ -212,20 +137,6 @@ namespace AtmoTrack_web_page.DAO
                 throw;
             }
 
-        }
-
-        public UsuarioViewModel Consulta(int id)
-        {
-            string sql = "Select * from [dbo].[Usuario] where id = " + id;
-            DataTable tabela = HelperDAO.ExecutaSelect(sql, null);
-            if(tabela.Rows.Count == 0)
-            {
-                return null;
-            }
-            else
-            {
-                return MontaViewModelUsuario(tabela.Rows[0]);
-            }
         }
 
         public EstadoViewModel ConsultaEstado(int id)
@@ -273,11 +184,6 @@ namespace AtmoTrack_web_page.DAO
                 DataRegistro = Convert.ToDateTime(row["DataRegistro"]),
                 DataAlteracao = Convert.ToDateTime(row["DataAlteracao"])
             };
-        }
-        public void Excluir(int id)
-        {
-            string sql = "delete [dbo].[Usuario] where id =" + id;
-            HelperDAO.ExecutaSQL(sql, null);
         }
     }
 }

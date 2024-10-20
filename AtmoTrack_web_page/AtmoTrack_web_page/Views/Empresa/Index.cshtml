@@ -8,7 +8,7 @@
 </head>
 
 
-<a href="/empresa/NovoRegistro" class="btn btn-info">Novo registro</a>
+<a href="/empresa/Create" class="btn btn-info">Novo registro</a>
 <br />
 
 <body class="usuario">
@@ -60,12 +60,12 @@
 </script>
 
 <style>
-    th{
+    th {
         color: #0DCAF0;
     }
 
     .image {
-        width: 25px;
+        width: 20%;
     }
 
     .title {
@@ -75,7 +75,7 @@
 
     .linha-verde {
         background-color: #0DCAF0;
-        color: black; 
+        color: black;
     }
 
     .linha-azulescuro {
@@ -84,22 +84,48 @@
     }
 
     .usuario .container-geral {
-        margin: 0;
-        padding: 0;
-        width: 100%;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
         height: 100%;
+        max-width: 100% !important;
+        max-height: 100%;
         justify-content: initial;
     }
 
+    .container {
+        min-height: 100% !important;
+        min-width: 100%;
+        margin: 0 !important;
+        padding: 0 !important;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        align-items: center;
+    }
+
     .table {
-        width: 80%;
+        width: 95%;
         margin-top: 5%;
         border-collapse: separate;
-        border-radius: 10px;
         border-spacing: 0px;
-        align-content: center;
-        align-items: center;
         align-self: center;
+    }
+
+    th:nth-child(2) {
+        width: 5%;
+    }
+
+    th:nth-child(3) {
+        width: 30%;
+    }
+
+    th:nth-child(4) {
+        width: 30%;
+    }
+
+    th:first-child {
+        width: 10%;
     }
 
     th:first-child {
@@ -124,3 +150,4 @@
         border: 1px solid black;
     }
 </style>
+

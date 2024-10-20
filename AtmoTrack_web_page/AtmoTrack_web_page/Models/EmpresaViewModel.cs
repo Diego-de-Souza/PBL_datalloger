@@ -1,8 +1,7 @@
 ﻿namespace AtmoTrack_web_page.Models
 {
-    public class EmpresaViewModel
+    public class EmpresaViewModel: PadraoViewModel
     {
-        public int Id { get; set; }
         public string RazaoSocial { get; set; }
         public string NomeFantasia { get; set; }
         public string CNPJ {  get; set; }
@@ -17,6 +16,7 @@
         public string Tipo { get; set; }
         public DateTime DataRegistro { get; set; }
         public DateTime? DataAlteracao { get; set; }
+
 
 
     }

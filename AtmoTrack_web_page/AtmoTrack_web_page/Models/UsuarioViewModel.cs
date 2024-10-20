@@ -2,9 +2,8 @@
 
 namespace AtmoTrack_web_page.Models
 {
-    public class UsuarioViewModel
+    public class UsuarioViewModel: PadraoViewModel
     {
-        public Int32 Id { get; set; }
         public string Nome { get; set; }
         public string Email { get; set; }
         public string Senha { get; set; }

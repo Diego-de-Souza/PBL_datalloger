@@ -7,13 +7,13 @@
 <h2 class="text-center mb-4">Cadastro de Empresas</h2>
 
 <form asp-action="Salvar">
-    <input type="hidden" value="@ViewBag.cadastroEmpresa" name="cadastroEmpresa" />
+    <input type="hidden" value="@ViewBag.Operacao" name="Operacao" />
     <div class="container">
         <div class="row">
             <!-- Id e Nome na mesma linha -->
             <div class="col-md-3">
                 <label for="Id" class="col-form-label">Id</label>
-                @if (ViewBag.cadastroEmpresa == "I")
+                @if (ViewBag.Operacao == "I")
                 {
                     <input type="text" name="id" value="@Model.Id" class="form-control" />
                 }
@@ -44,7 +44,7 @@
         <div class="row">
             <div class="col-md-6">
                 <label for="CNPJ" class="col-form-label">CNPJ</label>
-                <input type="text" name="CNPJ" value="@Model.CNPJ" class="form-control" placeholder="00.000.000/0000-00" />
+                <input type="text" id="CNPJ" name="CNPJ" value="@Model.CNPJ" class="form-control" placeholder="00.000.000/0000-00" maxlength="18" />
                 <span asp-validation-for="CNPJ" class="text-danger"></span>
             </div>
             <div class="col-md-6">
@@ -93,7 +93,7 @@
             </div>
             <div class="col-md-6">
                 <label for="Cep" class="col-form-label">Cep</label>
-                <input type="text" name="Cep" value="@Model.Cep" class="form-control" placeholder="00000-000" />
+                <input type="text" id="Cep" name="Cep" value="@Model.Cep" class="form-control" placeholder="00000-000" />
                 <span asp-validation-for="Cep" class="text-danger"></span>
             </div>
         </div>
@@ -110,12 +110,12 @@
         <div class="row">
             <div class="col-md-6">
                 <label for="Telefone1" class="col-form-label">Telefone 1</label>
-                <input type="text" name="telefone1" value="@Model.Telefone1" class="form-control" placeholder="(00)00000-0000" />
+                <input type="text" id="Telefone" name="telefone1" value="@Model.Telefone1" class="form-control" placeholder="(00)00000-0000" />
                 <span asp-validation-for="Telefone1" class="text-danger"></span>
             </div>
             <div class="col-md-6">
                 <label for="Telefone2" class="col-form-label">Telefone 2</label>
-                <input type="text" name="telefone2" value="@Model.Telefone2" class="form-control" placeholder="(00)00000-0000" />
+                <input type="text" id="Telefone" name="telefone2" value="@Model.Telefone2" class="form-control" placeholder="(00)00000-0000" />
                 <span asp-validation-for="Telefone2" class="text-danger"></span>
             </div>
         </div>
@@ -144,6 +144,30 @@
 </form>
 
 <script>
+
+    document.getElementById('Telefone').addEventListener('input', function (e) {
+        let value = e.target.value.replace(/\D/g, ''); // Remove tudo que não é dígito
+        value = value.replace(/^(\d{2})(\d{5})(\d{4}).*/, '($1)$2-$3'); // Aplica a máscara
+        e.target.value = value;
+    });
+
+    document.getElementById('Cep').addEventListener('input', function (e) {
+        let value = e.target.value.replace(/\D/g, ''); // Remove tudo que não é dígito
+        value = value.replace(/^(\d{5})(\d{3})?$/, '$1-$2'); // Aplica a máscara
+        e.target.value = value;
+    });
+
+    document.getElementById('CNPJ').addEventListener('input', function (e) {
+    let value = e.target.value.replace(/\D/g, ''); // Remove tudo que não é dígito
+    
+    if (value.length <= 14) { // Limita o número de caracteres a 14 (CNPJ)
+        // Aplica a máscara para o CNPJ no formato: 00.000.000/0000-00
+        value = value.replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2}).*/, '$1.$2.$3/$4-$5');
+    }
+
+    e.target.value = value;
+});
+
     document.getElementById('EstadoId').addEventListener('change', function () {
         var estadoId = this.value;
         var cidadeSelect = document.getElementById('CidadeId');

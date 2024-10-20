@@ -42,12 +42,9 @@ namespace AtmoTrack_web_page
 
             app.UseRouting();
 
-            // Habilitar a autenticação e autorização
-            app.UseAuthentication(); // Deve ser adicionado antes do Authorization
-            app.UseAuthorization();
-
-            // Habilitar sessões
-            app.UseSession(); // Adicione esta linha
+            app.UseSession(); // Ativa as sessões
+            app.UseAuthentication(); // Habilita autenticação
+            app.UseAuthorization(); // Habilita autorização
 
             app.MapControllerRoute(
                 name: "default",

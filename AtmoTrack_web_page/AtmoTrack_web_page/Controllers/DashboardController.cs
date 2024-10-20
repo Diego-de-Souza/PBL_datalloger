@@ -7,7 +7,7 @@ namespace AtmoTrack_web_page.Controllers
         public IActionResult Dashboard1()
         {
             // Verifica se o usuário está logado
-            if (HttpContext.Session.GetString("LoggedUser") != null)
+            if (User.Identity.IsAuthenticated)
             {
                 return View();
             }

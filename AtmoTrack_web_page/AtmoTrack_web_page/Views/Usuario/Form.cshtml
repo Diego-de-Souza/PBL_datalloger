@@ -7,13 +7,13 @@
 <h2 class="text-center mb-4">Cadastro de Usuário</h2>
 
 <form asp-action="Salvar">
-    <input type="hidden" value="@ViewBag.cadastroUsuario" name="cadastroUsuario" />
+    <input type="hidden" value="@ViewBag.Operacao" name="Operacao" />
     <div class="container">
         <div class="row">
             <!-- Id e Nome na mesma linha -->
             <div class="col-md-3">
                 <label class="col-form-label">Id</label>
-                @if (ViewBag.cadastroUsuario == "I")
+                @if (ViewBag.Operacao == "I")
                 {
                     <input type="text" name="id" value="@Model.Id" class="form-control" />
                 }
@@ -86,7 +86,7 @@
             </div>
             <div class="col-md-4">
                 <label for="Cep">CEP</label>
-                <input type="text" name="cep" value="@Model.Cep" class="form-control" placeholder="00000-000" />
+                <input type="text" id="Cep" name="cep" value="@Model.Cep" class="form-control" placeholder="00000-000" />
                 <span asp-validation-for="Cep" class="text-danger"></span>
             </div>
         </div>
@@ -96,12 +96,12 @@
             <!-- Telefone e Telefone Comercial na mesma linha -->
             <div class="col-md-6">
                 <label for="Telefone">Telefone</label>
-                <input type="text" name="telefone" value="@Model.Telefone" class="form-control" placeholder="(00)00000-0000" />
+                <input type="text" id="Telefone" name="Telefone" value="@Model.Telefone" class="form-control" placeholder="(00)00000-0000" maxlength="14"/>
                 <span asp-validation-for="Telefone" class="text-danger"></span>
             </div>
             <div class="col-md-6">
                 <label for="TelefoneComercial">Telefone Comercial</label>
-                <input type="text" name="telefoneComercial" value="@Model.TelefoneComercial" class="form-control" placeholder="(00)00000-0000" />
+                <input type="text" name="telefoneComercial" value="@Model.TelefoneComercial" class="form-control" placeholder="(00)00000-0000" maxlength="14"/>
                 <span asp-validation-for="TelefoneComercial" class="text-danger"></span>
             </div>
         </div>
@@ -145,6 +145,20 @@
 </form>
 
 <script>
+
+    document.getElementById('Telefone').addEventListener('input', function (e) {
+        let value = e.target.value.replace(/\D/g, ''); // Remove tudo que não é dígito
+        value = value.replace(/^(\d{2})(\d{5})(\d{4}).*/, '($1)$2-$3'); // Aplica a máscara
+        e.target.value = value;
+    });
+
+    document.getElementById('Cep').addEventListener('input', function (e) {
+    let value = e.target.value.replace(/\D/g, ''); // Remove tudo que não é dígito
+    value = value.replace(/^(\d{5})(\d{3})?$/, '$1-$2'); // Aplica a máscara
+    e.target.value = value;
+    });
+
+
     document.getElementById('EstadoId').addEventListener('change', function () {
         var estadoId = this.value;
         var cidadeSelect = document.getElementById('CidadeId');

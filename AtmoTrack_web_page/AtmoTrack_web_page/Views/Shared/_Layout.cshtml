@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/AtmoTrack_web_page.styles.css" asp-append-version="true" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 <body>
     <header>
@@ -38,6 +39,9 @@
 
                         @if (User.Identity.IsAuthenticated)
                         {
+                            <li class="nav-item me-3">
+                                <a class="nav-link" style="color: #4BE2F2;" asp-controller="Usuario" asp-action="Index">Usuarios</a>
+                            </li>
                             <li class="nav-item me-4">
                                 <div class="btn-group" role="group">
                                     <button type="button" class="btn dropdown-toggle" style="color: #4BE2F2;" data-bs-toggle="dropdown" aria-expanded="false">
@@ -50,19 +54,6 @@
                                 </div>
 
                             </li>
-
-                            <li class="nav-item me-4">
-                                <div class="btn-group" role="group">
-                                    <button type="button" class="btn dropdown-toggle" style="color: #4BE2F2;" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Registro Usuarios
-                                    </button>
-                                    <ul class="dropdown-menu" style="color:#4BE2F2; background-color: #112E3C">
-                                        <li><a class="dropdown-item" style="color: #4BE2F2;" asp-controller="Usuario" asp-action="Index">Usuarios</a></li>
-                                        <li><a class="dropdown-item" style="color: #4BE2F2;" asp-controller="Usuario" asp-action="NovoRegistro">Cadastro de Usuarios</a></li>
-                                    </ul>
-                                </div>
-
-                            </li>
                             <li class="nav-item me-4">
                                 <div class="btn-group" role="group">
                                     <button type="button" class="btn dropdown-toggle" style="color: #4BE2F2;" data-bs-toggle="dropdown" aria-expanded="false">
@@ -70,7 +61,7 @@
                                     </button>
                                     <ul class="dropdown-menu" style="color:#4BE2F2; background-color: #112E3C">
                                         <li><a class="dropdown-item" style="color: #4BE2F2;" asp-controller="Empresa" asp-action="Index">Empresas</a></li>
-                                        <li><a class="dropdown-item" style="color: #4BE2F2;" asp-controller="Empresa" asp-action="NovoRegistro">Cadastro de Empresas</a></li>
+                                        <li><a class="dropdown-item" style="color: #4BE2F2;" asp-controller="Empresa" asp-action="Create">Cadastro de Empresas</a></li>
                                     </ul>
                                 </div>
 
@@ -82,7 +73,7 @@
                                     </button>
                                     <ul class="dropdown-menu" style="color:#4BE2F2; background-color: #112E3C">
                                         <li><a class="dropdown-item" style="color: #4BE2F2;" asp-controller="Equipamento" asp-action="Index">Equipamentos</a></li>
-                                        <li><a class="dropdown-item" style="color: #4BE2F2;" asp-controller="Equipamento" asp-action="NovoRegistro">Cadastro de Equipamento</a></li>
+                                        <li><a class="dropdown-item" style="color: #4BE2F2;" asp-controller="Equipamento" asp-action="Create">Cadastro de Equipamento</a></li>
                                     </ul>
                                 </div>
 
@@ -98,6 +89,10 @@
                             {
                                 <button type="button" class="btn btn-primary" onclick="window.location.href='@Url.Action("Index", "Login")'">Sign In</button>
                             }
+                            <a asp-controller="Usuario" asp-action="Create">
+                                <button type="button" class="btn btn-light">Sign Up</button>
+                            </a>
+                                
                         </div>
 
                     </ul>

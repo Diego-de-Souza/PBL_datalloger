@@ -4,75 +4,18 @@ using System.Data;
 
 namespace AtmoTrack_web_page.DAO
 {
-    public class EquipamentoDAO
+    public class EquipamentoDAO : PadraoDAO<EquipamentoViewModel>
     {
-        public void Inserir(EquipamentoViewModel equipamento)
+        protected override void SetTabela()
         {
-            equipamento.DataRegistro = DateTime.Now;
-            equipamento.DataAlteracao = DateTime.Now;
-
-            string sql = @"INSERT INTO [dbo].[tbEquipamento](
-                            [Id],
-                            [Nome],
-                            [EmpresaId],
-                            [MacAddress],
-                            [IpAddress],
-                            [SSID],
-                            [SignalStrength],
-                            [ConnectionStatus],
-                            [DataRegistro],
-                            [SensorData],
-                            [StatusEquipamento],
-                            [AuthToken],
-                            [FirmwareVersion],
-                            [LastUpdate],
-                            [DataAlteracao]
-                        ) Values (
-                            @Id,
-                            @Nome,
-                            @EmpresaId,
-                            @MacAddress,
-                            @IpAddress,
-                            @SSID,
-                            @SignalStrength,
-                            @ConnectionStatus,
-                            @DataRegistro,
-                            @SensorData,
-                            @StatusEquipamento,
-                            @AuthToken,
-                            @FirmwareVersion,
-                            @LastUpdate,
-                            @DataAlteracao
-                        )";
-
-            HelperDAO.ExecutaSQL(sql, CriaParamentros(equipamento));
+            Tabela = "tbEquipamento";
+            CamposInsert = "Id, Nome, EmpresaId, MacAddress, IpAddress, SSID, SignalStrength, ConnectionStatus, DataRegistro, SensorData, StatusEquipamento, AuthToken, FirmwareVersion, LastUpdate, DataAlteracao";
+            ValoresInsert = "@Id, @Nome, @EmpresaId, @MacAddress, @IpAddress, @SSID, @SignalStrength, @ConnectionStatus, @DataRegistro, @SensorData, @StatusEquipamento, @AuthToken, @FirmwareVersion, @LastUpdate, @DataAlteracao";
+            SetCampos = "Nome = @Nome, EmpresaId = @EmpresaId, MacAddress = @MacAddress, IpAddress = @IpAddress, SSID = @SSID, SignalStrength = @SignalStrength, ConnectionStatus = @ConnectionStatus, DataRegistro = @DataRegistro, SensorData = @SensorData, StatusEquipamento = @StatusEquipamento, AuthToken = @AuthToken, FirmwareVersion = @FirmwareVersion, LastUpdate = @LastUpdate, DataAlteracao = @DataAlteracao";
+            Condicoes = "WHERE Id = @Id";
         }
 
-        public void Alterar(EquipamentoViewModel equipamento)
-        {
-            equipamento.DataAlteracao = DateTime.Now;
-
-            string sql = @" UPDATE [dbo].[tbEquipamento] set
-                            [Nome] = @Nome,
-                            [EmpresaId] = @EmpresaId,
-                            [MacAddress] = @MacAddress,
-                            [IpAddress] = @IpAddress,
-                            [SSID] = @SSID,
-                            [SignalStrength] = @SignalStrength,
-                            [ConnectionStatus] = @ConnectionStatus,
-                            [DataRegistro] = @DataRegistro,
-                            [SensorData] = @SensorData,
-                            [StatusEquipamento] = @StatusEquipamento,
-                            [AuthToken] = @AuthToken,
-                            [FirmwareVersion] = @FirmwareVersion,
-                            [LastUpdate] = @LastUpdate,
-                            [DataAlteracao] = @DataAlteracao
-                        WHERE Id = @Id";
-
-            HelperDAO.ExecutaSQL(sql, CriaParamentros(equipamento));
-        }
-
-        private SqlParameter[] CriaParamentros(EquipamentoViewModel eq)
+        protected override SqlParameter[] CriaParametros(EquipamentoViewModel eq)
         {
             SqlParameter[] parametros = new SqlParameter[15];
 
@@ -95,8 +38,7 @@ namespace AtmoTrack_web_page.DAO
             return parametros;
         }
 
-
-        private EquipamentoViewModel MontaViewModelEquipamento(DataRow registro)
+        protected override EquipamentoViewModel MontaModel(DataRow registro)
         {
             var eq = new EquipamentoViewModel();
 
@@ -135,29 +77,6 @@ namespace AtmoTrack_web_page.DAO
             return empresa;
         }
 
-        public List<EquipamentoViewModel> Listagem()
-        {
-            var Lista = new List<EquipamentoViewModel>();
-            string sql = "Select * from [dbo].[tbEquipamento] order by Nome";
-            DataTable tabela = HelperDAO.ExecutaSelect(sql, null);
-
-            Console.WriteLine($"Número de linhas retornadas: {tabela.Rows.Count}");
-
-            foreach (DataRow row in tabela.Rows)
-            {
-                Lista.Add(MontaViewModelEquipamento(row));
-            }
-
-            return Lista; ;
-        }
-
-        public int LastId()
-        {
-            string sql = "select isnull(max(id) +1, 1) as 'MAIOR' from [dbo].[tbEquipamento]";
-            DataTable tabela = HelperDAO.ExecutaSelect(sql, null);
-            return Convert.ToInt32(tabela.Rows[0]["MAIOR"]);
-        }
-
         public List<EmpresaViewModel> GetAllEmpresas()
         {
             var ListaEmpresas = new List<EmpresaViewModel>();
@@ -176,20 +95,6 @@ namespace AtmoTrack_web_page.DAO
             {
                 Console.WriteLine("Erro: " + ex.Message);
                 throw;
-            }
-        }
-
-        public EquipamentoViewModel Consulta(int id)
-        {
-            string sql = "Select * from [dbo].[tbEquipamento] where id = " + id;
-            DataTable tabela = HelperDAO.ExecutaSelect(sql, null);
-            if (tabela.Rows.Count == 0)
-            {
-                return null;
-            }
-            else
-            {
-                return MontaViewModelEquipamento(tabela.Rows[0]);
             }
         }
 
@@ -227,12 +132,6 @@ namespace AtmoTrack_web_page.DAO
                 LastUpdate = Convert.ToDateTime(row["LastUpdate"]),
                 DataAlteracao = Convert.ToDateTime(row["DataAlteracao"])
             };
-        }
-
-        public void Excluir(int id)
-        {
-            string sql = "delete [dbo].[tbEquipamento] where id =" + id;
-            HelperDAO.ExecutaSQL(sql, null);
         }
     }
 }

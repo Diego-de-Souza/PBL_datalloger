@@ -7,53 +7,13 @@ using System.Text.RegularExpressions;
 
 namespace AtmoTrack_web_page.Controllers
 {
-    public class EmpresaController : Controller
+    public class EmpresaController : PadraoController<EmpresaViewModel>
     {
-        public IActionResult Index()
+        public EmpresaController()
         {
-            try
-            {
-                EmpresaDAO dao = new EmpresaDAO();
-                var em = dao.Listagem();
-
-                return View(em);
-            }
-            catch (Exception erro)
-            {
-
-            }
-            return View();
-        }
-
-        public IActionResult NovoRegistro()
-        {
-            try
-            {
-                ViewBag.cadastroEmpresa = "I";
-                EmpresaDAO dao = new EmpresaDAO();
-                EmpresaViewModel em = new EmpresaViewModel();
-                em.Id = dao.LastId();
-
-                var estados = dao.GetAllStates().Select(e => new SelectListItem
-                {
-                    Value = e.Id.ToString(),
-                    Text = e.Estado
-                }).ToList();
-
-                ViewBag.Estados = estados;
-
-                return View("Form", em);
-            }
-            catch (Exception erro)
-            {
-                var errorViewModel = new ErrorViewModel
-                {
-                    ErrorMessage = erro.Message,
-                    RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier
-                };
-
-                return View("Error", errorViewModel);
-            }
+            DAO = new EmpresaDAO();
+            GeraProximoId = true;
+            TipoRegistro = "E";
         }
 
         public IActionResult GetCidades(int estadoId)
@@ -69,119 +29,8 @@ namespace AtmoTrack_web_page.Controllers
                 return Json(new { error = erro.Message });
             }
         }
-        public IActionResult Salvar(EmpresaViewModel em, string cadastroEmpresa)
-        {
-            try
-            {
-                ValidaDados(em, cadastroEmpresa);
-                if (ModelState.IsValid == false)
-                {
-                    ViewBag.Operacao = cadastroEmpresa;
 
-                    // Repopula os estados
-                    EmpresaDAO dao = new EmpresaDAO();
-                    var estados = dao.GetAllStates().Select(e => new SelectListItem
-                    {
-                        Value = e.Id.ToString(),
-                        Text = e.Estado
-                    }).ToList();
-
-                    ViewBag.Estados = estados;
-
-                    ViewBag.cadastroEmpresa = cadastroEmpresa;
-
-                    return View("Form", em);
-                }
-                else
-                {
-                    var dao = new EmpresaDAO();
-                    if (cadastroEmpresa == "I")
-                    {
-                        dao.Inserir(em);
-                    }
-                    else if (cadastroEmpresa == "A")
-                    {
-                        dao.Alterar(em);
-                    }
-
-                    return RedirectToAction("Index");
-                }
-            }
-            catch (Exception erro)
-            {
-                return View("Error", erro.ToString());
-            }
-        }
-
-        public IActionResult Editar(int id)
-        {
-            try
-            {
-                ViewBag.cadastroEmpresa = "A";
-                EmpresaDAO dao = new EmpresaDAO();
-                EmpresaViewModel em = dao.Consulta(id);
-                var estados = dao.GetAllStates().Select(e => new SelectListItem
-                {
-                    Value = e.Id.ToString(),
-                    Text = e.Estado
-                }).ToList();
-
-                ViewBag.Estados = estados;
-
-                return View("Form", em);
-            }
-            catch (Exception erro)
-            {
-                return View("Erro", erro.ToString());
-            }
-        }
-
-        public IActionResult Delete(int id)
-        {
-            try
-            {
-                EmpresaDAO dao = new EmpresaDAO();
-                dao.Excluir(id);
-                return RedirectToAction("Index");
-            }
-            catch (Exception erro)
-            {
-                return View("Erro", erro.ToString());
-            }
-        }
-
-        public IActionResult Exibir(int id)
-        {
-            try
-            {
-                EmpresaDAO dao = new EmpresaDAO();
-                var em = dao.Consulta(id);
-                if (em == null)
-                {
-                    return NotFound();
-                }
-
-                var estado = dao.ConsultaEstado(em.EstadoId);
-
-                ViewBag.EstadoNome = estado != null ? estado.Estado : "Estado não encontrado";
-
-                if (estado == null)
-                {
-                    return NotFound();
-                }
-
-                var cidade = dao.ConsultaCidade(em.CidadeId);
-                ViewBag.CidadeNome = cidade != null ? cidade.Cidade : "Cidade não encontrado";
-
-                return View("ExibirEmpresa", em);
-            }
-            catch (Exception erro)
-            {
-                return View("Erro", erro.ToString());
-            }
-        }
-
-        private void ValidaDados(EmpresaViewModel empresa, string operacao)
+        public override void ValidaDados(EmpresaViewModel empresa, string operacao, string statusId)
         {
             ModelState.Clear(); // Limpa os erros criados automaticamente pelo Asp.net (que podem estar com msg em inglês) 
             EmpresaDAO dao = new EmpresaDAO();
@@ -191,9 +40,9 @@ namespace AtmoTrack_web_page.Controllers
                 ModelState.AddModelError("Id", "Id inválido!");
             else
             {
-                if (operacao == "I" && dao.Consulta(empresa.Id) != null)
+                if (operacao == "I" && statusId != null)
                     ModelState.AddModelError("Id", "Código já está em uso.");
-                if (operacao == "A" && dao.Consulta(empresa.Id) == null)
+                if (operacao == "A" && statusId == null)
                     ModelState.AddModelError("Id", "Usuário não existe.");
             }
 

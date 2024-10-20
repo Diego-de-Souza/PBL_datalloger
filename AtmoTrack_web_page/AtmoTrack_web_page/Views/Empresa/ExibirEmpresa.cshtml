@@ -4,36 +4,152 @@
     ViewData["Title"] = "Empresa";
 }
 
-<h1>Visualização da Empresa</h1>
-<span class="TituloSublinhado">
-    @Model.NomeFantasia
-</span>
+<head class="title">
+    <h1>Visualização da Empresa</h1>
+</head>
+
+<table class="table">
+    <tr class="primary">
+        <th>@Model.NomeFantasia</th>
+    </tr>
+</table>
 <hr />
 
-&nbsp;&nbsp; Razão Social: @Model.RazaoSocial
-<br />
-&nbsp;&nbsp; CNPJ: @Model.CNPJ
-<br />
-&nbsp;&nbsp; Inscrição Estadual: @Model.InscricaoEstadual
-<br />
-&nbsp;&nbsp; Web Site: @Model.WebSite
-<br />
-&nbsp;&nbsp; Telefone 1: @Model.Telefone1
-<br />
-&nbsp;&nbsp; Telefone 2: @Model.Telefone2
-<br />
-&nbsp;&nbsp; Endereço: @Model.Endereco
-<br />
-&nbsp;&nbsp; Cep: @Model.Cep
-<br />
-&nbsp;&nbsp; Estado: @ViewBag.EstadoNome
-<br />
-&nbsp;&nbsp; Cidade: @ViewBag.CidadeNome
-<br />
-&nbsp;&nbsp; Tipo: @Model.Tipo
-<br />
-&nbsp;&nbsp; Data de Registro: @Model.DataRegistro.ToString("dd/MM/yyyy")
-<br />
-&nbsp;&nbsp; Data de Alteração: @(Model.DataAlteracao?.ToString("dd/MM/yyyy") ?? "Não alterado")
-<br />
+<body class="usuario">
+    <table class="table1">
+        <tr>
+            <td>Razão Social</td>
+            <td class="linha-azulescuro">@Model.RazaoSocial</td>
+        <tr />
+        <tr>
+            <td>CNPJ</td>
+            <td class="linha-azulescuro">@Model.CNPJ</td>
+        <tr />
+        <tr>
+            <td>Inscrição Estadual</td>
+            <td class="linha-azulescuro">@Model.InscricaoEstadual</td>
+        <tr />
+        <tr>
+            <td>Web Site</td>
+            <td class="linha-azulescuro">@Model.WebSite</td>
+        <tr />
+        <tr>
+            <td>Telefone 1</td>
+            <td class="linha-azulescuro">@Model.Telefone1</td>
+        <tr />
+        <tr>
+            <td>Telefone 2</td>
+            <td class="linha-azulescuro">@Model.Telefone2</td>
+        <tr />
+        <tr>
+            <td>Endereço</td>
+            <td class="linha-azulescuro">@Model.Endereco</td>
+        <tr />
+        <tr>
+            <td>Cep</td>
+            <td class="linha-azulescuro">@Model.Cep</td>
+        <tr />
+        <tr>
+            <td>Estado</td>
+            <td class="linha-azulescuro">@ViewBag.EstadoNome</td>
+        <tr />
+        <tr>
+            <td>Cidade</td>
+            <td class="linha-azulescuro">@ViewBag.CidadeNome</td>
+        <tr />
+        <tr>
+        <tr>
+            <td>Tipo</td>
+            <td class="linha-azulescuro">@Model.Tipo</td>
+        <tr />
+        <tr>
+            <td>Data de Registro</td>
+            <td class="linha-azulescuro">@Model.DataRegistro.ToString("dd/MM/yyyy")</td>
+        <tr />
+        <tr>
+            <td>Data de Alteração</td>
+            <td class="linha-azulescuro">@(Model.DataAlteracao?.ToString("dd/MM/yyyy") ?? "Não alterado")</td>
+        <tr />
+    </table>
+</body>
 
+<style>
+    th {
+        color: black;
+        font-size: 2rem;
+        border: 2px solid black;
+        border-radius: 10px;
+    }
+
+    td {
+        font-size: 1.2rem;
+        border: 1px solid black;
+    }
+
+    .linha-azulescuro {
+        background-color: #112E3C;
+        color: #0DCAF0;
+    }
+
+    .primary {
+        background-color: #0DCAF0;
+    }
+
+    tr {
+        background-color: #0DCAF0;
+        color: black;
+    }
+
+    .title {
+        padding-top: 2%;
+        padding-bottom: 5%;
+    }
+
+    .usuario .container-geral {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        height: 100%;
+        max-width: 100% !important;
+        max-height: 100%;
+        justify-content: initial;
+    }
+
+    .container {
+        min-height: 100% !important;
+        min-width: 100%;
+        margin: 0 !important;
+        padding: 0 !important;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .table {
+        width: 50%;
+        margin-top: 5%;
+        border-collapse: separate;
+        border-spacing: 1px;
+        text-align: center;
+    }
+
+    .table1 {
+        width: 50%;
+        border-collapse: separate;
+        border-spacing: 1px;
+        text-align: center;
+        margin-bottom: 5%;
+    }
+
+    td:first-child {
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+    }
+
+    td:last-child {
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+</style>

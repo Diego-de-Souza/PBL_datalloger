@@ -8,53 +8,13 @@ using System.Text.RegularExpressions;
 
 namespace AtmoTrack_web_page.Controllers
 {
-    public class UsuarioController : Controller
+    public class UsuarioController : PadraoController<UsuarioViewModel>
     {
-        public IActionResult Index()
+        public UsuarioController()
         {
-            try
-            {
-                UsuarioDAO dao = new UsuarioDAO();
-                var us = dao.Listagem();
-
-                return View(us);
-            }
-            catch (Exception erro)
-            {
-
-            }
-            return View();
-        }
-
-        public IActionResult NovoRegistro()
-        {
-            try
-            {
-                ViewBag.cadastroUsuario = "I";
-                UsuarioDAO dao = new UsuarioDAO();
-                UsuarioViewModel us = new UsuarioViewModel();
-                us.Id = dao.LastId();
-
-                var estados = dao.GetAllStates().Select(e => new SelectListItem
-                {
-                    Value = e.Id.ToString(),
-                    Text = e.Estado
-                }).ToList();
-
-                ViewBag.Estados = estados;
-
-                return View("Form",us);
-            }
-            catch (Exception erro)
-            {
-                var errorViewModel = new ErrorViewModel
-                {
-                    ErrorMessage = erro.Message,  
-                    RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier
-                };
-
-                return View("Error", errorViewModel);
-            }
+            DAO = new UsuarioDAO();
+            GeraProximoId = true;
+            TipoRegistro = "U";
         }
 
         public IActionResult GetCidades(int estadoId)
@@ -67,132 +27,11 @@ namespace AtmoTrack_web_page.Controllers
             }
             catch (Exception erro)
             {
-                return Json(new { error = erro.Message });
+                return View("Error", new ErrorViewModel(erro.ToString()));
             }
         }
 
-        public IActionResult Salvar(UsuarioViewModel us, string cadastroUsuario)
-        {
-            try
-            {
-                ValidaDados(us, cadastroUsuario);
-                if (ModelState.IsValid == false)
-                {
-                    ViewBag.Operacao = cadastroUsuario;
-
-                    // Repopula os estados
-                    UsuarioDAO dao = new UsuarioDAO();
-                    var estados = dao.GetAllStates().Select(e => new SelectListItem
-                    {
-                        Value = e.Id.ToString(),
-                        Text = e.Estado
-                    }).ToList();
-
-                    ViewBag.Estados = estados;
-
-                    ViewBag.cadastroUsuario = cadastroUsuario;
-
-                    // Se um estado foi selecionado, repopula as cidades
-                    if (us.EstadoId > 0)
-                    {
-                        var cidades = dao.GetAllCitiesEstadoId(us.EstadoId).Select(c => new SelectListItem
-                        {
-                            Value = c.Id.ToString(),
-                            Text = c.Cidade
-                        }).ToList();
-                        ViewBag.Cidades = cidades;
-                    }
-
-                    return View("Form", us);
-                }
-                else
-                {
-                    var dao = new UsuarioDAO();
-                    if (cadastroUsuario == "I")
-                    {
-                        dao.Inserir(us);
-                    }
-                    else if (cadastroUsuario == "A")
-                    {
-                        dao.Alterar(us);
-                    }
-
-                    return RedirectToAction("Index");
-                }
-            }
-            catch (Exception erro)
-            {
-                return View("Error", erro.ToString());
-            }
-        }
-
-        public IActionResult Editar(int id)
-        {
-            try
-            {
-                ViewBag.cadastroUsuario = "A";
-                UsuarioDAO dao = new UsuarioDAO();
-                UsuarioViewModel us = dao.Consulta(id);
-                var estados = dao.GetAllStates().Select(e => new SelectListItem
-                {
-                    Value = e.Id.ToString(),
-                    Text = e.Estado
-                }).ToList();
-
-                ViewBag.Estados = estados;
-
-                return View("Form", us);
-            }
-            catch(Exception erro)
-            {
-                return View("Error", erro.ToString());
-            }
-        }
-
-        public IActionResult Delete(int id)
-        {
-            try
-            {
-                UsuarioDAO dao = new UsuarioDAO();
-                dao.Excluir(id);
-                return RedirectToAction("Index");
-            }catch (Exception erro)
-            {
-                return View("Error", erro.ToString());
-            }
-        }
-
-        public IActionResult Exibir(int id)
-        {
-            try
-            {
-                UsuarioDAO dao = new UsuarioDAO();
-                var us = dao.Consulta(id);
-                if (us == null)
-                {
-                    return NotFound();
-                }
-
-                var estado = dao.ConsultaEstado(us.EstadoId);
-
-                ViewBag.EstadoNome = estado != null ? estado.Estado : "Estado não encontrado";
-
-                if(estado == null)
-                {
-                    return NotFound();
-                }
-
-                var cidade = dao.ConsultaCidade(us.CidadeId);
-                ViewBag.CidadeNome = cidade != null ? cidade.Cidade : "Estado não encontrado";
-
-                return View("VisualizarUsuario", us);
-            }catch(Exception erro)
-            {
-                return View("Error", erro.ToString());
-            }
-        }
-
-        private void ValidaDados(UsuarioViewModel usuario, string operacao)
+        public override void ValidaDados(UsuarioViewModel usuario, string operacao, string statusId)
         {
             ModelState.Clear(); // Limpa os erros criados automaticamente pelo Asp.net (que podem estar com msg em inglês) 
             UsuarioDAO dao = new UsuarioDAO();
@@ -202,9 +41,9 @@ namespace AtmoTrack_web_page.Controllers
                 ModelState.AddModelError("Id", "Id inválido!");
             else
             {
-                if (operacao == "I" && dao.Consulta(usuario.Id) != null)
+                if (operacao == "I" && statusId != null)
                     ModelState.AddModelError("Id", "Código já está em uso.");
-                if (operacao == "A" && dao.Consulta(usuario.Id) == null)
+                if (operacao == "A" && statusId == null)
                     ModelState.AddModelError("Id", "Usuário não existe.");
             }
 

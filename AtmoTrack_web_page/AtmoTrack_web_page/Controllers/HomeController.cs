@@ -6,20 +6,32 @@ namespace AtmoTrack_web_page.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult RedirectToProperPage()
+        public IActionResult RedirectToProperPage(int dashboard)
         {
-            // Verifica se o usuário está logado
+            Console.WriteLine($"Dashboard: {dashboard}");
+
             if (HttpContext.Session.GetString("LoggedUser") != null)
             {
-                // Lógica para redirecionar para a página correta
-                return RedirectToAction("Dashboard1", "Dashboard");
+                if (dashboard == 1)
+                {
+                    return RedirectToAction("Dashboard1", "Dashboard");
+                }
+                else if (dashboard == 2)
+                {
+                    return RedirectToAction("Dashboard2", "Dashboard");
+                }
+                else
+                {
+                    return RedirectToAction("Index", "Home");
+                }
             }
             else
             {
-                // Se não estiver logado, redireciona para a página de login
                 return RedirectToAction("Index", "Login");
             }
+
         }
+
 
         public IActionResult Index()
         {

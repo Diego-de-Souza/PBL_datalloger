@@ -1,8 +1,7 @@
 ﻿namespace AtmoTrack_web_page.Models
 {
-    public class EstadoViewModel
+    public class EstadoViewModel: PadraoViewModel
     {
-        public Int16 Id { get; set; }
         public string Estado { get; set; }
 
     }

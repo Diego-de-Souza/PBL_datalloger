@@ -19,5 +19,11 @@ namespace AtmoTrack_web_page.DAO
                 throw new Exception("Erro ao conectar ao banco de dados", ex);
             }
         }
+
+        public HttpClient GetHttpClient()
+        {
+            
+            return new HttpClient();
+        }
     }
 }

@@ -18,10 +18,6 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Mobile\Documents\facul\5_semestre\PBL\PBL_datalloger\AtmoTrack_web_page\AtmoTrack_web_page
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Mobile/Documents/facul/5_semestre/PBL/PBL_datalloger/AtmoTrack_web_page/AtmoTrack_web_page/Views/Cadastro/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FkYXN0cm9cSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Mobile/Documents/facul/5_semestre/PBL/PBL_datalloger/AtmoTrack_web_page/AtmoTrack_web_page/Views/Dashboard/Dashboard1.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXERhc2hib2FyZDEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

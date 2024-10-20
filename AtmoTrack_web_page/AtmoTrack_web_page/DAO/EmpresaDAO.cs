@@ -4,75 +4,18 @@ using System.Data;
 
 namespace AtmoTrack_web_page.DAO
 {
-    public class EmpresaDAO
+    public class EmpresaDAO: PadraoDAO<EmpresaViewModel>
     {
-        public void Inserir(EmpresaViewModel empresa)
+        protected override void SetTabela()
         {
-            empresa.DataRegistro = DateTime.Now;
-            empresa.DataAlteracao = DateTime.Now;
-
-            string sql = @"INSERT INTO [dbo].[tbEmpresa](
-                            [Id],
-                            [RazaoSocial],
-                            [NomeFantasia],
-                            [CNPJ],
-                            [InscricaoEstadual],
-                            [WebSite],
-                            [Telefone1],
-                            [Telefone2],
-                            [Endereco],
-                            [Cep],
-                            [EstadoId],
-                            [CidadeId],
-                            [Tipo],
-                            [DataRegistro],
-                            [DataAlteracao]
-                        ) Values (
-                            @Id,
-                            @RazaoSocial,
-                            @NomeFantasia,
-                            @CNPJ,
-                            @InscricaoEstadual,
-                            @WebSite,
-                            @Telefone1,
-                            @Telefone2,
-                            @Endereco,
-                            @Cep,
-                            @EstadoId,
-                            @CidadeId,
-                            @Tipo,
-                            @DataRegistro,
-                            @DataAlteracao
-                        )";
-
-            HelperDAO.ExecutaSQL(sql, CriaParamentros(empresa));
+            Tabela = "tbEmpresa";
+            CamposInsert = "Id, RazaoSocial, NomeFantasia, CNPJ, InscricaoEstadual, WebSite, Telefone1, Telefone2, Endereco, Cep, EstadoId, CidadeId, Tipo, DataRegistro, DataAlteracao";
+            ValoresInsert = "@Id, @RazaoSocial, @NomeFantasia, @CNPJ, @InscricaoEstadual, @WebSite, @Telefone1, @Telefone2, @Endereco, @Cep, @EstadoId, @CidadeId, @Tipo, @DataRegistro, @DataAlteracao";
+            SetCampos = "RazaoSocial = @RazaoSocial, NomeFantasia = @NomeFantasia, CNPJ = @CNPJ, InscricaoEstadual = @InscricaoEstadual, WebSite = @WebSite, Telefone1 = @Telefone1, Telefone2 = @Telefone2, Endereco = @Endereco, Cep = @Cep, EstadoId = @EstadoId, CidadeId = @CidadeId, Tipo = @Tipo, DataRegistro = @DataRegistro, DataAlteracao = @DataAlteracao";
+            Condicoes = "WHERE Id = @Id";
         }
 
-        public void Alterar(EmpresaViewModel empresa)
-        {
-            empresa.DataAlteracao = DateTime.Now;
-
-            string sql = @" UPDATE [dbo].[tbEmpresa] set
-                            [RazaoSocial] = @RazaoSocial,
-                            [NomeFantasia] = @NomeFantasia,
-                            [CNPJ] = @CNPJ,
-                            [InscricaoEstadual] = @InscricaoEstadual,
-                            [WebSite] = @WebSite,
-                            [Telefone1] = @Telefone1,
-                            [Telefone2] = @Telefone2,
-                            [Endereco] = @Endereco,
-                            [Cep] = @Cep,
-                            [EstadoId] = @EstadoId,
-                            [CidadeId] = @CidadeId,
-                            [Tipo] = @Tipo,
-                            [DataRegistro] = @DataRegistro,
-                            [DataAlteracao] = @DataAlteracao
-                        WHERE Id = @Id";
-
-            HelperDAO.ExecutaSQL(sql, CriaParamentros(empresa));
-        }
-
-        private SqlParameter[] CriaParamentros(EmpresaViewModel em)
+        protected override SqlParameter[] CriaParametros(EmpresaViewModel em)
         {
             SqlParameter[] parametros = new SqlParameter[15];
 
@@ -95,7 +38,7 @@ namespace AtmoTrack_web_page.DAO
             return parametros;
         }
 
-        private EmpresaViewModel MontaViewModelEmpresa(DataRow registro)
+        protected override EmpresaViewModel MontaModel(DataRow registro)
         {
             var em = new EmpresaViewModel();
 
@@ -130,8 +73,6 @@ namespace AtmoTrack_web_page.DAO
             return em;
         }
 
-
-
         private EstadoViewModel MontaViewModelEstado(DataRow registro)
         {
             var estado = new EstadoViewModel()
@@ -143,39 +84,37 @@ namespace AtmoTrack_web_page.DAO
             return estado;
         }
 
-        private CidadeViewModel MontaViewModelCidade(DataRow registro)
+        private CidadeViewModel MontaViewModelCidade(DataRow registroCidade)
         {
             var cidade = new CidadeViewModel()
             {
-                Id = Convert.ToInt32(registro["Id"]),
-                Cidade = registro["Cidade"].ToString(),
-                EstadoId = Convert.ToInt16(registro["EstadoId"])
+                Id = Convert.ToInt32(registroCidade["Id"]),
+                Cidade = registroCidade["Cidade"].ToString(),
+                EstadoId = Convert.ToInt16(registroCidade["EstadoId"])
             };
 
             return cidade;
         }
 
-        public List<EmpresaViewModel> Listagem()
+        public List<CidadeViewModel> GetAllCitiesEstadoId(int id)
         {
-            var Lista = new List<EmpresaViewModel>();
-            string sql = "Select * from [dbo].[tbEmpresa] order by RazaoSocial";
-            DataTable tabela = HelperDAO.ExecutaSelect(sql, null);
-
-            Console.WriteLine($"Número de linhas retornadas: {tabela.Rows.Count}");
-
-            foreach (DataRow row in tabela.Rows)
+            var ListaCidades = new List<CidadeViewModel>();
+            string sql = "Select * from [dbo].[tbCidade] where estadoId = " + id + "order by Cidade";
+            try
             {
-                Lista.Add(MontaViewModelEmpresa(row));
+                DataTable tabela = HelperDAO.ExecutaSelect(sql, null);
+                foreach (DataRow row in tabela.Rows)
+                {
+                    ListaCidades.Add(MontaViewModelCidade(row));
+                }
+                return ListaCidades;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro: " + ex.Message);
+                throw;
             }
 
-            return Lista; ;
-        }
-
-        public int LastId()
-        {
-            string sql = "select isnull(max(id) +1, 1) as 'MAIOR' from [dbo].[tbEmpresa]";
-            DataTable tabela = HelperDAO.ExecutaSelect(sql, null);
-            return Convert.ToInt32(tabela.Rows[0]["MAIOR"]);
         }
 
         public List<EstadoViewModel> GetAllStates()
@@ -197,42 +136,6 @@ namespace AtmoTrack_web_page.DAO
             }
 
             return ListaEstados;
-        }
-
-        public List<CidadeViewModel> GetAllCitiesEstadoId(int id)
-        {
-            var ListaCidades = new List<CidadeViewModel>();
-            string sql = "Select * from [dbo].[tbCidade] where estadoId = " + id + "order by Cidade";
-            try
-            {
-                DataTable tabela = HelperDAO.ExecutaSelect(sql, null);
-                foreach (DataRow row in tabela.Rows)
-                {
-                    ListaCidades.Add(MontaViewModelCidade(row));
-                }
-                return ListaCidades;
-            }
-            catch (Exception ex)
-            {
-                // Registrar o erro ou exibir em uma view apropriada
-                Console.WriteLine("Erro: " + ex.Message);
-                throw;
-            }
-
-        }
-
-        public EmpresaViewModel Consulta(int id)
-        {
-            string sql = "Select * from [dbo].[tbEmpresa] where id = " + id;
-            DataTable tabela = HelperDAO.ExecutaSelect(sql, null);
-            if (tabela.Rows.Count == 0)
-            {
-                return null;
-            }
-            else
-            {
-                return MontaViewModelEmpresa(tabela.Rows[0]);
-            }
         }
 
         public EstadoViewModel ConsultaEstado(int id)
@@ -282,11 +185,6 @@ namespace AtmoTrack_web_page.DAO
                 DataRegistro = Convert.ToDateTime(row["DataRegistro"]),
                 DataAlteracao = Convert.ToDateTime(row["DataAlteracao"])
             };
-        }
-        public void Excluir(int id)
-        {
-            string sql = "delete [dbo].[tbEmpresa] where id =" + id;
-            HelperDAO.ExecutaSQL(sql, null);
         }
     }
 }

@@ -7,13 +7,13 @@
 <h2 class="text-center mb-4">Cadastro de Equipamento</h2>
 
 <form asp-action="Salvar">
-    <input type="hidden" value="@ViewBag.cadastroEquipamento" name="cadastroEquipamento" />
+    <input type="hidden" value="@ViewBag.Operacao" name="Operacao" />
     <div class="container">
         <div class="row">
             <!-- Id e Nome na mesma linha -->
             <div class="col-md-3">
                 <label for="Id" class="col-form-label">Id</label>
-                @if (ViewBag.cadastroEquipamento == "I")
+                @if (ViewBag.Operacao == "I")
                 {
                     <input type="text" name="Id" value="@Model.Id" class="form-control" />
                 }

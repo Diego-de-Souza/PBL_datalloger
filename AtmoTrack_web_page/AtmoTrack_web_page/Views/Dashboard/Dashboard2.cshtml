@@ -1,43 +1,44 @@
-﻿﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "Dashboard 2";
 }
 
-
 <h2>Dashboard 2</h2>
-
 <div>
-    <canvas id="myChart" width="1000" height="400"></canvas>
+    <canvas id="chartDashboard2" width="1000" height="400"></canvas>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        // Criar dados fake
-        const labels = ['0', '10', '20', '30', '40', '50', '60'];
-        const dataValues = [15, 20, 25, 22, 18, 30, 28]; // Dados fictícios
+    document.addEventListener("DOMContentLoaded", async function () {
+        async function fetchDataDashboard2() {
+            const response = await fetch('/Dashboard/GetData');
+            const data = await response.json();
+            return data.contextResponses[0].contextElement.attributes[0].values;
+        }
 
-        // Criação de gradiente
-        const ctx = document.getElementById('myChart').getContext('2d');
-        const gradient = ctx.createLinearGradient(0, 0, 0, 400);
-        gradient.addColorStop(0, 'rgba(75,192,192,1)'); // Cor inicial (topo)
-        gradient.addColorStop(1, 'rgba(153,102,255,1)'); // Cor final (baixo)
+        function processAPIData(apiData) {
+            const labels = [];
+            const values = [];
+
+            apiData.forEach(item => {
+                labels.push(new Date(item.recvTime).toLocaleTimeString());
+                values.push(item.attrValue);
+            });
+
+            return { labels, values };
+        }
+
+        const apiDataDashboard2 = await fetchDataDashboard2();
+        const { labels, values } = processAPIData(apiDataDashboard2);
 
         const data = {
             labels: labels,
             datasets: [{
-                label: 'Temperatura (°C)',
-                data: dataValues,
-                fill: true, // Preencher a área abaixo da linha com o gradiente
-                backgroundColor: gradient, // Aplicar o gradiente ao fundo do gráfico
-                borderColor: 'rgba(75, 192, 192, 1)', // Cor da linha
-                pointBackgroundColor: 'rgba(255, 99, 132, 1)', // Cor dos pontos
-                pointBorderColor: '#fff', // Cor da borda dos pontos
-                pointHoverBackgroundColor: '#fff', // Cor do ponto ao passar o mouse
-                pointHoverBorderColor: 'rgba(255, 99, 132, 1)', // Cor da borda ao passar o mouse
-                borderWidth: 5, // Espessura da linha
-                tension: 0.4 // Suavização da linha
+                label: 'Luminosidade - Dashboard 2',
+                data: values,
+                fill: false,
+                borderColor: 'rgba(255, 99, 132, 1)',
+                tension: 0.1
             }]
         };
 
@@ -50,22 +51,19 @@
                         beginAtZero: true,
                         title: {
                             display: true,
-                            text: 'Temperatura (°C)'
+                            text: 'Luminosidade'
                         }
                     },
                     x: {
                         title: {
                             display: true,
-                            text: 'Segundos'
+                            text: 'Horário'
                         }
                     }
                 }
             }
         };
 
-        const myChart = new Chart(
-            document.getElementById('myChart'),
-            config
-        );
+        new Chart(document.getElementById('chartDashboard2'), config);
     });
 </script>

@@ -1,63 +1,84 @@
-﻿﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "Dashboard 1";
 }
 
 <h2>Dashboard 1</h2>
-
 <div>
-    <canvas id="myChart" width="1000" height="400"></canvas>
+    <canvas id="chartDashboard1" width="1000" height="400"></canvas>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const labels = ['0', '10', '20', '30', '40', '50', '60'];
-        const data = {
-            labels: labels,
-            datasets: [{
-                label: 'Temperatura (°C)',
-                data: [15, 20, 25, 22, 18, 30, 28], // Dados de temperatura fictícios
-                fill: true, // Para não preencher a área abaixo da linha
-                borderColor: 'rgba(75, 192, 192, 1)', // Cor da linha
-                tension: 0.1 // Para suavizar a linha
-            }]
-        };
+    document.addEventListener("DOMContentLoaded", async function () {
+        let chart; // Variável global para o gráfico
 
-        const config = {
-            type: 'line', // Tipo de gráfico como 'line'
-            data: data,
-            options: {
-                animations: {
-                    borderWidth: {
-                        duration: 1000,
-                        easing: 'easeInOutQuad',
-                        from: 1,
-                        to: 5
-                    }
-                },
-                scales: {
-                    y: {
-                        beginAtZero: true, // Iniciar o eixo Y em 0
-                        title: {
-                            display: true,
-                            text: 'Temperatura (°C)' // Título do eixo Y
-                        }
+        async function fetchDataDashboard1() {
+            const response = await fetch('/Dashboard/GetData');
+            const data = await response.json();
+            return data.contextResponses[0].contextElement.attributes[0].values;
+        }
+
+        function processAPIData(apiData) {
+            const labels = [];
+            const values = [];
+
+            apiData.forEach(item => {
+                labels.push(new Date(item.recvTime).toLocaleTimeString());
+                values.push(item.attrValue);
+            });
+
+            return { labels, values };
+        }
+
+        async function updateChart() {
+            const apiDataDashboard1 = await fetchDataDashboard1();
+            const { labels, values } = processAPIData(apiDataDashboard1);
+
+            if (!chart) {
+                // Criar o gráfico pela primeira vez
+                const ctx = document.getElementById('chartDashboard1').getContext('2d');
+                chart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            label: 'Luminosidade - Dashboard 1',
+                            data: values,
+                            fill: false,
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                            tension: 0.1
+                        }]
                     },
-                    x: {
-                        title: {
-                            display: true,
-                            text: 'Segundos' // Título do eixo X
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: 'Luminosidade'
+                                }
+                            },
+                            x: {
+                                title: {
+                                    display: true,
+                                    text: 'Horário'
+                                }
+                            }
                         }
                     }
-                }
+                });
+            } else {
+                // Atualizar os dados do gráfico existente
+                chart.data.labels = labels;
+                chart.data.datasets[0].data = values;
+                chart.update(); // Atualizar o gráfico com novos dados
             }
-        };
+        }
 
-        const myChart = new Chart(
-            document.getElementById('myChart'),
-            config
-        );
+        // Atualizar o gráfico ao carregar a página
+        await updateChart();
+
+        // Atualizar o gráfico automaticamente a cada 1 minuto (60000 milissegundos)
+        setInterval(updateChart, 10000);
     });
 </script>

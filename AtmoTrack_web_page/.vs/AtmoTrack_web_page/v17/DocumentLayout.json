@@ -1,7 +1,12 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\",
-  "Documents": [],
+  "WorkspaceRootPath": "F:\\PBL ec5\\AtmoTrack_web_page\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|f:\\pbl ec5\\atmotrack_web_page\\atmotrack_web_page\\views\\home\\sobre.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\views\\home\\sobre.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +14,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 220,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Sobre.cshtml",
+              "DocumentMoniker": "F:\\PBL ec5\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Home\\Sobre.cshtml",
+              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Views\\Home\\Sobre.cshtml",
+              "ToolTip": "F:\\PBL ec5\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Home\\Sobre.cshtml",
+              "RelativeToolTip": "AtmoTrack_web_page\\Views\\Home\\Sobre.cshtml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAADsAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-23T15:20:07.839Z",
+              "EditorCaption": ""
             }
           ]
         }

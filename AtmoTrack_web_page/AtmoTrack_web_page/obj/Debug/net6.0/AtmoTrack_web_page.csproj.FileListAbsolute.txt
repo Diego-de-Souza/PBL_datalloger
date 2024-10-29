@@ -305,3 +305,42 @@ C:\Users\Mobile\Documents\facul\5_semestre\PBL\PBL_datalloger\AtmoTrack_web_page
 C:\Users\Mobile\Documents\facul\5_semestre\PBL\PBL_datalloger\AtmoTrack_web_page\AtmoTrack_web_page\obj\Debug\net6.0\AtmoTrack_web_page.pdb
 C:\Users\Mobile\Documents\facul\5_semestre\PBL\PBL_datalloger\AtmoTrack_web_page\AtmoTrack_web_page\obj\Debug\net6.0\AtmoTrack_web_page.genruntimeconfig.cache
 C:\Users\Mobile\Documents\facul\5_semestre\PBL\PBL_datalloger\AtmoTrack_web_page\AtmoTrack_web_page\obj\Debug\net6.0\ref\AtmoTrack_web_page.dll
+F:\PBL ec5\AtmoTrack_web_page\AtmoTrack_web_page\bin\Debug\net6.0\appsettings.Development.json
+F:\PBL ec5\AtmoTrack_web_page\AtmoTrack_web_page\bin\Debug\net6.0\appsettings.json
+F:\PBL ec5\AtmoTrack_web_page\AtmoTrack_web_page\bin\Debug\net6.0\AtmoTrack_web_page.staticwebassets.runtime.json
+F:\PBL ec5\AtmoTrack_web_page\AtmoTrack_web_page\bin\Debug\net6.0\AtmoTrack_web_page.exe
+F:\PBL ec5\AtmoTrack_web_page\AtmoTrack_web_page\bin\Debug\net6.0\AtmoTrack_web_page.deps.json
+F:\PBL ec5\AtmoTrack_web_page\AtmoTrack_web_page\bin\Debug\net6.0\AtmoTrack_web_page.runtimeconfig.json
+F:\PBL ec5\AtmoTrack_web_page\AtmoTrack_web_page\bin\Debug\net6.0\AtmoTrack_web_page.dll
+F:\PBL ec5\AtmoTrack_web_page\AtmoTrack_web_page\bin\Debug\net6.0\AtmoTrack_web_page.pdb
+F:\PBL ec5\AtmoTrack_web_page\AtmoTrack_web_page\bin\Debug\net6.0\System.Data.SqlClient.dll
+F:\PBL ec5\AtmoTrack_web_page\AtmoTrack_web_page\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+F:\PBL ec5\AtmoTrack_web_page\AtmoTrack_web_page\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+F:\PBL ec5\AtmoTrack_web_page\AtmoTrack_web_page\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+F:\PBL ec5\AtmoTrack_web_page\AtmoTrack_web_page\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+F:\PBL ec5\AtmoTrack_web_page\AtmoTrack_web_page\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+F:\PBL ec5\AtmoTrack_web_page\AtmoTrack_web_page\obj\Debug\net6.0\AtmoTrack_web_page.csproj.AssemblyReference.cache
+F:\PBL ec5\AtmoTrack_web_page\AtmoTrack_web_page\obj\Debug\net6.0\AtmoTrack_web_page.GeneratedMSBuildEditorConfig.editorconfig
+F:\PBL ec5\AtmoTrack_web_page\AtmoTrack_web_page\obj\Debug\net6.0\AtmoTrack_web_page.AssemblyInfoInputs.cache
+F:\PBL ec5\AtmoTrack_web_page\AtmoTrack_web_page\obj\Debug\net6.0\AtmoTrack_web_page.AssemblyInfo.cs
+F:\PBL ec5\AtmoTrack_web_page\AtmoTrack_web_page\obj\Debug\net6.0\AtmoTrack_web_page.csproj.CoreCompileInputs.cache
+F:\PBL ec5\AtmoTrack_web_page\AtmoTrack_web_page\obj\Debug\net6.0\AtmoTrack_web_page.MvcApplicationPartsAssemblyInfo.cache
+F:\PBL ec5\AtmoTrack_web_page\AtmoTrack_web_page\obj\Debug\net6.0\AtmoTrack_web_page.RazorAssemblyInfo.cache
+F:\PBL ec5\AtmoTrack_web_page\AtmoTrack_web_page\obj\Debug\net6.0\AtmoTrack_web_page.RazorAssemblyInfo.cs
+F:\PBL ec5\AtmoTrack_web_page\AtmoTrack_web_page\obj\Debug\net6.0\AtmoTrack_web_page.sourcelink.json
+F:\PBL ec5\AtmoTrack_web_page\AtmoTrack_web_page\obj\Debug\net6.0\staticwebassets.build.json
+F:\PBL ec5\AtmoTrack_web_page\AtmoTrack_web_page\obj\Debug\net6.0\staticwebassets.development.json
+F:\PBL ec5\AtmoTrack_web_page\AtmoTrack_web_page\obj\Debug\net6.0\staticwebassets\msbuild.AtmoTrack_web_page.Microsoft.AspNetCore.StaticWebAssets.props
+F:\PBL ec5\AtmoTrack_web_page\AtmoTrack_web_page\obj\Debug\net6.0\staticwebassets\msbuild.build.AtmoTrack_web_page.props
+F:\PBL ec5\AtmoTrack_web_page\AtmoTrack_web_page\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.AtmoTrack_web_page.props
+F:\PBL ec5\AtmoTrack_web_page\AtmoTrack_web_page\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.AtmoTrack_web_page.props
+F:\PBL ec5\AtmoTrack_web_page\AtmoTrack_web_page\obj\Debug\net6.0\staticwebassets.pack.json
+F:\PBL ec5\AtmoTrack_web_page\AtmoTrack_web_page\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+F:\PBL ec5\AtmoTrack_web_page\AtmoTrack_web_page\obj\Debug\net6.0\scopedcss\bundle\AtmoTrack_web_page.styles.css
+F:\PBL ec5\AtmoTrack_web_page\AtmoTrack_web_page\obj\Debug\net6.0\scopedcss\projectbundle\AtmoTrack_web_page.bundle.scp.css
+F:\PBL ec5\AtmoTrack_web_page\AtmoTrack_web_page\obj\Debug\net6.0\AtmoTrac.7688A2A3.Up2Date
+F:\PBL ec5\AtmoTrack_web_page\AtmoTrack_web_page\obj\Debug\net6.0\AtmoTrack_web_page.dll
+F:\PBL ec5\AtmoTrack_web_page\AtmoTrack_web_page\obj\Debug\net6.0\refint\AtmoTrack_web_page.dll
+F:\PBL ec5\AtmoTrack_web_page\AtmoTrack_web_page\obj\Debug\net6.0\AtmoTrack_web_page.pdb
+F:\PBL ec5\AtmoTrack_web_page\AtmoTrack_web_page\obj\Debug\net6.0\AtmoTrack_web_page.genruntimeconfig.cache
+F:\PBL ec5\AtmoTrack_web_page\AtmoTrack_web_page\obj\Debug\net6.0\ref\AtmoTrack_web_page.dll

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZRZ9ZI0VZvs=",
+  "dgSpecHash": "GF+1/m7ZyFk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\AtmoTrack_web_page.csproj",
+  "projectFilePath": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\teste\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\AtmoTrack_web_page.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mobile\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Mobile\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\AtmoTrack_web_page.csproj": {}
+    "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\teste\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\AtmoTrack_web_page.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\AtmoTrack_web_page.csproj": {
+    "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\teste\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\AtmoTrack_web_page.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\AtmoTrack_web_page.csproj",
+        "projectUniqueName": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\teste\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\AtmoTrack_web_page.csproj",
         "projectName": "AtmoTrack_web_page",
-        "projectPath": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\AtmoTrack_web_page.csproj",
+        "projectPath": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\teste\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\AtmoTrack_web_page.csproj",
         "packagesPath": "C:\\Users\\Mobile\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\obj\\",
+        "outputPath": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\teste\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Mobile\\AppData\\Roaming\\NuGet\\NuGet.Config",

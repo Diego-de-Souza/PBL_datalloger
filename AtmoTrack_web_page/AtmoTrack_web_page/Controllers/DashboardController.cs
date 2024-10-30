@@ -27,12 +27,12 @@ namespace AtmoTrack_web_page.Controllers
 
         // Endpoint que consome a API via DashboardDAO
         [HttpGet]
-        public async Task<IActionResult> GetData()
+        public async Task<IActionResult> GetData(string dataObject)
         {
             try
             {
                 // Chama o método do DAO para consumir a API
-                var data = await _dashboardDAO.GetLuminosityDataAsync();
+                var data = await _dashboardDAO.GetLuminosityDataAsync(dataObject);
                 return Content(data, "application/json");
             }
             catch (HttpRequestException e)

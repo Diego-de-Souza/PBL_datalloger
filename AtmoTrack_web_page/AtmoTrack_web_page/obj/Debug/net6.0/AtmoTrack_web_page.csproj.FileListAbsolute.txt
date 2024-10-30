@@ -344,3 +344,4 @@ F:\PBL ec5\AtmoTrack_web_page\AtmoTrack_web_page\obj\Debug\net6.0\refint\AtmoTra
 F:\PBL ec5\AtmoTrack_web_page\AtmoTrack_web_page\obj\Debug\net6.0\AtmoTrack_web_page.pdb
 F:\PBL ec5\AtmoTrack_web_page\AtmoTrack_web_page\obj\Debug\net6.0\AtmoTrack_web_page.genruntimeconfig.cache
 F:\PBL ec5\AtmoTrack_web_page\AtmoTrack_web_page\obj\Debug\net6.0\ref\AtmoTrack_web_page.dll
+C:\Users\Mobile\Documents\facul\5_semestre\PBL\teste\PBL_datalloger\AtmoTrack_web_page\AtmoTrack_web_page\bin\Debug\net6.0\Newtonsoft.Json.dll

@@ -56,38 +56,46 @@
         </div>
         <br />
 
+
         <div class="row">
-            <!-- Endereço sozinho em uma linha -->
-            <div class="col-md-12">
-                <label class="col-form-label">Endereço</label>
-                <input type="text" name="endereco" value="@Model.Endereco" class="form-control" />
+            <div class="col-md-2">
+                <label class="col-form-label" for="Cep">CEP</label>
+                <input type="text" id="Cep" name="cep" value="@Model.Cep" class="form-control" onblur="buscaCEP()"/>
+                <span asp-validation-for="Cep" class="text-danger"></span>
+            </div>
+            <div class="col-md-8">
+                <label class="col-form-label" for="Endereco">Endereço</label>
+                <input type="text" name="Endereco" id="Endereco" value="@Model.Endereco" class="form-control" />
                 <span asp-validation-for="Endereco" class="text-danger"></span>
+            </div>
+            <div class="col-md-2">
+                <label class="col-form-label" for="Numero">Número</label>
+                <input type="text" name="Numero" id="Numero" value="@Model.Numero" class="form-control" />
+                <span asp-validation-for="Numero" class="text-danger"></span>
             </div>
         </div>
         <br />
 
         <div class="row">
-            <!-- Estado e CEP na mesma linha -->
-            <div class="col-md-4">
-                <label for="EstadoId">Estado</label>
-                <select asp-for="EstadoId" class="form-control" asp-items="ViewBag.Estados">
-                    <option value="">Selecione um estado</option>
-                </select>
-                <span asp-validation-for="EstadoId" class="text-danger"></span>
+            <div class="col-md-5">
+                <label class="col-form-label" for="Bairro">Bairro</label>
+                <input type="text" id="Bairro" name="Bairro" value="@Model.Bairro" class="form-control" />
+                <span asp-validation-for="Bairro" class="text-danger"></span>
             </div>
-            <div class="col-md-4">
-                <label for="CidadeId">Cidade</label>
-                @*<input type="text" name="CidadeId" value="@Model.CidadeId" class="form-control" />*@
-                @*<select asp-for="CidadeId" class="form-control" id="CidadeId" name="CidadeId">*@
-                <select asp-for="CidadeId" class="form-control" asp-items="ViewBag.Cidade">
-                    <option value="">Selecione uma cidade</option>
-                </select>
-                <span asp-validation-for="CidadeId" class="text-danger"></span>
+            <div class="col-md-5">
+                <label class="col-form-label" for="Cidade">Cidade</label>
+                <input type="text" id="Cidade" name="Cidade" value="@Model.Cidade" class="form-control" />
+                <span asp-validation-for="Cidade" class="text-danger"></span>
             </div>
-            <div class="col-md-4">
-                <label for="Cep">CEP</label>
-                <input type="text" id="Cep" name="cep" value="@Model.Cep" class="form-control" placeholder="00000-000" />
-                <span asp-validation-for="Cep" class="text-danger"></span>
+            <div class="col-md-5">
+                <label class="col-form-label" for="Estado">Estado</label>
+                <input type="text" id="Estado" name="Estado" value="@Model.Estado" class="form-control" />
+                <span asp-validation-for="Estado" class="text-danger"></span>
+            </div>
+            <div class="col-md-2">
+                <label class="col-form-label" for="Uf">UF</label>
+                <input type="text" id="Uf" name="Uf" value="@Model.Uf" class="form-control" />
+                <span asp-validation-for="Uf" class="text-danger"></span>
             </div>
         </div>
         <br />
@@ -95,12 +103,12 @@
         <div class="row">
             <!-- Telefone e Telefone Comercial na mesma linha -->
             <div class="col-md-6">
-                <label for="Telefone">Telefone</label>
+                <label class="col-form-label" for="Telefone">Telefone</label>
                 <input type="text" id="Telefone" name="Telefone" value="@Model.Telefone" class="form-control" placeholder="(00)00000-0000" maxlength="14"/>
                 <span asp-validation-for="Telefone" class="text-danger"></span>
             </div>
             <div class="col-md-6">
-                <label for="TelefoneComercial">Telefone Comercial</label>
+                <label class="col-form-label" for="TelefoneComercial">Telefone Comercial</label>
                 <input type="text" name="telefoneComercial" value="@Model.TelefoneComercial" class="form-control" placeholder="(00)00000-0000" maxlength="14"/>
                 <span asp-validation-for="TelefoneComercial" class="text-danger"></span>
             </div>
@@ -110,30 +118,17 @@
         <div class="row">
             <!-- Empresa e Cargo na mesma linha -->
             <div class="col-md-6">
-                <label for="Empresa">Empresa</label>
+                <label class="col-form-label" for="Empresa">Empresa</label>
                 <input type="text" name="empresa" value="@Model.Empresa" class="form-control" />
                 <span asp-validation-for="Empresa" class="text-danger"></span>
             </div>
             <div class="col-md-6">
-                <label for="Cargo">Cargo</label>
+                <label class="col-form-label" for="Cargo">Cargo</label>
                 <input type="text" name="cargo" value="@Model.Cargo" class="form-control" />
                 <span asp-validation-for="Cargo" class="text-danger"></span>
             </div>
         </div>
         <br />
-
-        @if (ViewBag.cadastroUsuario != "I")
-        {
-            <div class="row">
-                <!-- Data de Registro -->
-                <div class="col-md-12">
-                    <label for="DataRegistro">Data de Registro</label>
-                    <input type="date" name="dataRegistro" value="@Model.DataRegistro.ToString("yyyy-MM-dd")" class="form-control" />
-
-                </div>
-            </div>
-            <br />
-        }
 
         <!-- Botão de Submit -->
         <div class="row">
@@ -152,32 +147,4 @@
         e.target.value = value;
     });
 
-    document.getElementById('Cep').addEventListener('input', function (e) {
-    let value = e.target.value.replace(/\D/g, ''); // Remove tudo que não é dígito
-    value = value.replace(/^(\d{5})(\d{3})?$/, '$1-$2'); // Aplica a máscara
-    e.target.value = value;
-    });
-
-
-    document.getElementById('EstadoId').addEventListener('change', function () {
-        var estadoId = this.value;
-        var cidadeSelect = document.getElementById('CidadeId');
-        cidadeSelect.innerHTML = '<option value="">Selecione uma cidade</option>'; // Reset
-
-        if (estadoId) {
-            fetch('/Usuario/GetCidades?estadoId=' + estadoId)
-                .then(response => response.json())
-                .then(cidades => {
-                    console.log(cidades); // Verifique a estrutura do objeto retornado
-                    cidades.forEach(cidade => {
-                        console.log(cidade); // Verifique a estrutura de cada cidade
-                        var option = document.createElement('option');
-                        option.value = cidade.id;
-                        option.textContent = cidade.cidade;
-                        cidadeSelect.appendChild(option);
-                    });
-                })
-                .catch(error => console.error('Erro ao buscar cidades:', error));
-        }
-    });
 </script>

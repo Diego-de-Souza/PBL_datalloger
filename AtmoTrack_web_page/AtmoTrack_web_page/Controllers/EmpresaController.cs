@@ -16,20 +16,6 @@ namespace AtmoTrack_web_page.Controllers
             TipoRegistro = "E";
         }
 
-        public IActionResult GetCidades(int estadoId)
-        {
-            try
-            {
-                EmpresaDAO dao = new EmpresaDAO();
-                var cidades = dao.GetAllCitiesEstadoId(estadoId);
-                return Json(cidades);
-            }
-            catch (Exception erro)
-            {
-                return Json(new { error = erro.Message });
-            }
-        }
-
         public override void ValidaDados(EmpresaViewModel empresa, string operacao, string statusId)
         {
             ModelState.Clear(); // Limpa os erros criados automaticamente pelo Asp.net (que podem estar com msg em inglês) 
@@ -69,11 +55,11 @@ namespace AtmoTrack_web_page.Controllers
             if (string.IsNullOrEmpty(empresa.Endereco))
                 ModelState.AddModelError("Endereco", "Preencha o endereço.");
 
-            if (empresa.EstadoId <= 0)
-                ModelState.AddModelError("EstadoId", "Selecione um estado válido.");
+            if (string.IsNullOrEmpty(empresa.Estado))
+                ModelState.AddModelError("Estado", "Selecione um estado válido.");
 
-            if (empresa.CidadeId <= 0)
-                ModelState.AddModelError("CidadeId", "Selecione uma cidade válida.");
+            if (string.IsNullOrEmpty(empresa.Cidade))
+                ModelState.AddModelError("Cidade", "Selecione uma cidade válida.");
 
             if (string.IsNullOrEmpty(empresa.Tipo))
                 ModelState.AddModelError("Tipo", "Preencha o tipo.");
@@ -131,6 +117,11 @@ namespace AtmoTrack_web_page.Controllers
                 }
             }
 
+        }
+
+        public IActionResult TesteCep()
+        {
+            return View();
         }
     }
 }

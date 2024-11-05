@@ -89,7 +89,7 @@ namespace AtmoTrack_web_page.DAO
                 new SqlParameter("tabela",Tabela),
                 new SqlParameter("Ordem", "1") // primeiro campo d atabela
             };
-            var tabela = HelperDAO.ExecutaProcSelect(NomeSpListagem, p);
+            var tabela = HelperDAO.ExecutaProcSelect("SpListagem", p);
             List<T> lista = new List<T>();
             foreach (DataRow registro in tabela.Rows)
                 lista.Add(MontaModel(registro));

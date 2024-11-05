@@ -1,56 +1,46 @@
+using AtmoTrack_web_page.DAO;
 using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Session; // Adicione esta linha
-using Microsoft.Extensions.FileProviders;
 
-namespace AtmoTrack_web_page
-{
-    public class Program
+var builder = WebApplication.CreateBuilder(args);
+
+// Adiciona serviços ao contêiner
+builder.Services.AddControllersWithViews();
+
+// Configuração de autenticação por cookies
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
     {
-        public static void Main(string[] args)
-        {
-            var builder = WebApplication.CreateBuilder(args);
+        options.LoginPath = "/Login/Index";
+        options.LogoutPath = "/Login/Logout";
+        options.AccessDeniedPath = "/Home/Index";
+    });
 
-            // Add services to the container.
-            builder.Services.AddControllersWithViews();
+// Configuração de sessões
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
 
-            // Adiciona o serviço de autenticação por cookies
-            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-                .AddCookie(options =>
-                {
-                    options.LoginPath = "/Login/Index";  // Caminho para a página de login
-                    options.LogoutPath = "/Login/Logout"; // Caminho para logout
-                    options.AccessDeniedPath = "/Home/Index"; // Página para acesso negado (opcional)
-                });
+var app = builder.Build();
 
-            // Adiciona suporte a sessões
-            builder.Services.AddSession(options =>
-            {
-                options.IdleTimeout = TimeSpan.FromMinutes(30); // Duração da sessão
-                options.Cookie.HttpOnly = true; // O cookie da sessão não pode ser acessado por scripts
-                options.Cookie.IsEssential = true; // O cookie é essencial para o funcionamento da aplicação
-            });
-
-            var app = builder.Build();
-
-            // Configure the HTTP request pipeline.
-            if (!app.Environment.IsDevelopment())
-            {
-                app.UseExceptionHandler("/Home/Error");
-            }
-
-            app.UseStaticFiles();
-
-            app.UseRouting();
-
-            app.UseSession(); // Ativa as sessões
-            app.UseAuthentication(); // Habilita autenticação
-            app.UseAuthorization(); // Habilita autorização
-
-            app.MapControllerRoute(
-                name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
-
-            app.Run();
-        }
-    }
+// Configuração do pipeline de requisições HTTP
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Home/Error");
 }
+
+app.UseStaticFiles();
+
+app.UseRouting();
+
+app.UseSession();
+app.UseAuthentication();
+app.UseAuthorization();
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.Run();

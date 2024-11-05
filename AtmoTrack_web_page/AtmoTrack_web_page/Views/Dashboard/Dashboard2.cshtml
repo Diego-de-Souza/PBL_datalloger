@@ -1,69 +1,20 @@
 ﻿@{
-    ViewData["Title"] = "Dashboard 2";
+    ViewData["Title"] = "Dashboard2";
 }
+<h2>Dashboard - MQTT Data</h2>
+<div id="dataDisplay">Esperando dados MQTT...</div>
 
-<h2>Dashboard 2</h2>
-<div>
-    <canvas id="chartDashboard2" width="1000" height="400"></canvas>
-</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/3.1.18/signalr.min.js"></script>
+<script type="text/javascript">
+    const connection = new signalR.HubConnectionBuilder()
+        .withUrl("/mqtthub")
+        .build();
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", async function () {
-        async function fetchDataDashboard2() {
-            const response = await fetch('/Dashboard/GetData');
-            const data = await response.json();
-            return data.contextResponses[0].contextElement.attributes[0].values;
-        }
+    connection.on("ReceiveData", function (data) {
+        document.getElementById("dataDisplay").innerText = data;
+    });
 
-        function processAPIData(apiData) {
-            const labels = [];
-            const values = [];
-
-            apiData.forEach(item => {
-                labels.push(new Date(item.recvTime).toLocaleTimeString());
-                values.push(item.attrValue);
-            });
-
-            return { labels, values };
-        }
-
-        const apiDataDashboard2 = await fetchDataDashboard2();
-        const { labels, values } = processAPIData(apiDataDashboard2);
-
-        const data = {
-            labels: labels,
-            datasets: [{
-                label: 'Luminosidade - Dashboard 2',
-                data: values,
-                fill: false,
-                borderColor: 'rgba(255, 99, 132, 1)',
-                tension: 0.1
-            }]
-        };
-
-        const config = {
-            type: 'line',
-            data: data,
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        title: {
-                            display: true,
-                            text: 'Luminosidade'
-                        }
-                    },
-                    x: {
-                        title: {
-                            display: true,
-                            text: 'Horário'
-                        }
-                    }
-                }
-            }
-        };
-
-        new Chart(document.getElementById('chartDashboard2'), config);
+    connection.start().catch(function (err) {
+        return console.error(err.toString());
     });
 </script>

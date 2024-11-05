@@ -11,16 +11,16 @@ namespace AtmoTrack_web_page.DAO
         protected override void SetTabela()
         {
             Tabela = "Usuario";
-            CamposInsert = "Id, Nome, Email, Senha, Endereco, Cep, Telefone, TelefoneComercial, Empresa, Cargo, EstadoId, CidadeId, DataRegistro, DataAlteracao";
-            ValoresInsert = "@Id, @Nome, @Email, @Senha, @Endereco, @Cep, @Telefone, @TelefoneComercial, @Empresa, @Cargo, @EstadoId, @CidadeId, @DataRegistro, @DataAlteracao";
-            SetCampos = "Nome = @Nome, Email = @Email, Senha = @Senha, Endereco = @Endereco, Cep = @Cep, Telefone = @Telefone, TelefoneComercial = @TelefoneComercial, Empresa = @Empresa, Cargo = @Cargo, EstadoId = @EstadoId, CidadeId = @CidadeId, DataRegistro = @DataRegistro, DataAlteracao = @DataAlteracao";
+            CamposInsert = "Id, Nome, Email, Senha, Endereco, Cep, Telefone, TelefoneComercial, Empresa, Cargo, Estado, Cidade, Bairro, Uf, Numero, DataRegistro, DataAlteracao";
+            ValoresInsert = "@Id, @Nome, @Email, @Senha, @Endereco, @Cep, @Telefone, @TelefoneComercial, @Empresa, @Cargo, @Estado, @Cidade, @Bairro, @Uf, @Numero, @DataRegistro, @DataAlteracao";
+            SetCampos = "Nome = @Nome, Email = @Email, Senha = @Senha, Endereco = @Endereco, Cep = @Cep, Telefone = @Telefone, TelefoneComercial = @TelefoneComercial, Empresa = @Empresa, Cargo = @Cargo, Estado = @Estado, Cidade = @Cidade, Birro = @Bairro, Uf = @Uf, Numero = @Numero, DataRegistro = @DataRegistro, DataAlteracao = @DataAlteracao";
             Condicoes = "WHERE Id = @Id";
 
         }
 
         protected override SqlParameter[] CriaParametros(UsuarioViewModel us)
         {
-            SqlParameter[] parametros = new SqlParameter[14];
+            SqlParameter[] parametros = new SqlParameter[17];
             
             parametros[0] = new SqlParameter("@Id", SqlDbType.Int) { Value = us.Id };
             parametros[1] = new SqlParameter("@Nome", SqlDbType.NVarChar, 100) { Value = (object)us.Nome ?? DBNull.Value };
@@ -32,10 +32,13 @@ namespace AtmoTrack_web_page.DAO
             parametros[7] = new SqlParameter("@TelefoneComercial", SqlDbType.NVarChar, 15) { Value = (object)us.TelefoneComercial ?? DBNull.Value };
             parametros[8] = new SqlParameter("@Empresa", SqlDbType.NVarChar, 100) { Value = (object)us.Empresa };
             parametros[9] = new SqlParameter("@Cargo", SqlDbType.NVarChar, 50) { Value = (object)us.Cargo };
-            parametros[10] = new SqlParameter("@EstadoId", SqlDbType.SmallInt) { Value = (object)us.EstadoId };
-            parametros[11] = new SqlParameter("@CidadeId", SqlDbType.Int) { Value = (object)us.CidadeId ?? DBNull.Value };
-            parametros[12] = new SqlParameter("@DataRegistro", SqlDbType.DateTime) { Value = (object)us.DataRegistro ?? DBNull.Value };
-            parametros[13] = new SqlParameter("@DataAlteracao", SqlDbType.DateTime) { Value = (object)us.DataAlteracao ?? DBNull.Value };
+            parametros[10] = new SqlParameter("@Estado", SqlDbType.NVarChar, 50) { Value = (object)us.Estado };
+            parametros[11] = new SqlParameter("@Cidade", SqlDbType.NVarChar, 50) { Value = (object)us.Cidade};
+            parametros[12] = new SqlParameter("@Bairro", SqlDbType.NVarChar, 50) { Value = (object)us.Bairro };
+            parametros[13] = new SqlParameter("@Uf", SqlDbType.NVarChar, 2) { Value = (object)us.Uf };
+            parametros[14] = new SqlParameter("@Numero", SqlDbType.NVarChar, 50) { Value = (object)us.Numero };
+            parametros[15] = new SqlParameter("@DataRegistro", SqlDbType.DateTime) { Value = (object)us.DataRegistro ?? DBNull.Value };
+            parametros[16] = new SqlParameter("@DataAlteracao", SqlDbType.DateTime) { Value = (object)us.DataAlteracao ?? DBNull.Value };
  
             return parametros;
         }
@@ -56,12 +59,11 @@ namespace AtmoTrack_web_page.DAO
 
             us.Empresa = registro["Empresa"].ToString();
             us.Cargo = registro["Cargo"].ToString();
-            if (registro["EstadoId"] != DBNull.Value)
-                us.EstadoId = Convert.ToInt16(registro["EstadoId"]);
-
-            if (registro["CidadeId"] != DBNull.Value)
-                us.CidadeId = Convert.ToInt32(registro["CidadeId"]);
-
+            us.Estado = registro["Estado"].ToString();
+            us.Cidade = registro["Cidade"].ToString();
+            us.Bairro = registro["Bairro"].ToString();
+            us.Uf = registro["Uf"].ToString();
+            us.Numero = registro["Numero"].ToString();
             if (registro["DataRegistro"] != DBNull.Value)
                 us.DataRegistro = Convert.ToDateTime(registro["DataRegistro"]);
 
@@ -72,100 +74,6 @@ namespace AtmoTrack_web_page.DAO
             return us;
         }
 
-        private EstadoViewModel MontaViewModelEstado(DataRow registro)
-        {
-            var estado = new EstadoViewModel()
-            {
-                Id = Convert.ToInt16(registro["Id"]),
-                Estado = registro["Estado"].ToString(),
-            };
-
-            return estado;
-        }
-
-        private CidadeViewModel MontaViewModelCidade(DataRow registro)
-        {
-            var cidade = new CidadeViewModel()
-            {
-                Id = Convert.ToInt32(registro["Id"]),
-                Cidade = registro["Cidade"].ToString(),
-                EstadoId = Convert.ToInt16(registro["EstadoId"])
-            };
-
-            return cidade;
-        }
-
-        public List<EstadoViewModel> GetAllStates()
-        {
-            var ListaEstados = new List<EstadoViewModel>();
-            string sql = "Select * from [dbo].[tbEstado] order by Estado";
-            try
-            {
-                DataTable tabela = HelperDAO.ExecutaSelect(sql, null);
-                foreach (DataRow row in tabela.Rows)
-                {
-                    ListaEstados.Add(MontaViewModelEstado(row));
-                }
-            }
-            catch (Exception ex)
-            {
-                // Registrar o erro ou exibir em uma view apropriada
-                Console.WriteLine("Erro: " + ex.Message);
-                throw;
-            }
-
-            return ListaEstados;
-        }
-
-        public List<CidadeViewModel> GetAllCitiesEstadoId(int id)
-        {
-            var ListaCidades = new List<CidadeViewModel>();
-            string sql = "Select * from [dbo].[tbCidade] where estadoId = " + id + "order by Cidade";
-            try
-            {
-                DataTable tabela = HelperDAO.ExecutaSelect(sql, null);
-                foreach (DataRow row in tabela.Rows)
-                {
-                    ListaCidades.Add(MontaViewModelCidade(row));
-                }
-                return ListaCidades;
-            }
-            catch (Exception ex)
-            {
-                // Registrar o erro ou exibir em uma view apropriada
-                Console.WriteLine("Erro: " + ex.Message);
-                throw;
-            }
-
-        }
-
-        public EstadoViewModel ConsultaEstado(int id)
-        {
-            string sql = "Select * from [dbo].[tbEstado] where id = " + id;
-            DataTable tabela = HelperDAO.ExecutaSelect(sql, null);
-            if (tabela.Rows.Count == 0)
-            {
-                return null;
-            }
-            else
-            {
-                return MontaViewModelEstado(tabela.Rows[0]);
-            }
-        }
-
-        public CidadeViewModel ConsultaCidade(int id)
-        {
-            string sql = "Select * from [dbo].[tbCidade] where Id = " + id;
-            DataTable tabela = HelperDAO.ExecutaSelect(sql, null);
-            if (tabela.Rows.Count == 0)
-            {
-                return null;
-            }
-            else
-            {
-                return MontaViewModelCidade(tabela.Rows[0]);
-            }
-        }
         private UsuarioViewModel MontaViewModelParaExibir(DataRow row)
         {
             return new UsuarioViewModel
@@ -179,8 +87,11 @@ namespace AtmoTrack_web_page.DAO
                 TelefoneComercial = row["TelefoneComercial"].ToString(),
                 Empresa = row["Empresa"].ToString(),
                 Cargo = row["Cargo"].ToString(),
-                EstadoId = Convert.ToInt16(row["EstadoId"]),
-                CidadeId = Convert.ToInt32(row["CidadeId"]),
+                Estado = row["Estado"].ToString(),
+                Cidade = row["Cidade"].ToString(),
+                Bairro = row["Bairro"].ToString(),
+                Uf = row["Uf"].ToString(),
+                Numero = row["Numero"].ToString(),
                 DataRegistro = Convert.ToDateTime(row["DataRegistro"]),
                 DataAlteracao = Convert.ToDateTime(row["DataAlteracao"])
             };

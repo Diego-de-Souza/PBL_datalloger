@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
+using AtmoTrack_web_page.Models;
 
 namespace AtmoTrack_web_page.Controllers
 {
@@ -16,28 +17,35 @@ namespace AtmoTrack_web_page.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(string username, string password)
         {
-            // Exemplo simples com dados fictícios
-            if (username == "admin" && password == "password123")
+            try
             {
-                // Definir o valor da sessão
-                HttpContext.Session.SetString("LoggedUser", username);
+                // Exemplo simples com dados fictícios
+                if (username == "admin" && password == "password123")
+                {
+                    // Definir o valor da sessão
+                    HttpContext.Session.SetString("LoggedUser", username);
 
-                var claims = new List<Claim>
-            {
-                new Claim(ClaimTypes.Name, username)
-            };
+                    var claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.Name, username)
+                };
 
-                var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                    var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
 
-                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
+                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
 
-                // Redirecionar ao Dashboard após login
-                return RedirectToAction("Dashboard1", "Dashboard");
+                    // Redirecionar ao Dashboard após login
+                    return RedirectToAction("Dashboard1", "Dashboard");
+                }
+
+                // Se falhar, define a mensagem de erro e retorna à página de login
+                ViewBag.ErrorMessage = "As credenciais fornecidas estão incorretas.";
+                return View("Index");
             }
-
-            // Se falhar, define a mensagem de erro e retorna à página de login
-            ViewBag.ErrorMessage = "As credenciais fornecidas estão incorretas.";
-            return View("Index");
+            catch (Exception erro)
+            {
+                return View("Error", new ErrorViewModel(erro.ToString()));
+            }
         }
 
         [HttpGet]

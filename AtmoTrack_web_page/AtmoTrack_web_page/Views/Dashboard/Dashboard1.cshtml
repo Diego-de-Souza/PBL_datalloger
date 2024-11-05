@@ -2,10 +2,70 @@
     ViewData["Title"] = "Dashboard 1";
 }
 
-<h2>Dashboard 1</h2>
-<div>
-    <canvas id="chartDashboard1" width="1000" height="400"></canvas>
-</div>
+
+<section class="container-dashboard">
+    <h2>Dashboard 1</h2>
+    <section class="container-dados">
+        <div class="container-dados__subitens">
+            <label>Valor do Erro</label>
+            <div class="container-dados__subitens-value">teste</div>
+        </div>
+        <div class="container-dados__subitens">
+            <label>Constante de Tempo</label>
+            <div class ="container-dados__subitens-value">teste</div>
+        </div>
+        <div class="container-dados__subitens">
+            <label>Constante de ganho</label>
+            <div class="container-dados__subitens-value">teste</div>
+        </div>
+        <div class="container-dados__subitens">
+            <label>Tempo de acomodação</label>
+            <div class="container-dados__subitens-value">teste</div>
+        </div>
+    </section>
+    <div class="container-grafico">
+        <div class="container-grafico__grafico">
+            <canvas id="chartDashboard1"></canvas>
+        </div>
+        <div class="container-grafico__legenda">
+            <table>
+                <caption>Legenda</caption>
+                <tr>
+                    <th>Sigla</th>
+                    <th>Descrição</th>
+                </tr>
+                <tr>
+                    <td>LM</td>
+                    <td>Valor de luminosidade em %</td>
+                </tr>
+                <tr>
+                    <td>TP</td>
+                    <td>Valor de temperatura em °C</td>
+                </tr>
+                <tr>
+                    <td>HD</td>
+                    <td>Valor de Humidade em %</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+    <div class="legenda_dashboard">
+        <div>
+            <label>Luminosidade</label>
+            <div id="luminosity-value"></div>
+        </div>
+        <div>
+            <label>Temperatura</label>
+            <div id="temperature-value"></div>
+        </div>
+        <div>
+            <label>Humidade</label>
+            <div id="humidity-value"></div>
+        </div>
+    </div>
+</section>
+
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
@@ -39,6 +99,10 @@
             
             const apiDataHumidity = await fetchDataDashboard1("humidity");
             const { values: valuesHumidity } = processAPIData(apiDataHumidity);
+
+            document.getElementById('luminosity-value').textContent = valuesLuminosity[valuesLuminosity.length - 1] || 'N/A';
+            document.getElementById('temperature-value').textContent = valuesTemperature[valuesTemperature.length - 1] || 'N/A';
+            document.getElementById('humidity-value').textContent = valuesHumidity[valuesHumidity.length - 1] || 'N/A';
 
            if (!chart) {
                 // Criar o gráfico pela primeira vez

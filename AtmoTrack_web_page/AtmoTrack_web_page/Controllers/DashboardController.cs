@@ -25,13 +25,11 @@ namespace AtmoTrack_web_page.Controllers
             }
         }
 
-        // Endpoint que consome a API via DashboardDAO
         [HttpGet]
         public async Task<IActionResult> GetData(string dataObject)
         {
             try
             {
-                // Chama o método do DAO para consumir a API
                 var data = await _dashboardDAO.GetLuminosityDataAsync(dataObject);
                 return Content(data, "application/json");
             }
@@ -41,7 +39,7 @@ namespace AtmoTrack_web_page.Controllers
             }
         }
 
-        public IActionResult Dashboard2()
+        public async Task<IActionResult> Dashboard2()
         {
             if (User.Identity.IsAuthenticated)
             {
@@ -52,5 +50,6 @@ namespace AtmoTrack_web_page.Controllers
                 return RedirectToAction("Index", "Login");
             }
         }
+        
     }
 }

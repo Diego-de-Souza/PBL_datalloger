@@ -17,20 +17,6 @@ namespace AtmoTrack_web_page.Controllers
             TipoRegistro = "U";
         }
 
-        public IActionResult GetCidades(int estadoId)
-        {
-            try
-            {
-                UsuarioDAO dao = new UsuarioDAO();
-                var cidades = dao.GetAllCitiesEstadoId(estadoId);
-                return Json(cidades);
-            }
-            catch (Exception erro)
-            {
-                return View("Error", new ErrorViewModel(erro.ToString()));
-            }
-        }
-
         public override void ValidaDados(UsuarioViewModel usuario, string operacao, string statusId)
         {
             ModelState.Clear(); // Limpa os erros criados automaticamente pelo Asp.net (que podem estar com msg em inglês) 

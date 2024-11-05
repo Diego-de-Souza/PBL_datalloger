@@ -3,6 +3,7 @@ using AtmoTrack_web_page.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Net;
 
 namespace AtmoTrack_web_page.Controllers
 {
@@ -50,27 +51,7 @@ namespace AtmoTrack_web_page.Controllers
                     T model = Activator.CreateInstance<T>();
                     PreencheDadosParaView("I", model);
 
-                    if (TipoRegistro == "U")
-                    {
-                        var estados = _usuarioDAO.GetAllStates().Select(e => new SelectListItem
-                        {
-                            Value = e.Id.ToString(),
-                            Text = e.Estado
-                        }).ToList();
-
-                        ViewBag.Estados = estados;
-                    }
-                    else if (TipoRegistro == "E")
-                    {
-                        var estados = _empresaDAO.GetAllStates().Select(e => new SelectListItem
-                        {
-                            Value = e.Id.ToString(),
-                            Text = e.Estado
-                        }).ToList();
-
-                        ViewBag.Estados = estados;
-                    }
-                    else if (TipoRegistro == "Q")
+                    if (TipoRegistro == "Q")
                     {
                         var empresas = _equipamentoDAO.GetAllEmpresas().Select(e => new SelectListItem
                         {
@@ -143,27 +124,7 @@ namespace AtmoTrack_web_page.Controllers
                         return RedirectToAction(NomeViewIndex);
                     else
                     {
-                        if (TipoRegistro == "U")
-                        {
-                            var estados = _usuarioDAO.GetAllStates().Select(e => new SelectListItem
-                            {
-                                Value = e.Id.ToString(),
-                                Text = e.Estado
-                            }).ToList();
-
-                            ViewBag.Estados = estados;
-                        }
-                        else if (TipoRegistro == "E")
-                        {
-                            var estados = _empresaDAO.GetAllStates().Select(e => new SelectListItem
-                            {
-                                Value = e.Id.ToString(),
-                                Text = e.Estado
-                            }).ToList();
-
-                            ViewBag.Estados = estados;
-                        }
-                        else if (TipoRegistro == "Q")
+                        if (TipoRegistro == "Q")
                         {
                             var empresas = _equipamentoDAO.GetAllEmpresas().Select(e => new SelectListItem
                             {
@@ -219,30 +180,10 @@ namespace AtmoTrack_web_page.Controllers
 
                     if (TipoRegistro == "U")
                     {
-                        var estado = _usuarioDAO.ConsultaEstado(model.EstadoId);
-
-                        ViewBag.EstadoNome = estado != null ? estado.Estado : "Estado não encontrado";
-
-                        if (estado != null)
-                        {
-                            var cidadeId = _usuarioDAO.ConsultaCidade(model.CidadeId);
-
-                            ViewBag.CidadeNome = cidadeId != null ? cidadeId.Cidade : "Cidade não encontrada";
-                        }
                         viewRetorno = "VisualizarUsuario";
                     }
                     else if (TipoRegistro == "E")
                     {
-                        var estado = _empresaDAO.ConsultaEstado(model.EstadoId);
-
-                        ViewBag.EstadoNome = estado != null ? estado.Estado : "Estado não encontrado";
-
-                        if (estado != null)
-                        {
-                            var cidadeId = _empresaDAO.ConsultaCidade(model.CidadeId);
-
-                            ViewBag.CidadeNome = cidadeId != null ? cidadeId.Cidade : "Cidade não encontrada";
-                        }
                         viewRetorno = "ExibirEmpresa";
                     }
                     else if (TipoRegistro == "Q")

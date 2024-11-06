@@ -1,4 +1,5 @@
 ﻿using AtmoTrack_web_page.DAO;
+using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
@@ -50,6 +51,43 @@ namespace AtmoTrack_web_page.Controllers
                 return RedirectToAction("Index", "Login");
             }
         }
-        
+
+
+        [HttpPost]
+        public async Task<JsonResult> AtivaAlarme(string unidade)
+        {
+            bool sucesso = true;
+            string mensagem = "";
+            string lampState = "on";  // Variável para armazenar o estado da lâmpada
+
+            // Definir a mensagem e o estado da lâmpada conforme a unidade
+            if (unidade == "temperatura")
+            {
+                mensagem = $"Alerta! A temperatura está acima do set!";
+            }
+            else if (unidade == "luminosidade")
+            {
+                mensagem = $"Alerta! A luminosidade está abaixo do ideal.";
+            }
+            else if (unidade == "umidade")
+            {
+                mensagem = $"Alerta! A umidade está muito elevada.";
+            }
+
+            var lampadaResposta = await _dashboardDAO.SetLampStateAsync(lampState);
+
+            var mensagemAlert = new { sucesso = sucesso, mensagem = mensagem, lampadaResposta };
+            return Json(mensagemAlert);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ApagaLampada()
+        {
+            string lampState = "off";  
+            await _dashboardDAO.SetLampStateAsync(lampState);  
+
+            return NoContent(); 
+        }
+
     }
 }

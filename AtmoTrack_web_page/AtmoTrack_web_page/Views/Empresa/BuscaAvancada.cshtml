@@ -1,0 +1,42 @@
+﻿@model List<EmpresaBuscaAvancadaViewModel>
+
+@{
+    ViewData["Title"] = "Empresa Busca avançada";
+}
+
+<fieldset id="areaFiltro" class="form-group">
+    <legend>Consulta avançada da Empresa</legend>
+    <div class="row">
+        <div class="col-lg-4">
+            Id<br />
+            <input type="number" id="id" class="form-control" />
+        </div>
+        <div class="col-lg-4">
+            Nome<br />
+            <input type="text" id="NomeFantasia" class="form-control" />
+        </div>
+        <div class="col-lg-2">
+            Estados<br />
+            <input type="text" id="Estados" class="form-control" />
+        </div>
+        <div class="col-lg-2">
+            Tipo<br />
+            <input type="text" id="Tipo" class="form-control" />
+        </div>
+        <div class="col-lg-2">
+            Data de Registro<br />
+            <input type="date" id="dataregistro" class="form-control" />
+        </div>
+        <div class="col-lg-2">
+            Status da Conexão<br />
+            <input type="text" id="connectionstatus" class="form-control" />
+        </div>
+        <div class="col-lg-1">
+            <br />
+            <input type="button" id="btnFiltro" class="btn btn-success" value="Aplicar" onclick="aplicaFiltroConsultaAvancada()"/>
+        </div>
+    </div>
+</fieldset>
+<div id="resultadoConsulta" class="table-responsive">
+</div>
+

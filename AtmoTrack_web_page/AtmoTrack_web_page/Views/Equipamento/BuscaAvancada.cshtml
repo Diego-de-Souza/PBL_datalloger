@@ -1,32 +1,33 @@
-﻿@{
-    Layout = "~/Views/Shared/_Layout.cshtml";
+﻿@model List<EquipamentoBuscaAvancadaViewModel>
+
+@{
+    ViewData["Title"] = "Equipamento Busca Avançada";
 }
+
 <fieldset id="areaFiltro" class="form-group">
-    <legend>Consulta avançada de Jogos</legend>
+    <legend>Consulta avançada do Equipamento</legend>
     <div class="row">
         <div class="col-lg-4">
-            Descrição<br />
-            <input type="text" id="descricao" class="form-control" />
+            Nome<br />
+            <input type="text" id="Nome" class="form-control" />
         </div>
-        <div class="col-lg-3">
-            Categoria <br />
-            <select id="categoria" class="form-control" asp-items="@ViewBag.Categorias"></select>
+        <div class="col-lg-4">
+            EmpresaId<br />
+            <input type="number" id="EmpresaId" class="form-control" />
         </div>
-        <div class="col-lg-2">
-            Período <br />
-            <input type="date" id="dataInicial" class="form-control" />
+        <div class="col-lg-4">
+            Nome Fantasia<br />
+            <input type="text" id="NomeFantasia" class="form-control" />
+        </div>
+        <div class="col-lg-4">
+            Ultima atualização<br />
+            <input type="date" id="LastUpdate" class="form-control" />
         </div>
         <div class="col-lg-2">
             <br />
-            <input type="date" id="dataFinal" class="form-control" />
-        </div>
-        <div class="col-lg-1">
-            <br />
-            <input type="button" id="btnFiltro" class="btn btn-success" value="Aplicar"
-                   onclick="aplicaFiltroConsultaAvancada()" />
+            <input type="button" id="btnFiltro" class="btn btn-success" value="Aplicar" onclick="aplicaFiltroConsultaAvancadaEquipamento()" />
         </div>
     </div>
 </fieldset>
 <div id="resultadoConsulta" class="table-responsive">
 </div>
-

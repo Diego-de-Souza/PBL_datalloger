@@ -2,6 +2,8 @@
 using AtmoTrack_web_page.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Data;
+using System.Data.SqlTypes;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
 
@@ -116,12 +118,62 @@ namespace AtmoTrack_web_page.Controllers
                     ModelState.AddModelError("DataRegistro", "Data de registro fora do intervalo permitido.");
                 }
             }
-
         }
 
         public IActionResult TesteCep()
         {
             return View();
+        }
+
+        public IActionResult ExibeConsultaAvancada()
+        {
+            try
+            {
+                EmpresaBuscaAvancadaViewModel EmBusca = new EmpresaBuscaAvancadaViewModel();
+
+                var listaEmpresas = DAO.Listagem();
+                EquipamentoDAO equipamentoDAO = new EquipamentoDAO();
+                var listaEquipamentos = equipamentoDAO.Listagem();
+                var listaBusca = listaEmpresas.Select(emp => new EmpresaBuscaAvancadaViewModel
+                {
+                    Id = emp.Id,
+                    NomeFantasia = emp.NomeFantasia,
+                    Estado = emp.Estado,
+                    DataRegistro = emp.DataRegistro,
+                    ConnectionStatus = listaEquipamentos
+                        .Where(eq => eq.EmpresaId == emp.Id)
+                        .Select(eq => eq.ConnectionStatus)
+                        .FirstOrDefault()
+                }).ToList();
+
+                return View("BuscaAvancada", listaBusca);
+            }
+            catch (Exception erro)
+            {
+                return View("Error", new ErrorViewModel (erro.Message));
+            }
+        }
+
+        public IActionResult ObtemDadosConsultaAvancada(int id, string nome, string estados, DateTime dataregistro, string connectionstatus)
+        {
+            try
+            {
+                EmpresaDAO dao = new EmpresaDAO();
+                if (string.IsNullOrEmpty(nome))
+                    nome = "";
+                if (string.IsNullOrEmpty(estados))
+                    estados = "";
+                if (dataregistro.Date == Convert.ToDateTime(dataregistro))
+                    dataregistro = SqlDateTime.MinValue.Value;
+                if (string.IsNullOrEmpty(connectionstatus))
+                    connectionstatus = "";
+                var lista = dao.ConsultaAvancadaEmpresa(id, nome, estados, dataregistro, connectionstatus);
+                return PartialView("pvGridEm", lista);
+            }
+            catch (Exception erro)
+            {
+                return Json(new { erro = true, msg = erro.Message });
+            }
         }
     }
 }

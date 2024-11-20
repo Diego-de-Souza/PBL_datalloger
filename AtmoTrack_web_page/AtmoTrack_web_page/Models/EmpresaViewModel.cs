@@ -19,8 +19,5 @@
         public string Tipo { get; set; }
         public DateTime DataRegistro { get; set; }
         public DateTime? DataAlteracao { get; set; }
-
-
-
     }
 }

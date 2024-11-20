@@ -1,10 +1,11 @@
 ﻿using AtmoTrack_web_page.Models;
 using System.Data.SqlClient;
 using System.Data;
+using System.Linq.Expressions;
 
 namespace AtmoTrack_web_page.DAO
 {
-    public class EmpresaDAO: PadraoDAO<EmpresaViewModel>
+    public class EmpresaDAO : PadraoDAO<EmpresaViewModel>
     {
         protected override void SetTabela()
         {
@@ -33,7 +34,7 @@ namespace AtmoTrack_web_page.DAO
             parametros[11] = new SqlParameter("@Cidade", SqlDbType.NVarChar, 50) { Value = (object)em.Cidade };
             parametros[12] = new SqlParameter("@Bairro", SqlDbType.NVarChar, 50) { Value = (object)em.Bairro };
             parametros[13] = new SqlParameter("@Uf", SqlDbType.NVarChar, 2) { Value = (object)em.Uf };
-            parametros[14] = new SqlParameter("Numero", SqlDbType.NVarChar, 50) { Value = em.Numero};
+            parametros[14] = new SqlParameter("@Numero", SqlDbType.NVarChar, 50) { Value = em.Numero };
             parametros[15] = new SqlParameter("@Tipo", SqlDbType.NVarChar, 50) { Value = (object)em.Tipo };
             parametros[16] = new SqlParameter("@DataRegistro", SqlDbType.DateTime) { Value = (object)em.DataRegistro ?? DBNull.Value };
             parametros[17] = new SqlParameter("@DataAlteracao", SqlDbType.DateTime) { Value = (object)em.DataAlteracao ?? DBNull.Value };
@@ -48,7 +49,7 @@ namespace AtmoTrack_web_page.DAO
 
             em.Id = Convert.ToInt32(registro["Id"]);
             em.RazaoSocial = registro["RazaoSocial"].ToString();
-            em.NomeFantasia= registro["NomeFantasia"].ToString();
+            em.NomeFantasia = registro["NomeFantasia"].ToString();
             em.CNPJ = registro["CNPJ"].ToString();
             em.InscricaoEstadual = registro["InscricaoEstadual"].ToString();
             em.WebSite = registro["WebSite"].ToString();
@@ -98,5 +99,36 @@ namespace AtmoTrack_web_page.DAO
                 DataAlteracao = Convert.ToDateTime(row["DataAlteracao"])
             };
         }
+
+        public List<EmpresaBuscaAvancadaViewModel> ConsultaAvancadaEmpresa(int id, string nome, string estados, DateTime dataregistro, string connectionstatus)
+        {
+            SqlParameter[] p = {
+                new SqlParameter("Id", id),
+                new SqlParameter("NomeFantasia", nome),
+                new SqlParameter("Estado", estados),
+                new SqlParameter("DataRegistro", dataregistro),
+                new SqlParameter("ConnectionStatus", connectionstatus),
+            };
+            var tabela = HelperDAO.ExecutaProcSelect("spConsultaAvancada_" + Tabela, p);
+            var lista = new List<EmpresaBuscaAvancadaViewModel>();
+            foreach (DataRow dr in tabela.Rows)
+                lista.Add(MontaModelo(dr));
+            return lista;
+        }
+
+        protected virtual EmpresaBuscaAvancadaViewModel MontaModelo(DataRow registro)
+        {
+            var em = new EmpresaBuscaAvancadaViewModel();
+            if (registro["Id"] != DBNull.Value)
+                em.Id = Convert.ToInt32(registro["Id"]);
+            em.NomeFantasia = registro["NomeFantasia"]?.ToString();
+            if (registro["DataRegistro"] != DBNull.Value)
+                em.DataRegistro = Convert.ToDateTime(registro["DataRegistro"]);
+            em.Estado = registro["Estado"]?.ToString();
+            em.ConnectionStatus = registro["ConnectionStatus"]?.ToString();
+
+            return em;
+        }
+
     }
 }

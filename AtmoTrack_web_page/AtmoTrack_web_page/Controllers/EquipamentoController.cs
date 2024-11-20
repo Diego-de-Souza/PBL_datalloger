@@ -2,6 +2,7 @@
 using AtmoTrack_web_page.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Data.SqlTypes;
 using System.Diagnostics;
 
 namespace AtmoTrack_web_page.Controllers
@@ -77,6 +78,58 @@ namespace AtmoTrack_web_page.Controllers
                 {
                     ModelState.AddModelError("LastUpdate", "Data de atualização fora do intervalo permitido.");
                 }
+            }
+        }
+        public IActionResult ExibeConsultaAvancada()
+        {
+            try
+            {
+                EquipamentoBuscaAvancadaViewModel equipamentoBusca = new EquipamentoBuscaAvancadaViewModel();
+
+                EquipamentoDAO EquipamentoDAO = new EquipamentoDAO();
+                var listaequipamentos = EquipamentoDAO.Listagem();
+                EmpresaDAO empresaDAO = new EmpresaDAO();
+                var listaEmpresas = empresaDAO.Listagem();
+                var listaBusca = listaequipamentos.Select(equipamento => new EquipamentoBuscaAvancadaViewModel
+                {
+                    Nome = equipamento.Nome,
+                    NomeFantasia = listaEmpresas
+                        .Where(empresa => empresa.Id == equipamento.EmpresaId)
+                        .Select(empresa => empresa.NomeFantasia)
+                        .FirstOrDefault(),
+                    EmpresaId = listaEmpresas
+                        .Where(empresa => empresa.Id == equipamento.EmpresaId)
+                        .Select(empresa => empresa.EmpresaId)
+                        .FirstOrDefault(),
+                    LastUpdate = equipamento.LastUpdate
+                }).ToList();
+
+                return View("BuscaAvancada", listaBusca);
+            }
+            catch (Exception erro)
+            {
+                return View("Error", new ErrorViewModel(erro.Message));
+            }
+        }
+        public IActionResult ObtemDadosConsultaAvancada(string nome, string empresaId, string nomefantasia, DateTime lastupdate)
+        {
+            try
+            {
+                EquipamentoDAO dao = new EquipamentoDAO();
+                if (string.IsNullOrEmpty(nome))
+                    nome = "";
+                if (string.IsNullOrEmpty(empresaId))
+                    empresaId = "";
+                if (string.IsNullOrEmpty(nomefantasia))
+                    nomefantasia = "";
+                if (lastupdate.Date == Convert.ToDateTime(lastupdate))
+                    lastupdate = SqlDateTime.MinValue.Value;
+                var lista = dao.ConsultaAvancadaEquipamento(nome, empresaId, nomefantasia, lastupdate);
+                return PartialView("pvGridEq", lista);
+            }
+            catch (Exception erro)
+            {
+                return Json(new { erro = true, msg = erro.Message });
             }
         }
     }

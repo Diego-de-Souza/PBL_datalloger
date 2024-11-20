@@ -13,6 +13,7 @@ namespace AtmoTrack_web_page.Controllers
         protected bool GeraProximoId { get; set; }
         protected string NomeViewIndex { get; set; } = "index";
         protected string NomeViewForm { get; set; } = "Form";
+        protected string NomeViewCadastro { get; set; } = "BuscaAvancada";
         protected string TipoRegistro { get; set; }
 
         private UsuarioDAO _usuarioDAO = new UsuarioDAO();
@@ -26,7 +27,7 @@ namespace AtmoTrack_web_page.Controllers
                 try
                 {
                     var lista = DAO.Listagem(); 
-                    return View(NomeViewIndex, lista); 
+                    return View(NomeViewIndex, lista);
                 }
                 catch (Exception erro)
                 {
@@ -205,6 +206,10 @@ namespace AtmoTrack_web_page.Controllers
             {
                 return RedirectToAction("Index", "Login");
             }
+        }
+        public virtual IActionResult BuscaAvancada()
+        {
+            return View(NomeViewCadastro);
         }
     }
 }

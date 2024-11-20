@@ -1,0 +1,25 @@
+﻿@model List<EquipamentoBuscaAvancadaViewModel>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Código</th>
+            <th>Código da Empresa</th>
+            <th>Nome</th>
+            <th>Empresa</th>
+            <th>Ultima Atualização</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var equipamento in Model)
+        {
+            <tr>
+                <td>@equipamento.Id</td>
+                <td>@equipamento.EmpresaId</td>
+                <td>@equipamento.Nome</td>
+                <td>@equipamento.NomeFantasia</td>
+                <td>@equipamento.LastUpdate.ToString("dd/MM/yyyy")</td>
+            </tr>
+        }
+    </tbody>
+</table>

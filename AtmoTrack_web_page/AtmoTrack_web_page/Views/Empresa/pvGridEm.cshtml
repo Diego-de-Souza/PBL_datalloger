@@ -1,0 +1,98 @@
+﻿@model List<EmpresaBuscaAvancadaViewModel>
+
+<table>
+    <tr>
+        <th>Código</th>
+        <th>Nome Fantasia</th>
+        <th>Estado</th>
+        <th>Data Registro</th>
+        <th>Status da Conexão</th>
+    </tr>
+    @foreach (var empresa in Model)
+    {
+    <tr>
+        <td>@empresa.Id</td>
+        <td>@empresa.NomeFantasia</td>
+        <td>@empresa.Estado</td>
+        <td>@empresa.DataRegistro.ToString("dd/MM/yyyy")</td>
+        <td>@empresa.ConnectionStatus</td>
+    </tr>
+    }
+</table>
+
+<style>
+    th {
+        color: #0DCAF0;
+    }
+
+    td {
+        color: white;
+    }
+
+    .usuario .container-geral {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        height: 100%;
+        max-width: 100% !important;
+        max-height: 100%;
+        justify-content: initial;
+    }
+
+    .container {
+        min-height: 100% !important;
+        min-width: 100%;
+        margin: 0 !important;
+        padding: 0 !important;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .table {
+        width: 95%;
+        margin-top: 5%;
+        border-collapse: separate;
+        border-spacing: 0px;
+        align-self: center;
+    }
+
+    th:nth-child(2) {
+        width: 25%;
+    }
+
+    th:nth-child(3) {
+        width: 30%;
+    }
+
+    th:nth-child(4) {
+        width: 30%;
+    }
+
+    th:first-child {
+        width: 15%;
+    }
+
+    th:first-child {
+        border-top-left-radius: 10px;
+    }
+
+    th:last-child {
+        border-top-right-radius: 10px;
+    }
+
+    tr:last-child td:first-child {
+        border-bottom-left-radius: 10px;
+    }
+
+    tr:last-child td:last-child {
+        border-bottom-right-radius: 10px;
+    }
+
+    th, td {
+        padding: 8px;
+        text-align: center;
+        border: 1px solid black;
+    }
+</style>

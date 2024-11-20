@@ -19,8 +19,6 @@ namespace AtmoTrack_web_page.Models
         public string Cidade { get; set; }
         public string Bairro { get; set; }
         public string Uf {  get; set; }
-        public DateTime DataRegistro { get; set; }
-        public DateTime? DataAlteracao { get; set; }
 
 
         [NotMapped] // Essa propriedade não será salva no banco de dados

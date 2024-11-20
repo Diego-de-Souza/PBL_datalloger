@@ -18,8 +18,8 @@
 <body class="usuario">
     <table class="table1">
         <tr>
-            <td>Empresa</td>
-            <td class="linha-azulescuro">@ViewBag.EmpresaNome</td>
+            <td>Serviço</td>
+            <td class="linha-azulescuro">@ViewBag.ServiceNome</td>
         <tr />
         <tr>
             <td>MAC Address</td>
@@ -58,16 +58,8 @@
             <td class="linha-azulescuro">@Model.FirmwareVersion</td>
         <tr />
         <tr>
-            <td>Data de Registro</td>
-            <td class="linha-azulescuro">@Model.DataRegistro.ToString("dd/MM/yyyy")</td>
-        <tr />
-        <tr>
             <td>Última Atualização</td>
             <td class="linha-azulescuro">@Model.LastUpdate.ToString("dd/MM/yyyy")</td>
-        <tr />
-        <tr>
-            <td>Data de Alteração</td>
-            <td class="linha-azulescuro">@(Model.DataAlteracao?.ToString("dd/MM/yyyy") ?? "Não alterado")</td>
         <tr />
     </table>
 </body>

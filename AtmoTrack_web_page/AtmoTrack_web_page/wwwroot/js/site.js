@@ -63,25 +63,11 @@ function aplicaFiltroConsultaAvancada() {
 }
 
 const alertaTemperatura = document.getElementById('container-dados-reais-temperatura');
-const alertaLuminosidade = document.getElementById('container-dados-reais-luminosidade');
-const alertaUmidade = document.getElementById('container-dados-reais-umidade');
 
 function mudaCorTemperatura() {
     alertaTemperatura.classList.add('alert-dados');
     alertaTemperatura.classList.remove('container-dados-reais');
     ativaAlerta("temperatura");
-}
-
-function mudaCorLuminosidade() {
-    alertaLuminosidade.classList.add('alert-dados');
-    alertaLuminosidade.classList.remove('container-dados-reais');
-    ativaAlerta("luminosidade");
-}
-
-function mudaCorUmidade() {
-    alertaUmidade.classList.add('alert-dados');
-    alertaUmidade.classList.remove('container-dados-reais');
-    ativaAlerta("umidade");
 }
 
 function fecharAlerta() {

@@ -72,7 +72,7 @@ namespace AtmoTrack_web_page.DAO
         {
             var empresa = new EmpresaViewModel();
             empresa.Id = Convert.ToInt32(registro["id"]);
-            empresa.NomeFantasia = registro["NomeFantasia"].ToString();
+            empresa.NomeService = registro["NomeService"].ToString();
 
             return empresa;
         }
@@ -80,7 +80,7 @@ namespace AtmoTrack_web_page.DAO
         public List<EmpresaViewModel> GetAllEmpresas()
         {
             var ListaEmpresas = new List<EmpresaViewModel>();
-            string sql = "Select Id, NomeFantasia from [dbo].[tbEmpresa] order by NomeFantasia";
+            string sql = "Select Id, NomeService from [dbo].[tbEmpresa] order by NomeService;";
             try
             {
                 DataTable tabela = HelperDAO.ExecutaSelect(sql, null);
@@ -100,7 +100,7 @@ namespace AtmoTrack_web_page.DAO
 
         public EmpresaViewModel ConsultaEmpresa(int id)
         {
-            string sql = "Select Id, NomeFantasia from [dbo].[tbEmpresa] where id = " + id;
+            string sql = "Select Id, NomeService from [dbo].[tbEmpresa] where id = " + id;
             DataTable tabela = HelperDAO.ExecutaSelect(sql, null);
             if (tabela.Rows.Count == 0)
             {

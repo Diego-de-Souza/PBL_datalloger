@@ -40,6 +40,10 @@ namespace AtmoTrack_web_page.Controllers
 
         }
 
+        public virtual Task<JsonResult> CriaServico(string empresa)
+        {
+            return Task.FromResult(Json("Base method not implemented."));
+        }
         public virtual IActionResult Create()
         {
             if (User.Identity.IsAuthenticated || TipoRegistro == "U")
@@ -56,10 +60,11 @@ namespace AtmoTrack_web_page.Controllers
                         var empresas = _equipamentoDAO.GetAllEmpresas().Select(e => new SelectListItem
                         {
                             Value = e.Id.ToString(),
-                            Text = e.NomeFantasia
+                            Text = e.NomeService
                         }).ToList();
 
                         ViewBag.Empresas = empresas;
+
                     }
 
                     return View(NomeViewForm, model);
@@ -83,14 +88,14 @@ namespace AtmoTrack_web_page.Controllers
 
         public virtual void ValidaDados(T model, string operacao, string statusId) { }
 
-        public virtual IActionResult Salvar(T model, string Operacao)
+        public virtual async Task<IActionResult> Salvar(T model, string Operacao)
         {
             try
             {
                 var statusId = DAO.Consulta(model.Id) != null ? "ok" : null;
 
                 ValidaDados(model, Operacao, statusId);
-                if (ModelState.IsValid == false)
+                if (!ModelState.IsValid)
                 {
                     ViewBag.Operacao = Operacao;
                     PreencheDadosParaView(Operacao, model);
@@ -99,9 +104,25 @@ namespace AtmoTrack_web_page.Controllers
                 else
                 {
                     if (Operacao == "I")
+                    {
                         DAO.InsertDinamico(model);
+                        if (TipoRegistro == "Q")
+                        {
+                            var empresaParaServico = _empresaDAO.Consulta(model.EmpresaId);
+
+                            // Aguarda a conclusão de CriaServico antes de prosseguir
+                            var resultadoServico = await CriaServico(empresaParaServico.NomeService);
+
+                            if (resultadoServico?.Value?.ToString() != "ok")
+                            {
+                                throw new Exception("Erro ao criar o serviço IoT.");
+                            }
+                        }
+                    }
                     else
+                    {
                         DAO.AlterDinamico(model);
+                    }
 
                     return RedirectToAction(NomeViewIndex);
                 }
@@ -111,6 +132,7 @@ namespace AtmoTrack_web_page.Controllers
                 return View("Error", new ErrorViewModel(erro.ToString()));
             }
         }
+
 
         public virtual IActionResult Editar(int id)
         {
@@ -190,7 +212,7 @@ namespace AtmoTrack_web_page.Controllers
                     {
                         var empresaId = _equipamentoDAO.ConsultaEmpresa(model.EmpresaId);
 
-                        ViewBag.EstadoNome = empresaId != null ? empresaId.NomeFantasia : "Estado não encontrado";
+                        ViewBag.ServiceNome = empresaId != null ? empresaId.NomeService : "Estado não encontrado";
                         viewRetorno = "ExibirEquipamento";
                     }
 

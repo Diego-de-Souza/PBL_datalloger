@@ -54,12 +54,6 @@ namespace AtmoTrack_web_page.Controllers
             if (string.IsNullOrEmpty(usuario.Endereco))
                 ModelState.AddModelError("Endereco", "Preencha o endereço.");
 
-            if (usuario.EstadoId <= 0)
-                ModelState.AddModelError("EstadoId", "Selecione um estado válido.");
-
-            if (usuario.CidadeId <= 0)
-                ModelState.AddModelError("CidadeId", "Selecione uma cidade válida.");
-
             if (string.IsNullOrEmpty(usuario.Cep))
             {
                 ModelState.AddModelError("CEP", "Preencha o CEP.");

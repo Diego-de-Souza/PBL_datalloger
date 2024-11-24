@@ -1,7 +1,7 @@
 ﻿@model List<EquipamentoBuscaAvancadaViewModel>
 
-<table class="table table-striped">
-    <thead>
+<body class="usuario">
+    <table class ="table">
         <tr>
             <th>Código</th>
             <th>Código da Empresa</th>
@@ -9,8 +9,6 @@
             <th>Empresa</th>
             <th>Ultima Atualização</th>
         </tr>
-    </thead>
-    <tbody>
         @foreach (var equipamento in Model)
         {
             <tr>
@@ -21,5 +19,89 @@
                 <td>@equipamento.LastUpdate.ToString("dd/MM/yyyy")</td>
             </tr>
         }
-    </tbody>
-</table>
+    </table>
+</body>
+
+<style>
+    tr {
+        color: #0DCAF0;
+        border: 1px solid black;
+    }
+
+    td {
+        color: white;
+    }
+
+    .usuario .container-geral {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        height: 100%;
+        max-width: 100% !important;
+        max-height: 100%;
+        justify-content: initial;
+    }
+
+    .container {
+        min-height: 100% !important;
+        min-width: 100%;
+        margin: 0 !important;
+        padding: 0 !important;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .table {
+        width: 95%;
+        margin-top: 5%;
+        border: 1px solid black;
+        border-radius: 10px;
+        border-collapse: separate;
+        border-spacing: 0px;
+        align-self: center;
+    }
+
+    td:nth-child(2) {
+        width: 25%;
+    }
+
+    td:nth-child(3) {
+        width: 30%;
+    }
+
+    td:nth-child(4) {
+        width: 30%;
+    }
+
+    td:first-child {
+        width: 15%;
+    }
+
+    th:first-child {
+        border-top-left-radius: 10px;
+    }
+
+    th:last-child {
+        border-top-right-radius: 10px;
+    }
+
+    tr:last-child td:first-child {
+        border-bottom-left-radius: 10px;
+    }
+
+    tr:last-child td:last-child {
+        border-bottom-right-radius: 10px;
+    }
+
+    th {
+        border-width: 1px;
+    }
+
+    tr, td {
+        padding: 8px;
+        text-align: center;
+        border: 1px solid black;
+    }
+</style>

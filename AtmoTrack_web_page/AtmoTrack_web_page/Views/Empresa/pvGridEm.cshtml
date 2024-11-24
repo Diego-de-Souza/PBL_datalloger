@@ -1,28 +1,32 @@
 ﻿@model List<EmpresaBuscaAvancadaViewModel>
 
-<table>
-    <tr>
-        <th>Código</th>
-        <th>Nome Fantasia</th>
-        <th>Estado</th>
-        <th>Data Registro</th>
-        <th>Status da Conexão</th>
-    </tr>
-    @foreach (var empresa in Model)
-    {
-    <tr>
-        <td>@empresa.Id</td>
-        <td>@empresa.NomeFantasia</td>
-        <td>@empresa.Estado</td>
-        <td>@empresa.DataRegistro.ToString("dd/MM/yyyy")</td>
-        <td>@empresa.ConnectionStatus</td>
-    </tr>
-    }
-</table>
+<body class="usuario">
+    <table class ="table">
+        <tr class="tr">
+            <th>Código</th>
+            <th>Nome Fantasia</th>
+            <th>Estado</th>
+            <th>Data Registro</th>
+            <th>Status da Conexão</th>
+        </tr>
+        @foreach (var empresa in Model)
+        {
+            <tr>
+                <td>@empresa.Id</td>
+                <td>@empresa.NomeFantasia</td>
+                <td>@empresa.Estado</td>
+                <td>@empresa.DataRegistro.ToString("dd/MM/yyyy")</td>
+                <td>@empresa.ConnectionStatus</td>
+            </tr>
+        }
+    </table>
+</body>
+
 
 <style>
-    th {
+    tr {
         color: #0DCAF0;
+        border: 1px solid black;
     }
 
     td {
@@ -53,24 +57,26 @@
     .table {
         width: 95%;
         margin-top: 5%;
+        border: 1px solid black;
+        border-radius: 10px;
         border-collapse: separate;
         border-spacing: 0px;
         align-self: center;
     }
 
-    th:nth-child(2) {
+    td:nth-child(2) {
         width: 25%;
     }
 
-    th:nth-child(3) {
+    td:nth-child(3) {
         width: 30%;
     }
 
-    th:nth-child(4) {
+    td:nth-child(4) {
         width: 30%;
     }
 
-    th:first-child {
+    td:first-child {
         width: 15%;
     }
 
@@ -90,7 +96,11 @@
         border-bottom-right-radius: 10px;
     }
 
-    th, td {
+    th {
+        border-width: 1px;
+    }
+
+    tr, td {
         padding: 8px;
         text-align: center;
         border: 1px solid black;

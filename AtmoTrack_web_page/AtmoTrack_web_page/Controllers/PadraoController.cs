@@ -61,7 +61,7 @@ namespace AtmoTrack_web_page.Controllers
                         var empresas = _equipamentoDAO.GetAllEmpresas().Select(e => new SelectListItem
                         {
                             Value = e.Id.ToString(),
-                            Text = e.NomeService
+                            Text = e.Tipo
                         }).ToList();
 
                         ViewBag.Empresas = empresas;
@@ -112,7 +112,7 @@ namespace AtmoTrack_web_page.Controllers
                             var empresaParaServico = _empresaDAO.Consulta(model.EmpresaId);
 
                             // Aguarda a conclusão de CriaServico antes de prosseguir
-                            var resultadoServico = await CriaServico(empresaParaServico.NomeService);
+                            var resultadoServico = await CriaServico(empresaParaServico.Tipo);
 
                             if (resultadoServico?.Value?.ToString() != "ok")
                             {
@@ -213,7 +213,7 @@ namespace AtmoTrack_web_page.Controllers
                     {
                         var empresaId = _equipamentoDAO.ConsultaEmpresa(model.EmpresaId);
 
-                        ViewBag.ServiceNome = empresaId != null ? empresaId.NomeService : "Estado não encontrado";
+                        ViewBag.ServiceNome = empresaId != null ? empresaId.Tipo : "Estado não encontrado";
                         viewRetorno = "ExibirEquipamento";
                     }
 

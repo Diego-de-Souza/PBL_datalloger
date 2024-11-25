@@ -60,7 +60,7 @@
         <tr>
         <tr>
             <td>Nome Service</td>
-            <td class="linha-azulescuro">@Model.NomeService</td>
+            <td class="linha-azulescuro">@Model.Tipo</td>
         <tr />
         <tr>
             <td>Data de Registro</td>
@@ -68,7 +68,7 @@
         <tr />
         <tr>
             <td>Data de Alteração</td>
-            <td class="linha-azulescuro">@(Model.DataAlteracao.ToString("dd/MM/yyyy") ?? "Não alterado")</td>
+            <td class="linha-azulescuro">@(Model.DataAlteracao?.ToString("dd/MM/yyyy") ?? "Não alterado")</td>
         <tr />
     </table>
 </body>

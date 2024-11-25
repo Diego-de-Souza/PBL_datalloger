@@ -82,7 +82,6 @@ namespace AtmoTrack_web_page.Controllers
                 }
             }
         }
-<<<<<<< HEAD
 
         [HttpPost]
         public override async Task<JsonResult> CriaServico(string empresa)
@@ -143,10 +142,6 @@ namespace AtmoTrack_web_page.Controllers
                 return Json($"Erro inesperado: {ex.Message}");
             }
         }
-
-
-
-=======
         public IActionResult ExibeConsultaAvancada()
         {
             try
@@ -199,6 +194,5 @@ namespace AtmoTrack_web_page.Controllers
                 return Json(new { erro = true, msg = erro.Message });
             }
         }
->>>>>>> 6e9cc9972c8f3b87d26692007717e96abe92181e
     }
 }

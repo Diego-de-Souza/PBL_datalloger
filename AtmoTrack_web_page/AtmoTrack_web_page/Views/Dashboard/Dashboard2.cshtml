@@ -7,12 +7,12 @@
 
             <form asp-controller="Dashboard" asp-action="Dashboard1" method="post" class="needs-validation" novalidate>
                 <div class="mb-3">
-                    <label for="NomeService" class="form-label">Serviço</label>
-                    <select id="NomeService" name="NomeService" class="form-select" required>
+                    <label for="Tipo" class="form-label">Serviço</label>
+                    <select id="Tipo" name="Tipo" class="form-select" required>
                         <option value="" selected disabled>Selecione um Serviço</option>
                         @foreach (var empresa in Model)
                         {
-                            <option value="@empresa.NomeService">@empresa.NomeService</option>
+                            <option value="@empresa.Tipo">@empresa.Tipo</option>
                         }
                     </select>
                     <div class="invalid-feedback">Por favor, selecione uma empresa.</div>

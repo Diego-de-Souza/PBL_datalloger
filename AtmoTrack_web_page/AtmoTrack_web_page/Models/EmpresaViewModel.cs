@@ -16,15 +16,8 @@
         public string Cidade { get; set; }
         public string Bairro { get; set; }
         public string Uf { get; set; }
-<<<<<<< HEAD
-        public string NomeService { get; set; }
-
-
-
-=======
         public string Tipo { get; set; }
         public DateTime DataRegistro { get; set; }
         public DateTime? DataAlteracao { get; set; }
->>>>>>> 6e9cc9972c8f3b87d26692007717e96abe92181e
     }
 }

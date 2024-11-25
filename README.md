@@ -18,7 +18,10 @@ Aqui estão os datasheets dos componentes usados no projeto:
 - [Protoboard](Datasheets/Datasheet-Protoboard.pdf)
 - [RTCDS1307](Datasheets/Datasheet-RTCDS1307.PDF)
 - [SSD1306](Datasheets/Datasheet-SSD1306.PDF)
-- 
+- [ESP 32 Datasheet.pdf](https://github.com/user-attachments/files/17909496/ESP.32.Datasheet.pdf)
+- [LCD 16X2 I2C Datasheet.pdf](https://github.com/user-attachments/files/17909498/LCD.16X2.I2C.Datasheet.pdf)
+
+
 
 ## Objetivo
 

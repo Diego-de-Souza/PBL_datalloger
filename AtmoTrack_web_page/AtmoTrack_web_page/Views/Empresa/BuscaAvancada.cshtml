@@ -1,31 +1,39 @@
-﻿@model List<EquipamentoBuscaAvancadaViewModel>
+﻿@model List<EmpresaBuscaAvancadaViewModel>
 
 @{
-    ViewData["Title"] = "Equipamento Busca Avançada";
+    ViewData["Title"] = "Empresa Busca avançada";
 }
 
 <fieldset id="areaFiltro" class="form-group">
-    <legend>Consulta avançada do Equipamento</legend>
+    <legend>Consulta avançada da Empresa</legend>
     <div class="row">
         <div class="col-lg-4">
+            Id<br />
+            <input type="number" id="id" class="form-control" />
+        </div>
+        <div class="col-lg-4">
             Nome<br />
-            <input type="text" id="Nome" class="form-control" />
-        </div>
-        <div class="col-lg-4">
-            EmpresaId<br />
-            <input type="number" id="EmpresaId" class="form-control" />
-        </div>
-        <div class="col-lg-4">
-            Nome Fantasia<br />
             <input type="text" id="NomeFantasia" class="form-control" />
         </div>
-        <div class="col-lg-4">
-            Ultima atualização<br />
-            <input type="date" id="LastUpdate" class="form-control" />
+        <div class="col-lg-2">
+            Estados<br />
+            <input type="text" id="Estados" class="form-control" />
         </div>
         <div class="col-lg-2">
+            Tipo<br />
+            <input type="text" id="Tipo" class="form-control" />
+        </div>
+        <div class="col-lg-2">
+            Data de Registro<br />
+            <input type="date" id="dataregistro" class="form-control" />
+        </div>
+        <div class="col-lg-2">
+            Status da Conexão<br />
+            <input type="text" id="connectionstatus" class="form-control" />
+        </div>
+        <div class="col-lg-1">
             <br />
-            <input type="button" id="btnFiltro" class="btn btn-success" value="Aplicar" onclick="aplicaFiltroConsultaAvancadaEquipamento()" />
+            <input type="button" id="btnFiltro" class="btn btn-success" value="Aplicar" onclick="aplicaFiltroConsultaAvancada()"/>
         </div>
     </div>
 </fieldset>

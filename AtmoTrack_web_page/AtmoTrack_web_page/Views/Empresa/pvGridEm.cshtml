@@ -1,40 +1,32 @@
-﻿@model List<EquipamentoBuscaAvancadaViewModel>
+﻿@model List<EmpresaBuscaAvancadaViewModel>
 
-@{
-    ViewData["Title"] = "Equipamento Busca Avançada";
-}
+<body class="usuario">
+    <table class ="table">
+        <tr class="tr">
+            <th>Código</th>
+            <th>Nome Fantasia</th>
+            <th>Estado</th>
+            <th>Data Registro</th>
+            <th>Status da Conexão</th>
+        </tr>
+        @foreach (var empresa in Model)
+        {
+            <tr>
+                <td>@empresa.Id</td>
+                <td>@empresa.NomeFantasia</td>
+                <td>@empresa.Estado</td>
+                <td>@empresa.DataRegistro.ToString("dd/MM/yyyy")</td>
+                <td>@empresa.ConnectionStatus</td>
+            </tr>
+        }
+    </table>
+</body>
 
-<fieldset id="areaFiltro" class="form-group">
-    <legend>Consulta avançada do Equipamento</legend>
-    <div class="row">
-        <div class="col-lg-4">
-            Nome<br />
-            <input type="text" id="Nome" class="form-control" />
-        </div>
-        <div class="col-lg-4">
-            EmpresaId<br />
-            <input type="number" id="EmpresaId" class="form-control" />
-        </div>
-        <div class="col-lg-4">
-            Nome Fantasia<br />
-            <input type="text" id="NomeFantasia" class="form-control" />
-        </div>
-        <div class="col-lg-4">
-            Ultima atualização<br />
-            <input type="date" id="LastUpdate" class="form-control" />
-        </div>
-        <div class="col-lg-2">
-            <br />
-            <input type="button" id="btnFiltro" class="btn btn-success" value="Aplicar" onclick="aplicaFiltroConsultaAvancadaEquipamento()" />
-        </div>
-    </div>
-</fieldset>
-<div id="resultadoConsulta" class="table-responsive">
-</div>
 
 <style>
-    .tr {
+    tr {
         color: #0DCAF0;
+        border: 1px solid black;
     }
 
     td {
@@ -65,6 +57,8 @@
     .table {
         width: 95%;
         margin-top: 5%;
+        border: 1px solid black;
+        border-radius: 10px;
         border-collapse: separate;
         border-spacing: 0px;
         align-self: center;
@@ -86,10 +80,6 @@
         width: 15%;
     }
 
-    tr {
-        width: 95%;
-    }
-
     th:first-child {
         border-top-left-radius: 10px;
     }
@@ -104,6 +94,10 @@
 
     tr:last-child td:last-child {
         border-bottom-right-radius: 10px;
+    }
+
+    th {
+        border-width: 1px;
     }
 
     tr, td {

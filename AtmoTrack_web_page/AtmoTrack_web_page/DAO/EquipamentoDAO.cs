@@ -133,5 +133,37 @@ namespace AtmoTrack_web_page.DAO
                 DataAlteracao = Convert.ToDateTime(row["DataAlteracao"])
             };
         }
+        public List<EquipamentoBuscaAvancadaViewModel> ConsultaAvancadaEquipamento(string nome, string empresaId, string nomefantasia, DateTime lastupdate)
+        {
+            SqlParameter[] p = {
+                new SqlParameter("Nome", nome),
+                new SqlParameter("EmpresaId", empresaId),
+                new SqlParameter("NomeFantasia", nomefantasia),
+                new SqlParameter("LastUpdate", lastupdate)
+            };
+
+            var tabela = HelperDAO.ExecutaProcSelect("spConsultaAvancada_" + Tabela, p);
+            var lista = new List<EquipamentoBuscaAvancadaViewModel>();
+
+            foreach (DataRow dr in tabela.Rows)
+            {
+                lista.Add(MontaModelo(dr));
+            }
+            return lista;
+        }
+
+        protected virtual EquipamentoBuscaAvancadaViewModel MontaModelo(DataRow registro)
+        {
+            var eq = new EquipamentoBuscaAvancadaViewModel();
+            eq.Nome = registro["Nome"].ToString();
+            if (registro["EmpresaId"] != DBNull.Value)
+                eq.EmpresaId = Convert.ToInt32(registro["EmpresaId"]);
+            eq.NomeFantasia = registro["NomeFantasia"].ToString();
+
+            if (registro["LastUpdate"] != DBNull.Value)
+                eq.LastUpdate = Convert.ToDateTime(registro["LastUpdate"]);
+
+            return eq;
+        }
     }
 }

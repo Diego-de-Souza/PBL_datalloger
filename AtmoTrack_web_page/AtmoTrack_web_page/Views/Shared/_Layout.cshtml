@@ -39,9 +39,13 @@
 
                         @if (User.Identity.IsAuthenticated)
                         {
-                            <li class="nav-item me-3">
-                                <a class="nav-link" style="color: #4BE2F2;" asp-controller="Usuario" asp-action="Index">Usuarios</a>
-                            </li>
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn dropdown-toggle" style="color: #4BE2F2;" data-bs-toggle="dropdown" aria-expanded="false">Usuario</button>
+                                <ul class="dropdown-menu" style="color:#4BE2F2; background-color: #112E3C">
+                                    <li><a class="nav-link" style="color: #4BE2F2;" asp-controller="Usuario" asp-action="Index">Usuarios</a></li>
+                                </ul>
+                            </div>
+
                             <li class="nav-item me-4">
                                 <div class="btn-group" role="group">
                                     <button type="button" class="btn dropdown-toggle" style="color: #4BE2F2;" data-bs-toggle="dropdown" aria-expanded="false">
@@ -50,6 +54,7 @@
                                     <ul class="dropdown-menu" style="color:#4BE2F2; background-color: #112E3C">
                                         <li><a class="dropdown-item" style="color: #4BE2F2;" asp-controller="Dashboard" asp-action="Dashboard1">DashBoard 1</a></li>
                                         <li><a class="dropdown-item" style="color: #4BE2F2;" asp-controller="Dashboard" asp-action="Dashboard2">DashBoard 2</a></li>
+                                        <li><a class="dropdown-item" style="color: #4BE2F2;" asp-controller="Usuario" asp-action="ExibeConsultaAvancada">Busca Avancada</a></li>
                                     </ul>
                                 </div>
 
@@ -62,6 +67,7 @@
                                     <ul class="dropdown-menu" style="color:#4BE2F2; background-color: #112E3C">
                                         <li><a class="dropdown-item" style="color: #4BE2F2;" asp-controller="Empresa" asp-action="Index">Empresas</a></li>
                                         <li><a class="dropdown-item" style="color: #4BE2F2;" asp-controller="Empresa" asp-action="Create">Cadastro de Empresas</a></li>
+                                        <li><a class="dropdown-item" style="color: #4BE2F2;" asp-controller="Empresa" asp-action="ExibeConsultaAvancada">Busca Avancada</a></li>
                                     </ul>
                                 </div>
 
@@ -74,7 +80,7 @@
                                     <ul class="dropdown-menu" style="color:#4BE2F2; background-color: #112E3C">
                                         <li><a class="dropdown-item" style="color: #4BE2F2;" asp-controller="Equipamento" asp-action="Index">Equipamentos</a></li>
                                         <li><a class="dropdown-item" style="color: #4BE2F2;" asp-controller="Equipamento" asp-action="Create">Cadastro de Equipamento</a></li>
-                                        <li><a class="dropdown-item" style="color: #4BE2F2;" asp-controller="Equipamento" asp-action="BuscaAvancada">Busca Avancada</a></li>
+                                        <li><a class="dropdown-item" style="color: #4BE2F2;" asp-controller="Equipamento" asp-action="ExibeConsultaAvancada">Busca Avancada</a></li>
                                     </ul>
                                 </div>
 

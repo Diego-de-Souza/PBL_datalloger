@@ -86,7 +86,7 @@ namespace AtmoTrack_web_page.DAO
         {
             var p = new SqlParameter[]
             {
-                new SqlParameter("tabela",Tabela),
+                new SqlParameter("tabela", Tabela),
                 new SqlParameter("Ordem", "1") // primeiro campo d atabela
             };
             var tabela = HelperDAO.ExecutaProcSelect("SpListagem", p);

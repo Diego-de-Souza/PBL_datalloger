@@ -1,8 +1,8 @@
-# AtmoTrack : Data Logger Ambiental com Arduino
+# AtmoTrack : Estufa e datalogger para secagem de enrolamento de motores.
 
 # PBL_datalloger
 
-Trabalho de desenvolvimento de um datalogger para disciplina de Sistemas Embarcados de Engenharia da Computação da FESA - Faculdade de Engenheiro Salvador Arena
+Trabalho de desenvolvimento de um datalogger para as disciplinas de Sistemas Embarcados, Linguagem de Programação I, Controle e Automação, Mecânica dos Sólidos e fenômenos de transporte de Engenharia da Computação da FESA - Faculdade de Engenheiro Salvador Arena
 
 # Manual de Instruções 
 
@@ -14,42 +14,32 @@ Aqui estão os datasheets dos componentes usados no projeto:
 
 - [ATMEGA48P](Datasheets/Datasheet-ATMEGA48P.PDF)
 - [Batereia 9V](Datasheets/Datasheet-Bateria9V.pdf)
-- [Buzzer](Datasheets/Datasheet-Buzzer.pdf)
 - [DHT11](Datasheets/Datasheet-DHT11.PDF)
-- [LDR](Datasheets/Datasheet-LDR.pdf)
 - [Protoboard](Datasheets/Datasheet-Protoboard.pdf)
 - [RTCDS1307](Datasheets/Datasheet-RTCDS1307.PDF)
 - [SSD1306](Datasheets/Datasheet-SSD1306.PDF)
+- 
 
 ## Objetivo
 
-Esse projeto foi criado para fazer o monitoramento ambiental de temperatura, umidade e luminosidade, usando sensores conectados a um Arduino Uno (ATmega328P). Ele exibe os dados em um display OLED e armazena tudo na memória EEPROM com uma marcação de tempo. Além disso, tem alertas sonoros e visuais quando os valores saem dos limites que você definir.
+Esse projeto foi criado para fazer o monitoramento de temperatura remoto de estufas de secagem de enrolamentos de motores. O sistema consta com o microcontroledor ESP-32 para a captação e envio dos dados de temperatura para a nuvem e site ArmoTrack. 
 
 ## Materiais Necessários
 
-- **Microcontrolador**: Arduino Uno (ATmega328P) (Uma unidade)
+- **Microcontrolador**:
+  - ESP-32 (Uma unidade)
+  - Arduito (Atmega 328P) (uma unidade)
 - **Sensores**:
-  - DHT11/DHT22: Medição de temperatura e umidade (Uma unidade)
-  - LDR: Medição de luminosidade (Uma unidade)
-- **Display**: OLED 128x64 pixels I2C (Uma unidade)
-- **Memória**: EEPROM para guardar os dados (Uma unidade)
-- **RTC**: Módulo DS3231 (Relógio de Tempo Real) para registrar a hora dos eventos (Uma Unidade)
-- **Buzzer**: Para os alertas sonoros (Uma unidade)
-- **LEDs**: Para alertas visuais e status (Uma unidade) 
-- **Botões**: Três botões (UP, DOWN e SELECT) para navegação e configuração(Três unidades)
-- **Outros**: Jumpers, resistores, bateria 9v e uma protoboard(Uma unidade de cada)
+  - DHT11: Sensor para captação de temperatura
+- **Outros**: Jumpers, resistores, display LCD 16x2, bateria 9v e uma protoboard(Uma unidade de cada)
 
 ## Esquema de Montagem
 
 ### Conexões:
 
-- **DHT22**: Conectado ao pino digital 2 do Arduino.
-- **LDR**: Vai no pino analógico A0, com um resistor de pull-down.
-- **Display OLED**: Conectado ao barramento I2C (pinos GND , alimentação 3.3V , pino A4 para SDA e A5 para SCL).
-- **RTC DS3231**: Também usa o barramento I2C.
-- **EEPROM**: Conectada via I2C.
-- **Botões de controle**: Conectados nos pinos digitais 6, 7 e 8.
-- **Buzzer**: Vai no pino digital 5.
+- **DHT11**: Conectado ao Arduino.
+- **Display LCD**: Conectado ao Arduino.
+- **ESP-32**: Conectado ao Arduino via pino 34.
 
 ### Diagrama de Montagem:
 
@@ -59,68 +49,42 @@ Siga o diagrama da protoboard para fazer as conexões corretas. Vai ajudar a org
 
 ### 1. Compilação e Upload do Código
 
-1. Abra o Arduino IDE e conecte seu Arduino ao computador usando um cabo USB.
+1. Abra a ESP-32 e conecte seu Arduino ao computador usando um cabo USB.
 2. Copie o código do arquivo `sketch.ino` para o Arduino IDE.
-3. Certifique-se de que as bibliotecas necessárias estão instaladas (você pode usar o Library Manager para isso):
-   - `SPI.h`, `Wire.h`, `Adafruit_GFX.h`, `Adafruit_SSD1306.h`, `RTClib.h`, `EEPROM.h`, `DHT.h`
+3. Certifique-se de que as bibliotecas necessárias estão instaladas (você pode usar o Library Manager para isso)
 4. Compile o código e faça o upload para o Arduino.
+5. Acesse o site Atmotrack com login e senha para cadastrar seu dispositivo ESP-32 e iniciar o monitoramento em tempo real da sua estufa
 
 ### 2. Como o Sistema Funciona
 
 #### Inicialização:
 
-- Ao ligar, o sistema exibe o logotipo e o nome (AtmoTrack) no display OLED.
-- O RTC é configurado para registrar data e hora dos eventos.
+- Ao abrir, o site exibe a página inicial AtmoTrack, sinta-se à vontade para explorar a página e conhecer mais sobre o datalogger.
+- Caso deseje acessar os Dashboards, efetue seu login ou cadastro e selecione o dispositivo que deseja monitorar.
 
 #### Monitoramento:
 
-- **Temperatura**: Captada pelo DHT22 e exibida no display.
-- **Umidade**: Captada pelo DHT22 e exibida no display.
-- **Luminosidade**: Lida pelo LDR e exibida no display.
+- **Temperatura**: Captada constantemente e armazenada a cada um minuto, o valor armazenado é uma média dos valores coletados durante o intervalo de tempo.
 
-Se a temperatura ou a umidade sair dos limites pré-definidos, ativa efeitos sonoros (buzzer), além de registrar os dados na EEPROM com um timestamp.
-
-#### Navegação:
-
-- Use os botões UP, DOWN e SELECT para navegar pelo  menu,  ajustar os limites de alerta.
-
-### 3. Parâmetros Configuráveis
-
-Você pode configurar os seguintes limites:
-
-- **Temperatura mínima**: 20.0°C
-- **Temperatura máxima**: 30.0°C
-- **Umidade mínima**: 30%
-- **Umidade máxima**: 60%
+Se a temperatura sair dos limites pré-definidos, ativa efeitos visuais (LED interno ESP-32).
 
 ## Operação do Sistema
 
 ### 1. Exibição dos Dados
 
-O display OLED vai alternar entre as informações de temperatura, umidade e luminosidade, além da data e hora fornecidas pelo módulo RTC no ângulo superior direito .
+O gráfico exibirá os pontos armazenados em nuvem, o gráfico reflete em tempo real a temperatura da estufa.
 
 ### 2. Alertas
 
 Quando algum valor sair dos limites:
 
 - **LEDs**: Piscam para chamar atenção.
-- **Buzzer**: Emite um som de alerta.
 
 ### 3. Armazenamento de Dados
 
-Os dados (temperatura, umidade e luminosidade) são salvos na EEPROM a cada minuto, mas somente se dair dos parâmetros.
-
-### 4. Memória EEPROM
-
-O sistema pode armazenar até 100 registros na EEPROM, incluindo temperatura, umidade, luminosidade e o horário de cada registro.
-
-### 5. Monitoramento da Memória RAM
-
-O sistema também fica de olho na quantidade de RAM disponível. Se estiver muito baixa, ele vai mostrar uma mensagem no monitor serial para evitar possíveis falhas.
-
-### 6. Histórico de erros
-
-O sistema possuir um menu aonde o usuário pode conferir o histórico de erros dentro da propria tela para o usuário , aonde pelos botões ele pode interagir com o menu e conferir.
+Os dados são armazenados em nuvem por meio de dois bancos de daodos distintos.
+-**MONGO DB**: Armazena dados referentes à temperatura.
+-**SQL Server**: Armazena dados de úsuario e dispositivo, assim como empresa.
 
 ### link da simulação
 ```

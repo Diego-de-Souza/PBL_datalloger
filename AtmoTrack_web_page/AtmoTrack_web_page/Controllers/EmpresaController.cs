@@ -13,7 +13,7 @@ namespace AtmoTrack_web_page.Controllers
         {
             DAO = new EmpresaDAO();
             GeraProximoId = true;
-            NomeServiceRegistro = "E";
+            TipoRegistro = "E";
         }
 
         public override void ValidaDados(EmpresaViewModel empresa, string operacao, string statusId)

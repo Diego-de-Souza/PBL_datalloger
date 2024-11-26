@@ -10,7 +10,7 @@ namespace AtmoTrack_web_page.Controllers
         {
             DAO = new UsuarioDAO();
             GeraProximoId = true;
-            NomeServiceRegistro = "U";
+            TipoRegistro = "U";
         }
 
         public override void ValidaDados(UsuarioViewModel usuario, string operacao, string statusId)

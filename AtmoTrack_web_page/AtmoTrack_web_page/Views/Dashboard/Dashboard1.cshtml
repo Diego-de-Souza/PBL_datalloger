@@ -8,19 +8,19 @@
     <section class="container-dados">
         <div class="container-dados__subitens">
             <label>Valor do Erro</label>
-            <div class="container-dados__subitens-value">teste</div>
+            <div class="container-dados__subitens-value">14,66°C</div>
         </div>
         <div class="container-dados__subitens">
             <label>Constante de Tempo</label>
-            <div class ="container-dados__subitens-value">teste</div>
+            <div class ="container-dados__subitens-value">66,3s</div>
         </div>
         <div class="container-dados__subitens">
             <label>Constante de ganho</label>
-            <div class="container-dados__subitens-value">teste</div>
+            <div class="container-dados__subitens-value">0,175</div>
         </div>
         <div class="container-dados__subitens">
-            <label>Tempo de acomodação</label>
-            <div class="container-dados__subitens-value">teste</div>
+            <label>SetPoint</label>
+            <div class="container-dados__subitens-value">40°C</div>
         </div>
     </section>
     <div class="container-grafico">
@@ -28,24 +28,39 @@
             <canvas id="chartDashboard1"></canvas>
         </div>
         <div style="display:flex; flex-direction: column;width: 30%;">
+            <div class="container-SetPoint">
+                <label for="SetPoint" class="form-label">SetPoint</label>
+                <div class="input-group">
+                    <input type="text"
+                           id="SetPoint"
+                           name="SetPoint"
+                           class="form-control"
+                           value=""
+                           placeholder="Insira o valor" />
+                    <button class="btn btn-primary"
+                            type="button"
+                            onclick="enviarSetPoint()">
+                        Enviar
+                    </button>
+                </div>
+            </div>
             <div class="container-grafico__legenda">
-            <table>
-                <caption>Legenda</caption>
-                <tr>
-                    <th>Sigla</th>
-                    <th>Descrição</th>
-                </tr>
-                <tr>
-                    <td>TP</td>
-                    <td>Valor de temperatura em °C</td>
-                </tr>
-            </table>
-
-        </div>
-        <div class="container-dados-reais" id="container-dados-reais-temperatura">
-            <label class="dados_label">Temperatura</label>
-            <div class="dados-value" id="temperature-value"></div>
-        </div>
+                <table>
+                    <caption>Legenda</caption>
+                    <tr>
+                        <th>Sigla</th>
+                        <th>Descrição</th>
+                    </tr>
+                    <tr>
+                        <td>TP</td>
+                        <td>Valor de temperatura em °C</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="container-dados-reais" id="container-dados-reais-temperatura">
+                <label class="dados_label">Temperatura</label>
+                <div class="dados-value" id="temperature-value"></div>
+            </div>
         </div>
         
     </div>
@@ -61,14 +76,25 @@
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-    document.addEventListener("DOMContentLoaded", async function () {
-        let chart; // Variável global para o gráfico
+    let currentSetPoint = null;
+    let chart; // Variável global para o gráfico
 
+    document.addEventListener("DOMContentLoaded", async function () {
+        
         async function fetchDataDashboard1(dataObject) {
-            const response = await fetch(`/Dashboard/GetData?dataObject=${dataObject}`);
-            const data = await response.json();
-            console.log("Dados recebidos da API:", data);
-            return data.contextResponses[0].contextElement.attributes[0].values;
+            try {
+                const response = await fetch(`/Dashboard/GetData?dataObject=${dataObject}`);
+                if (!response.ok) {
+                    throw new Error(`Erro ao buscar dados: ${response.statusText}`);
+                }
+                const data = await response.json();
+                return data.contextResponses[0].contextElement.attributes[0].values;
+            } catch (error) {
+                console.error(error);
+                document.getElementById('alerta-mensagem').textContent = 'Erro ao carregar dados.';
+                document.getElementById('alerta').classList.add('show', 'alert-danger');
+                return [];
+            }
         }
 
         function processAPIData(apiData) {
@@ -79,9 +105,6 @@
                 labels.push(new Date(item.recvTime).toLocaleTimeString());
                 values.push(item.attrValue);
             });
-
-            console.log("Labels gerados:", labels);
-    console.log("Valores gerados:", values);
 
             return { labels, values };
         }
@@ -113,6 +136,14 @@
                                 fill: false,
                                 borderColor: 'rgba(255, 99, 132, 1)',
                                 tension: 0.1
+                            },
+                            {
+                                label: 'SetPoint',
+                                data: Array(labels.length).fill(currentSetPoint || 0), // Preenche com SetPoint
+                                fill: false,
+                                borderColor: 'rgba(54, 162, 235, 1)',
+                                borderDash: [5, 5], // Linha tracejada para diferenciar
+                                tension: 0.1
                             }
                         ]
                     },
@@ -134,16 +165,14 @@
                         }
                     }
                 });
-
-                console.log("Atualizando gráfico com labels:", labels);
-                console.log("Atualizando gráfico com valores:", valuesTemperature);
             } else {
                 // Atualizar os dados do gráfico existente
                 chart.data.labels = labels;
                 chart.data.datasets[0].data = valuesTemperature;
-                chart.update(); // Atualizar o gráfico com novos dados
 
-                console.log("Criando gráfico pela primeira vez.");
+                chart.data.datasets[1].data = Array(labels.length).fill(currentSetPoint || 0);
+
+                chart.update(); // Atualizar o gráfico com novos dados
             }
         }
 
@@ -151,10 +180,75 @@
         await updateChart();
 
         // Atualizar o gráfico automaticamente a cada 1 minuto (60000 milissegundos)
-        setInterval(updateChart, 1000);
+        setInterval(updateChart, 5000);
     });
 
+    function enviarSetPoint() {
+        const setPointInput = document.getElementById('SetPoint').value;
+        if (isNaN(setPointInput) || setPointInput === '') {
+            alert('Por favor, insira um número válido.');
+            return;
+        }
+        currentSetPoint = parseFloat(setPointInput);
 
+        if (setPointInput < 0 || setPointInput > 100) {
+            alert('O SetPoint deve estar entre 0 e 100.');
+            return;
+        }
+        // Atualizar o gráfico com o novo SetPoint
+        if (chart) {
+            chart.data.datasets[1].data = Array(chart.data.labels.length).fill(currentSetPoint);
+            chart.update();
+            alert('SetPoint atualizado para: ' + currentSetPoint + '°C.');
+        }
+
+    }
+
+    const alertaTemperatura = document.getElementById('container-dados-reais-temperatura');
+
+    function mudaCorTemperatura() {
+        alertaTemperatura.classList.add('alert-dados');
+        alertaTemperatura.classList.remove('container-dados-reais');
+        ativaAlerta("temperatura");
+    }
+
+    function fecharAlerta() {
+        const alerta = document.getElementById("alerta");
+        alerta.classList.add("show");
+
+        $.ajax({
+            type: "POST",
+            url: "/Dashboard/ApagaLampada",
+            success: function () {
+                console.log("Lâmpada apagada com sucesso.");
+            },
+            error: function () {
+                console.error("Erro ao tentar apagar a lâmpada.");
+            }
+        });
+    }
+
+    // Ajuste na função `ativaAlerta` para exibir a mensagem de forma mais clara
+    function ativaAlerta(unidade) {
+        $.ajax({
+            type: "POST",
+            url: "/Dashboard/AtivaAlarme",
+            data: { unidade: unidade },
+            success: function (response) {
+                const alerta = $("#alerta");
+                $("#alerta-mensagem").text(response.mensagem);
+                alerta.removeClass("d-none alert-danger alert-success")
+                    .addClass(response.sucesso ? "alert-warning" : "alert-danger");
+                alerta.show();
+            },
+            error: function () {
+                const alerta = $("#alerta");
+                $("#alerta-mensagem").text("Erro ao processar a operação.");
+                alerta.removeClass("d-none alert-success").addClass("alert-danger");
+                alerta.show();
+            }
+        });
+    }
 </script>
 
 <style>
@@ -252,7 +346,6 @@
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
         color: #fff;
         padding-left: 1em;
-        height: 300px;
     }
 
         .container-grafico__legenda table {
@@ -330,6 +423,7 @@
         border-radius: 1em;
         background-color: #f52a2adb;
         box-shadow: 0px 0px 8px yellow;
+        transition: background-color 0.3s ease;
     }
 
     .dados-value{
@@ -357,18 +451,16 @@
     }
 
     #alerta {
-        position: fixed;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 90%;
-        max-width: 500px;
-        padding: 15px;
-        text-align: center;
-        z-index: 1000;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-        display: none; /* Esconde inicialmente */
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        opacity: 0;
+        transform: translateY(-10px);
     }
+
+    #alerta.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
 
     .alert-success {
         background-color: #d4edda;
@@ -390,4 +482,40 @@
         color: #0c5460;
     }
 
+    .container-SetPoint {
+        margin: 10px 0;
+    }
+
+        .container-SetPoint label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+    .container-SetPoint {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .container-SetPoint input {
+        flex: 1;
+        padding: 8px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .container-SetPoint button {
+        padding: 8px 15px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .container-SetPoint button:hover {
+        background-color: #0056b3;
+    }
 </style>

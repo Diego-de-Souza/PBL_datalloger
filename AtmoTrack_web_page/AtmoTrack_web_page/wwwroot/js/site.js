@@ -62,48 +62,4 @@ function aplicaFiltroConsultaAvancada() {
 
 }
 
-const alertaTemperatura = document.getElementById('container-dados-reais-temperatura');
 
-function mudaCorTemperatura() {
-    alertaTemperatura.classList.add('alert-dados');
-    alertaTemperatura.classList.remove('container-dados-reais');
-    ativaAlerta("temperatura");
-}
-
-function fecharAlerta() {
-    const alerta = document.getElementById("alerta");
-    alerta.classList.add("d-none");
-
-    $.ajax({
-        type: "POST",
-        url: "/Dashboard/ApagaLampada",
-        success: function () {
-            console.log("Lâmpada apagada com sucesso.");
-        },
-        error: function () {
-            console.error("Erro ao tentar apagar a lâmpada.");
-        }
-    });
-}
-
-// Ajuste na função `ativaAlerta` para exibir a mensagem de forma mais clara
-function ativaAlerta(unidade) {
-    $.ajax({
-        type: "POST",
-        url: "/Dashboard/AtivaAlarme",
-        data: { unidade: unidade },
-        success: function (response) {
-            const alerta = $("#alerta");
-            $("#alerta-mensagem").text(response.mensagem);
-            alerta.removeClass("d-none alert-danger alert-success")
-                .addClass(response.sucesso ? "alert-warning" : "alert-danger");
-            alerta.show();
-        },
-        error: function () {
-            const alerta = $("#alerta");
-            $("#alerta-mensagem").text("Erro ao processar a operação.");
-            alerta.removeClass("d-none alert-success").addClass("alert-danger");
-            alerta.show();
-        }
-    });
-}

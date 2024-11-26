@@ -2,7 +2,7 @@ CREATE DATABASE PBL_EC5;
 
 USE PBL_EC5;
 
-CREATE TABLE Usuario (
+CREATE TABLE tbUsuario (
     Id INT PRIMARY KEY NOT NULL, 
     Nome NVARCHAR(100) NOT NULL,
     Email NVARCHAR(50) NOT NULL,
@@ -62,7 +62,14 @@ CREATE TABLE tbEquipamento (
     LastUpdate DATETIME NOT NULL, 
     DataAlteracao DATETIME  
 );
+GO 
 
+CREATE TABLE tbLogs (
+    Id INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+    TipoEvento NVARCHAR(100) NOT NULL,
+    Temperatura FLOAT NOT NULL,
+    DataOcorrencia DATETIME NOT NULL
+);
  
 SELECT * 
 FROM tbEquipamento eq 

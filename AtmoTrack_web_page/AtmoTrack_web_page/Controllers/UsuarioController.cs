@@ -1,10 +1,5 @@
 ﻿using AtmoTrack_web_page.DAO;
 using AtmoTrack_web_page.Models;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using System.Data.SqlClient;
-using System.Data.SqlTypes;
-using System.Diagnostics;
 using System.Text.RegularExpressions;
 
 namespace AtmoTrack_web_page.Controllers
@@ -15,7 +10,7 @@ namespace AtmoTrack_web_page.Controllers
         {
             DAO = new UsuarioDAO();
             GeraProximoId = true;
-            TipoRegistro = "U";
+            NomeServiceRegistro = "U";
         }
 
         public override void ValidaDados(UsuarioViewModel usuario, string operacao, string statusId)

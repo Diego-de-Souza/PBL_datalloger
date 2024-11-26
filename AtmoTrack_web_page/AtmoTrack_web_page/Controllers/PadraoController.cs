@@ -14,7 +14,7 @@ namespace AtmoTrack_web_page.Controllers
         protected string NomeViewIndex { get; set; } = "index";
         protected string NomeViewForm { get; set; } = "Form";
         protected string NomeViewCadastro { get; set; } = "BuscaAvancada";
-        protected string TipoRegistro { get; set; }
+        protected string NomeServiceRegistro { get; set; }
 
         private UsuarioDAO _usuarioDAO = new UsuarioDAO();
         private EmpresaDAO _empresaDAO = new EmpresaDAO();
@@ -47,7 +47,7 @@ namespace AtmoTrack_web_page.Controllers
         }
         public virtual IActionResult Create()
         {
-            if (User.Identity.IsAuthenticated || TipoRegistro == "U")
+            if (User.Identity.IsAuthenticated || NomeServiceRegistro == "U")
             {
                 try
                 {
@@ -56,12 +56,12 @@ namespace AtmoTrack_web_page.Controllers
                     T model = Activator.CreateInstance<T>();
                     PreencheDadosParaView("I", model);
 
-                    if (TipoRegistro == "Q")
+                    if (NomeServiceRegistro == "Q")
                     {
                         var empresas = _equipamentoDAO.GetAllEmpresas().Select(e => new SelectListItem
                         {
                             Value = e.Id.ToString(),
-                            Text = e.Tipo
+                            Text = e.NomeService
                         }).ToList();
 
                         ViewBag.Empresas = empresas;
@@ -107,12 +107,12 @@ namespace AtmoTrack_web_page.Controllers
                     if (Operacao == "I")
                     {
                         DAO.InsertDinamico(model);
-                        if (TipoRegistro == "Q")
+                        if (NomeServiceRegistro == "Q")
                         {
                             var empresaParaServico = _empresaDAO.Consulta(model.EmpresaId);
 
                             // Aguarda a conclusão de CriaServico antes de prosseguir
-                            var resultadoServico = await CriaServico(empresaParaServico.Tipo);
+                            var resultadoServico = await CriaServico(empresaParaServico.NomeService);
 
                             if (resultadoServico?.Value?.ToString() != "ok")
                             {
@@ -147,7 +147,7 @@ namespace AtmoTrack_web_page.Controllers
                         return RedirectToAction(NomeViewIndex);
                     else
                     {
-                        if (TipoRegistro == "Q")
+                        if (NomeServiceRegistro == "Q")
                         {
                             var empresas = _equipamentoDAO.GetAllEmpresas().Select(e => new SelectListItem
                             {
@@ -201,19 +201,19 @@ namespace AtmoTrack_web_page.Controllers
                         return NotFound();
                     }
 
-                    if (TipoRegistro == "U")
+                    if (NomeServiceRegistro == "U")
                     {
                         viewRetorno = "VisualizarUsuario";
                     }
-                    else if (TipoRegistro == "E")
+                    else if (NomeServiceRegistro == "E")
                     {
                         viewRetorno = "ExibirEmpresa";
                     }
-                    else if (TipoRegistro == "Q")
+                    else if (NomeServiceRegistro == "Q")
                     {
                         var empresaId = _equipamentoDAO.ConsultaEmpresa(model.EmpresaId);
 
-                        ViewBag.ServiceNome = empresaId != null ? empresaId.Tipo : "Estado não encontrado";
+                        ViewBag.ServiceNome = empresaId != null ? empresaId.NomeService : "Estado não encontrado";
                         viewRetorno = "ExibirEquipamento";
                     }
 

@@ -1,8 +1,6 @@
 ﻿using AtmoTrack_web_page.Models;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Runtime.ConstrainedExecution;
 
 namespace AtmoTrack_web_page.DAO
 {
@@ -10,7 +8,7 @@ namespace AtmoTrack_web_page.DAO
     {
         protected override void SetTabela()
         {
-            Tabela = "Usuario";
+            Tabela = "tbUsuario";
             CamposInsert = "Id, Nome, Email, Senha, Endereco, Cep, Telefone, TelefoneComercial, Empresa, Cargo, Estado, Cidade, Bairro, Uf, Numero, DataRegistro, DataAlteracao";
             ValoresInsert = "@Id, @Nome, @Email, @Senha, @Endereco, @Cep, @Telefone, @TelefoneComercial, @Empresa, @Cargo, @Estado, @Cidade, @Bairro, @Uf, @Numero, @DataRegistro, @DataAlteracao";
             SetCampos = "Nome = @Nome, Email = @Email, Senha = @Senha, Endereco = @Endereco, Cep = @Cep, Telefone = @Telefone, TelefoneComercial = @TelefoneComercial, Empresa = @Empresa, Cargo = @Cargo, Estado = @Estado, Cidade = @Cidade, Birro = @Bairro, Uf = @Uf, Numero = @Numero, DataRegistro = @DataRegistro, DataAlteracao = @DataAlteracao";
@@ -102,7 +100,7 @@ namespace AtmoTrack_web_page.DAO
             string resposta = "ok";
 
             // A consulta SQL agora usa parâmetros
-            string sql = "SELECT Email, Senha FROM [dbo].[Usuario] WHERE Email = @Email AND Senha = @Senha";
+            string sql = "SELECT Email, Senha FROM [dbo].[tbUsuario] WHERE Email = @Email AND Senha = @Senha";
 
             // Criação dos parâmetros para proteger contra injeção de SQL
             SqlParameter[] parametros = new SqlParameter[]

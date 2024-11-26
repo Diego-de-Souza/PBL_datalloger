@@ -1,7 +1,6 @@
 ﻿using AtmoTrack_web_page.Models;
 using System.Data.SqlClient;
 using System.Data;
-using System.Linq.Expressions;
 
 namespace AtmoTrack_web_page.DAO
 {
@@ -10,9 +9,9 @@ namespace AtmoTrack_web_page.DAO
         protected override void SetTabela()
         {
             Tabela = "tbEmpresa";
-            CamposInsert = "Id, RazaoSocial, NomeFantasia, CNPJ, InscricaoEstadual, WebSite, Telefone1, Telefone2, Endereco, Cep, Estado, Cidade, Bairro, Uf, Numero, Tipo, DataRegistro, DataAlteracao";
-            ValoresInsert = "@Id, @RazaoSocial, @NomeFantasia, @CNPJ, @InscricaoEstadual, @WebSite, @Telefone1, @Telefone2, @Endereco, @Cep, @Estado, @Cidade, @Bairro, @Uf, @Numero, @Tipo, @DataRegistro, @DataAlteracao";
-            SetCampos = "RazaoSocial = @RazaoSocial, NomeFantasia = @NomeFantasia, CNPJ = @CNPJ, InscricaoEstadual = @InscricaoEstadual, WebSite = @WebSite, Telefone1 = @Telefone1, Telefone2 = @Telefone2, Endereco = @Endereco, Cep = @Cep, Estado = @Estado, Cidade = @Cidade, Bairro = @Bairro, Uf = @Uf, Numero = @Numero, Tipo = @Tipo, DataRegistro = @DataRegistro, DataAlteracao = @DataAlteracao";
+            CamposInsert = "Id, RazaoSocial, NomeFantasia, CNPJ, InscricaoEstadual, WebSite, Telefone1, Telefone2, Endereco, Cep, Estado, Cidade, Bairro, Uf, Numero, NomeService, DataRegistro, DataAlteracao";
+            ValoresInsert = "@Id, @RazaoSocial, @NomeFantasia, @CNPJ, @InscricaoEstadual, @WebSite, @Telefone1, @Telefone2, @Endereco, @Cep, @Estado, @Cidade, @Bairro, @Uf, @Numero, @NomeService, @DataRegistro, @DataAlteracao";
+            SetCampos = "RazaoSocial = @RazaoSocial, NomeFantasia = @NomeFantasia, CNPJ = @CNPJ, InscricaoEstadual = @InscricaoEstadual, WebSite = @WebSite, Telefone1 = @Telefone1, Telefone2 = @Telefone2, Endereco = @Endereco, Cep = @Cep, Estado = @Estado, Cidade = @Cidade, Bairro = @Bairro, Uf = @Uf, Numero = @Numero, NomeService = @NomeService, DataRegistro = @DataRegistro, DataAlteracao = @DataAlteracao";
             Condicoes = "WHERE Id = @Id";
         }
 
@@ -35,7 +34,7 @@ namespace AtmoTrack_web_page.DAO
             parametros[12] = new SqlParameter("@Bairro", SqlDbType.NVarChar, 50) { Value = (object)em.Bairro };
             parametros[13] = new SqlParameter("@Uf", SqlDbType.NVarChar, 2) { Value = (object)em.Uf };
             parametros[14] = new SqlParameter("@Numero", SqlDbType.NVarChar, 50) { Value = em.Numero };
-            parametros[15] = new SqlParameter("@Tipo", SqlDbType.NVarChar, 50) { Value = (object)em.Tipo };
+            parametros[15] = new SqlParameter("@NomeService", SqlDbType.NVarChar, 50) { Value = (object)em.NomeService };
             parametros[16] = new SqlParameter("@DataRegistro", SqlDbType.DateTime) { Value = (object)em.DataRegistro ?? DBNull.Value };
             parametros[17] = new SqlParameter("@DataAlteracao", SqlDbType.DateTime) { Value = (object)em.DataAlteracao ?? DBNull.Value };
 
@@ -64,7 +63,7 @@ namespace AtmoTrack_web_page.DAO
             em.Bairro = registro["Bairro"].ToString();
             em.Uf = registro["Uf"].ToString();
             em.Numero = registro["Numero"].ToString();
-            em.Tipo = registro["Tipo"].ToString();
+            em.NomeService = registro["NomeService"].ToString();
 
             if (registro["DataRegistro"] != DBNull.Value)
                 em.DataRegistro = Convert.ToDateTime(registro["DataRegistro"]);
@@ -94,7 +93,7 @@ namespace AtmoTrack_web_page.DAO
                 Bairro = row["Bairro"].ToString(),
                 Uf = row["Uf"].ToString(),
                 Numero = row["Numero"].ToString(),
-                Tipo = row["Tipo"].ToString(),
+                NomeService = row["NomeService"].ToString(),
                 DataRegistro = Convert.ToDateTime(row["DataRegistro"]),
                 DataAlteracao = Convert.ToDateTime(row["DataAlteracao"])
             };

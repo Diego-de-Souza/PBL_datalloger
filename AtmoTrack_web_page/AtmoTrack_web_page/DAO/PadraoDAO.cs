@@ -45,6 +45,8 @@ namespace AtmoTrack_web_page.DAO
 
             string query = $"UPDATE {Tabela} SET {setClause} {whereClause}";
 
+            Console.WriteLine(query);
+
             HelperDAO.ExecutaSQL(query, parametros);
         }
 

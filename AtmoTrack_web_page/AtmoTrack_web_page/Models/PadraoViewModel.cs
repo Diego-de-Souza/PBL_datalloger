@@ -9,6 +9,6 @@
         public virtual int EmpresaId { get; set; }
 
         public virtual DateTime DataRegistro { get; set; }
-        public virtual DateTime DataAlteracao { get; set; }
+        public virtual DateTime? DataAlteracao { get; set; }
     }
 }

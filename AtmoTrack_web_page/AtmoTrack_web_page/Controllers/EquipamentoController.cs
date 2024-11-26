@@ -13,7 +13,7 @@ namespace AtmoTrack_web_page.Controllers
         {
             DAO = new EquipamentoDAO();
             GeraProximoId = true;
-            TipoRegistro = "Q";
+            NomeServiceRegistro = "Q";
         }
 
         private DashboardDAO _dashboardDAO = new DashboardDAO();

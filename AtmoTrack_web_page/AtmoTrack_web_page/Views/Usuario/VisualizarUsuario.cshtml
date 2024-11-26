@@ -59,7 +59,7 @@
         <tr />
         <tr>
             <td>Data de Alteração</td>
-            <td class="linha-azulescuro">@(Model.DataAlteracao.ToString("dd/MM/yyyy") ?? "Não alterado")</td>
+            <td class="linha-azulescuro">@(Model.DataAlteracao?.ToString("dd/MM/yyyy") ?? "Não alterado")</td>
         <tr />
     </table>
 </body>

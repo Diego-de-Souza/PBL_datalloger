@@ -3,56 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\mobile\\documents\\facul\\5_semestre\\pbl\\pbl_datalloger\\atmotrack_web_page\\atmotrack_web_page\\views\\dashboard\\dashboard1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\views\\dashboard\\dashboard1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\mobile\\documents\\facul\\5_semestre\\pbl\\pbl_datalloger\\atmotrack_web_page\\atmotrack_web_page\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\mobile\\documents\\facul\\5_semestre\\pbl\\pbl_datalloger\\atmotrack_web_page\\atmotrack_web_page\\views\\empresa\\form.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\views\\empresa\\form.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\mobile\\documents\\facul\\5_semestre\\pbl\\pbl_datalloger\\atmotrack_web_page\\atmotrack_web_page\\dao\\equipamentodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\dao\\equipamentodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\mobile\\documents\\facul\\5_semestre\\pbl\\pbl_datalloger\\atmotrack_web_page\\atmotrack_web_page\\dao\\padraodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\dao\\padraodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\mobile\\documents\\facul\\5_semestre\\pbl\\pbl_datalloger\\atmotrack_web_page\\atmotrack_web_page\\dao\\usuariodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\dao\\usuariodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\mobile\\documents\\facul\\5_semestre\\pbl\\pbl_datalloger\\atmotrack_web_page\\atmotrack_web_page\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\mobile\\documents\\facul\\5_semestre\\pbl\\pbl_datalloger\\atmotrack_web_page\\atmotrack_web_page\\dao\\helperdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\dao\\helperdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\mobile\\documents\\facul\\5_semestre\\pbl\\pbl_datalloger\\atmotrack_web_page\\atmotrack_web_page\\dao\\padraodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\dao\\padraodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\mobile\\documents\\facul\\5_semestre\\pbl\\pbl_datalloger\\atmotrack_web_page\\atmotrack_web_page\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\mobile\\documents\\facul\\5_semestre\\pbl\\pbl_datalloger\\atmotrack_web_page\\atmotrack_web_page\\controllers\\padraocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\controllers\\padraocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\mobile\\documents\\facul\\5_semestre\\pbl\\pbl_datalloger\\atmotrack_web_page\\atmotrack_web_page\\dao\\dashboarddao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\dao\\dashboarddao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\mobile\\documents\\facul\\5_semestre\\pbl\\pbl_datalloger\\atmotrack_web_page\\atmotrack_web_page\\models\\cidadeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\models\\cidadeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\mobile\\documents\\facul\\5_semestre\\pbl\\pbl_datalloger\\atmotrack_web_page\\atmotrack_web_page\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\mobile\\documents\\facul\\5_semestre\\pbl\\pbl_datalloger\\atmotrack_web_page\\atmotrack_web_page\\dao\\logservicedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\dao\\logservicedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\mobile\\documents\\facul\\5_semestre\\pbl\\pbl_datalloger\\atmotrack_web_page\\atmotrack_web_page\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -61,8 +29,8 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 269,
-          "SelectedChildIndex": 10,
+          "DockedWidth": 271,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -86,171 +54,67 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CidadeViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\Models\\CidadeViewModel.cs",
+              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Models\\CidadeViewModel.cs",
+              "ToolTip": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\Models\\CidadeViewModel.cs",
+              "RelativeToolTip": "AtmoTrack_web_page\\Models\\CidadeViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T18:25:28.35Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "site.js",
-              "DocumentMoniker": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\js\\site.js",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\wwwroot\\js\\site.js",
-              "ToolTip": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\js\\site.js",
-              "RelativeToolTip": "AtmoTrack_web_page\\wwwroot\\js\\site.js",
-              "ViewState": "AgIAADEAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-11-26T10:32:20.174Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Form.cshtml",
-              "DocumentMoniker": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Empresa\\Form.cshtml",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Views\\Empresa\\Form.cshtml",
-              "ToolTip": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Empresa\\Form.cshtml",
-              "RelativeToolTip": "AtmoTrack_web_page\\Views\\Empresa\\Form.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-26T09:29:53.747Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "UsuarioDAO.cs",
               "DocumentMoniker": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\DAO\\UsuarioDAO.cs",
               "RelativeDocumentMoniker": "AtmoTrack_web_page\\DAO\\UsuarioDAO.cs",
-              "ToolTip": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\DAO\\UsuarioDAO.cs",
-              "RelativeToolTip": "AtmoTrack_web_page\\DAO\\UsuarioDAO.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAlwBYAAAAMAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\DAO\\UsuarioDAO.cs*",
+              "RelativeToolTip": "AtmoTrack_web_page\\DAO\\UsuarioDAO.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T23:35:37.079Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "EquipamentoDAO.cs",
-              "DocumentMoniker": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\DAO\\EquipamentoDAO.cs",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\DAO\\EquipamentoDAO.cs",
-              "ToolTip": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\DAO\\EquipamentoDAO.cs",
-              "RelativeToolTip": "AtmoTrack_web_page\\DAO\\EquipamentoDAO.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAkwFsAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T23:35:37.103Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DashboardController.cs",
-              "DocumentMoniker": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\Controllers\\DashboardController.cs",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Controllers\\DashboardController.cs",
-              "ToolTip": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\Controllers\\DashboardController.cs",
-              "RelativeToolTip": "AtmoTrack_web_page\\Controllers\\DashboardController.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAawDEAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T23:35:37.128Z",
+              "WhenOpened": "2024-11-26T18:23:33.19Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Dashboard1.cshtml",
-              "DocumentMoniker": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Dashboard\\Dashboard1.cshtml",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Views\\Dashboard\\Dashboard1.cshtml",
-              "ToolTip": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Dashboard\\Dashboard1.cshtml*",
-              "RelativeToolTip": "AtmoTrack_web_page\\Views\\Dashboard\\Dashboard1.cshtml*",
-              "ViewState": "AgIAAEoAAAAAAAAAAAAswE8AAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-25T23:42:07.511Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "DashboardDAO.cs",
-              "DocumentMoniker": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\DAO\\DashboardDAO.cs",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\DAO\\DashboardDAO.cs",
-              "ToolTip": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\DAO\\DashboardDAO.cs",
-              "RelativeToolTip": "AtmoTrack_web_page\\DAO\\DashboardDAO.cs",
-              "ViewState": "AgIAAIcAAAAAAAAAAAAYwKQAAABWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T23:36:30.512Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "PadraoDAO.cs",
               "DocumentMoniker": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\DAO\\PadraoDAO.cs",
               "RelativeDocumentMoniker": "AtmoTrack_web_page\\DAO\\PadraoDAO.cs",
-              "ToolTip": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\DAO\\PadraoDAO.cs",
-              "RelativeToolTip": "AtmoTrack_web_page\\DAO\\PadraoDAO.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAIA4wCEAAAAMAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\DAO\\PadraoDAO.cs*",
+              "RelativeToolTip": "AtmoTrack_web_page\\DAO\\PadraoDAO.cs*",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAYwCkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T23:35:37.139Z",
+              "WhenOpened": "2024-11-26T18:10:40.976Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "HelperDAO.cs",
-              "DocumentMoniker": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\DAO\\HelperDAO.cs",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\DAO\\HelperDAO.cs",
-              "ToolTip": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\DAO\\HelperDAO.cs",
-              "RelativeToolTip": "AtmoTrack_web_page\\DAO\\HelperDAO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T23:35:37.154Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 2,
               "Title": "PadraoController.cs",
               "DocumentMoniker": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\Controllers\\PadraoController.cs",
               "RelativeDocumentMoniker": "AtmoTrack_web_page\\Controllers\\PadraoController.cs",
               "ToolTip": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\Controllers\\PadraoController.cs",
               "RelativeToolTip": "AtmoTrack_web_page\\Controllers\\PadraoController.cs",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAEwGoAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAewHwAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T23:35:37.167Z",
+              "WhenOpened": "2024-11-26T18:07:18.181Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
               "Title": "UsuarioController.cs",
               "DocumentMoniker": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\Controllers\\UsuarioController.cs",
               "RelativeDocumentMoniker": "AtmoTrack_web_page\\Controllers\\UsuarioController.cs",
               "ToolTip": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\Controllers\\UsuarioController.cs",
               "RelativeToolTip": "AtmoTrack_web_page\\Controllers\\UsuarioController.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAQwFgAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T23:35:37.2Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "LoginController.cs",
-              "DocumentMoniker": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\Controllers\\LoginController.cs",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Controllers\\LoginController.cs",
-              "ToolTip": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\Controllers\\LoginController.cs",
-              "RelativeToolTip": "AtmoTrack_web_page\\Controllers\\LoginController.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAMwC0AAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T23:35:37.23Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "LogServiceDAO.cs",
-              "DocumentMoniker": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\DAO\\LogServiceDAO.cs",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\DAO\\LogServiceDAO.cs",
-              "ToolTip": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\DAO\\LogServiceDAO.cs",
-              "RelativeToolTip": "AtmoTrack_web_page\\DAO\\LogServiceDAO.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAsAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T23:34:58.449Z",
+              "WhenOpened": "2024-11-26T18:07:11.634Z",
               "EditorCaption": ""
             }
           ]

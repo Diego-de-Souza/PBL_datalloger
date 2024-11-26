@@ -9,6 +9,8 @@
   <ItemGroup>
     <Compile Remove="DAO\MQTTHub.cs" />
     <Compile Remove="DAO\MQTTService.cs" />
+    <Compile Remove="Models\CidadeViewModel.cs" />
+    <Compile Remove="Models\EstadoViewModel.cs" />
   </ItemGroup>
 
   <ItemGroup>

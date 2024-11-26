@@ -1,10 +1,8 @@
 ﻿using AtmoTrack_web_page.DAO;
 using AtmoTrack_web_page.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Data;
 using System.Data.SqlTypes;
-using System.Diagnostics;
 using System.Text.RegularExpressions;
 
 namespace AtmoTrack_web_page.Controllers
@@ -15,7 +13,7 @@ namespace AtmoTrack_web_page.Controllers
         {
             DAO = new EmpresaDAO();
             GeraProximoId = true;
-            TipoRegistro = "E";
+            NomeServiceRegistro = "E";
         }
 
         public override void ValidaDados(EmpresaViewModel empresa, string operacao, string statusId)
@@ -63,8 +61,8 @@ namespace AtmoTrack_web_page.Controllers
             if (string.IsNullOrEmpty(empresa.Cidade))
                 ModelState.AddModelError("Cidade", "Selecione uma cidade válida.");
 
-            if (string.IsNullOrEmpty(empresa.Tipo))
-                ModelState.AddModelError("Tipo", "Preencha o nome da service.");
+            if (string.IsNullOrEmpty(empresa.NomeService))
+                ModelState.AddModelError("NomeService", "Preencha o nome da service.");
 
             if (string.IsNullOrEmpty(empresa.Cep))
             {

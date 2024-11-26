@@ -11,33 +11,37 @@ namespace AtmoTrack_web_page.DAO
             Tabela = "tbUsuario";
             CamposInsert = "Id, Nome, Email, Senha, Endereco, Cep, Telefone, TelefoneComercial, Empresa, Cargo, Estado, Cidade, Bairro, Uf, Numero, DataRegistro, DataAlteracao";
             ValoresInsert = "@Id, @Nome, @Email, @Senha, @Endereco, @Cep, @Telefone, @TelefoneComercial, @Empresa, @Cargo, @Estado, @Cidade, @Bairro, @Uf, @Numero, @DataRegistro, @DataAlteracao";
-            SetCampos = "Nome = @Nome, Email = @Email, Senha = @Senha, Endereco = @Endereco, Cep = @Cep, Telefone = @Telefone, TelefoneComercial = @TelefoneComercial, Empresa = @Empresa, Cargo = @Cargo, Estado = @Estado, Cidade = @Cidade, Birro = @Bairro, Uf = @Uf, Numero = @Numero, DataRegistro = @DataRegistro, DataAlteracao = @DataAlteracao";
+            //SetCampos = "Nome = @Nome, Email = @Email, Senha = @Senha, Endereco = @Endereco, Cep = @Cep, Telefone = @Telefone, TelefoneComercial = @TelefoneComercial, Empresa = @Empresa, Cargo = @Cargo, Estado = @Estado, Cidade = @Cidade, Birro = @Bairro, Uf = @Uf, Numero = @Numero, DataRegistro = @DataRegistro, DataAlteracao = @DataAlteracao";
+            SetCampos = "Nome = @Nome, Email = @Email, Senha = @Senha, Endereco = @Endereco, Cep = @Cep";
             Condicoes = "WHERE Id = @Id";
 
         }
 
         protected override SqlParameter[] CriaParametros(UsuarioViewModel us)
         {
-            SqlParameter[] parametros = new SqlParameter[17];
-            
+            //SqlParameter[] parametros = new SqlParameter[17];
+            SqlParameter[] parametros = new SqlParameter[6];
+
             parametros[0] = new SqlParameter("@Id", SqlDbType.Int) { Value = us.Id };
             parametros[1] = new SqlParameter("@Nome", SqlDbType.NVarChar, 100) { Value = (object)us.Nome ?? DBNull.Value };
             parametros[2] = new SqlParameter("@Email", SqlDbType.NVarChar, 50) { Value = (object)us.Email };
             parametros[3] = new SqlParameter("@Senha", SqlDbType.NVarChar, 50) { Value = (object)us.Senha };
             parametros[4] = new SqlParameter("@Endereco", SqlDbType.NVarChar, 255) { Value = (object)us.Endereco };
             parametros[5] = new SqlParameter("@Cep", SqlDbType.NVarChar, 10) { Value = (object)us.Cep };
-            parametros[6] = new SqlParameter("@Telefone", SqlDbType.NVarChar, 15) { Value = (object)us.Telefone };
-            parametros[7] = new SqlParameter("@TelefoneComercial", SqlDbType.NVarChar, 15) { Value = (object)us.TelefoneComercial ?? DBNull.Value };
-            parametros[8] = new SqlParameter("@Empresa", SqlDbType.NVarChar, 100) { Value = (object)us.Empresa };
-            parametros[9] = new SqlParameter("@Cargo", SqlDbType.NVarChar, 50) { Value = (object)us.Cargo };
-            parametros[10] = new SqlParameter("@Estado", SqlDbType.NVarChar, 50) { Value = (object)us.Estado };
-            parametros[11] = new SqlParameter("@Cidade", SqlDbType.NVarChar, 50) { Value = (object)us.Cidade};
-            parametros[12] = new SqlParameter("@Bairro", SqlDbType.NVarChar, 50) { Value = (object)us.Bairro };
-            parametros[13] = new SqlParameter("@Uf", SqlDbType.NVarChar, 2) { Value = (object)us.Uf };
-            parametros[14] = new SqlParameter("@Numero", SqlDbType.NVarChar, 50) { Value = (object)us.Numero };
-            parametros[15] = new SqlParameter("@DataRegistro", SqlDbType.DateTime) { Value = (object)us.DataRegistro ?? DBNull.Value };
-            parametros[16] = new SqlParameter("@DataAlteracao", SqlDbType.DateTime) { Value = (object)us.DataAlteracao ?? DBNull.Value };
- 
+            //parametros[6] = new SqlParameter("@Telefone", SqlDbType.NVarChar, 15) { Value = (object)us.Telefone };
+            //parametros[7] = new SqlParameter("@TelefoneComercial", SqlDbType.NVarChar, 15) { Value = (object)us.TelefoneComercial ?? DBNull.Value };
+            //parametros[8] = new SqlParameter("@Empresa", SqlDbType.NVarChar, 100) { Value = (object)us.Empresa };
+            //parametros[9] = new SqlParameter("@Cargo", SqlDbType.NVarChar, 50) { Value = (object)us.Cargo };
+            //parametros[10] = new SqlParameter("@Estado", SqlDbType.NVarChar, 50) { Value = (object)us.Estado };
+            //parametros[11] = new SqlParameter("@Cidade", SqlDbType.NVarChar, 50) { Value = (object)us.Cidade};
+            //parametros[12] = new SqlParameter("@Bairro", SqlDbType.NVarChar, 50) { Value = (object)us.Bairro };
+            //parametros[13] = new SqlParameter("@Uf", SqlDbType.NVarChar, 2) { Value = (object)us.Uf };
+            //parametros[14] = new SqlParameter("@Numero", SqlDbType.NVarChar, 50) { Value = (object)us.Numero };
+            //parametros[15] = new SqlParameter("@DataRegistro", SqlDbType.DateTime) { Value = (object)us.DataRegistro ?? DBNull.Value };
+            //parametros[16] = new SqlParameter("@DataAlteracao", SqlDbType.DateTime) { Value = (object)us.DataAlteracao ?? DBNull.Value };
+
+            //Console.WriteLine($"Id: {us.Id}, Nome: {us.Nome}, Email: {us.Email}, DataRegistro: {us.DataRegistro}");
+
             return parametros;
         }
 

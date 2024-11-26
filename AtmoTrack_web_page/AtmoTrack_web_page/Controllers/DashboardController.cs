@@ -69,9 +69,11 @@ namespace AtmoTrack_web_page.Controllers
                 mensagem = $"Alerta! A temperatura está acima do set!";
             }
 
-            var lampadaResposta = await _dashboardDAO.SetLampStateAsync(lampState);
+            //var lampadaResposta = await _dashboardDAO.SetLampStateAsync(lampState);
 
-            var mensagemAlert = new { sucesso = sucesso, mensagem = mensagem, lampadaResposta };
+            //var mensagemAlert = new { sucesso = sucesso, mensagem = mensagem, lampadaResposta };
+            var mensagemAlert = new { sucesso = sucesso, mensagem = "Deu merda" };
+
             return Json(mensagemAlert);
         }
 

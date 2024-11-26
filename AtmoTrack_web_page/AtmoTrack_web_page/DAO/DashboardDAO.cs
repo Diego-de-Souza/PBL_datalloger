@@ -14,8 +14,8 @@ namespace AtmoTrack_web_page.DAO
         //metodo que busca os dados do sensor no sth-comet
         public async Task<string> GetTemperatureDataAsync(string data)
         {
-            var request = new HttpRequestMessage(HttpMethod.Get, "http://4.228.58.59:8666/STH/v1/contextEntities/type/Lamp/id/urn:ngsi-ld:Lamp:003t/attributes/" + data+"?lastN=30");
-            request.Headers.Add("fiware-service", "nextime");
+            var request = new HttpRequestMessage(HttpMethod.Get, "http://74.163.88.52:8666/STH/v1/contextEntities/type/Lamp/id/urn:ngsi-ld:Lamp:001/attributes/" + data+"?lastN=30");
+            request.Headers.Add("fiware-service", "atmotrack");
             request.Headers.Add("fiware-servicepath", "/");
 
             var response = await _client.SendAsync(request);
@@ -43,8 +43,8 @@ namespace AtmoTrack_web_page.DAO
         // Método para acender ou apagar a lâmpada
         public async Task<string> SetLampStateAsync(string state)
         {
-            var request = new HttpRequestMessage(HttpMethod.Patch, "http://4.228.58.59:1026/v2/entities/urn:ngsi-ld:Lamp:002t/attrs");
-            request.Headers.Add("fiware-service", "nextime");
+            var request = new HttpRequestMessage(HttpMethod.Patch, "http://74.163.88.52:1026/v2/entities/urn:ngsi-ld:Lamp:001/attrs");
+            request.Headers.Add("fiware-service", "atmotrack");
             request.Headers.Add("fiware-servicepath", "/");
 
             // Define o JSON dinamicamente com o valor de estado recebido
@@ -66,7 +66,7 @@ namespace AtmoTrack_web_page.DAO
         //provisiona a criação do serviço
         public async Task<string> CreateIoTServiceAsync(string fiwareService)
         {
-            var request = new HttpRequestMessage(HttpMethod.Post, "http://4.228.58.59:4041/iot/services");
+            var request = new HttpRequestMessage(HttpMethod.Post, "http://74.163.88.52:4041/iot/services");
             request.Headers.Add("fiware-service", fiwareService);
             request.Headers.Add("fiware-servicepath", "/");
 
@@ -92,7 +92,7 @@ namespace AtmoTrack_web_page.DAO
         //provisiona o dispositivo para acender a lampada
         public async Task<string> RegisterDeviceAsync(string fiwareService)
         {
-            var request = new HttpRequestMessage(HttpMethod.Post, "http://4.228.58.59:4041/iot/devices");
+            var request = new HttpRequestMessage(HttpMethod.Post, "http://74.163.88.52:4041/iot/devices");
             request.Headers.Add("fiware-service", fiwareService);
             request.Headers.Add("fiware-servicepath", "/");
 
@@ -127,7 +127,7 @@ namespace AtmoTrack_web_page.DAO
         //provisionando o registro dos comandos para ascender e apagar a lampada
         public async Task<string> RegisterLampCommandsAsync(string fiwareService)
         {
-            var request = new HttpRequestMessage(HttpMethod.Post, "http://4.228.58.59:1026/v2/registrations");
+            var request = new HttpRequestMessage(HttpMethod.Post, "http://74.163.88.52:1026/v2/registrations");
             request.Headers.Add("fiware-service", fiwareService);
             request.Headers.Add("fiware-servicepath", "/");
 
@@ -162,7 +162,7 @@ namespace AtmoTrack_web_page.DAO
         //cria o serviço de notificação pelo sth comet para receber os dados do back-end
         public async Task<string> AddTemperatureSubscriptionAsync(string fiwareService)
         {
-            var request = new HttpRequestMessage(HttpMethod.Post, "http://4.228.58.59:1026/v2/subscriptions");
+            var request = new HttpRequestMessage(HttpMethod.Post, "http://74.163.88.52:1026/v2/subscriptions");
             request.Headers.Add("fiware-service", fiwareService);
             request.Headers.Add("fiware-servicepath", "/");
 

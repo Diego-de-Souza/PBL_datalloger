@@ -37,98 +37,29 @@
     }
 }
 
-const alertaTemperatura = document.getElementById('container-dados-reais-temperatura');
-
-function mudaCorTemperatura() {
-    alertaTemperatura.classList.add('alert-dados');
-    alertaTemperatura.classList.remove('container-dados-reais');
-    ativaAlerta("temperatura");
-}
-
-function fecharAlerta() {
-    const alerta = document.getElementById("alerta");
-    alerta.classList.add("d-none");
-
-    $.ajax({
-        type: "POST",
-        url: "/Dashboard/ApagaLampada",
-        success: function () {
-            console.log("Lâmpada apagada com sucesso.");
-        },
-        error: function () {
-            console.error("Erro ao tentar apagar a lâmpada.");
-        }
-    });
-}
-
-// Ajuste na função `ativaAlerta` para exibir a mensagem de forma mais clara
-function ativaAlerta(unidade) {
-    $.ajax({
-        type: "POST",
-        url: "/Dashboard/AtivaAlarme",
-        data: { unidade: unidade },
-        success: function (response) {
-            const alerta = $("#alerta");
-            $("#alerta-mensagem").text(response.mensagem);
-            alerta.removeClass("d-none alert-danger alert-success")
-                .addClass(response.sucesso ? "alert-warning" : "alert-danger");
-            alerta.show();
-        },
-        error: function () {
-            const alerta = $("#alerta");
-            $("#alerta-mensagem").text("Erro ao processar a operação.");
-            alerta.removeClass("d-none alert-success").addClass("alert-danger");
-            alerta.show();
-        }
-    });
-}
-
-function aplicaFiltroConsultaAvancadaEquipamento() {
-    var vNome = document.getElementById('Nome').value;
-    var vEmpresaId = document.getElementById('EmpresaId').value;
-    var vNomeFantasia = document.getElementById('NomeFantasia').value;
-    var vLastUpdate = document.getElementById('LastUpdate').value;
-
-    $.ajax({
-        url: "/Equipamento/ObtemDadosConsultaAvancada",
-        type: "POST",
-        data: {Nome: vNome, EmpresaId: vEmpresaId, LastUpdate: vLastUpdate, NomeFantasia: vNomeFantasia},
-        success: function (dados) {
-            if (dados.erro !== undefined && dados.erro) {
-                alert(dados.msg);
-            } else {
-                document.getElementById('resultadoConsulta').innerHTML = dados;
-            }
-        },
-        error: function (xhr, status, error) {
-            console.error("Erro na requisição AJAX:", error);
-            alert("Erro ao obter dados da consulta avançada.");
-        }
-    });
-}
-
-
 function aplicaFiltroConsultaAvancada() {
-    var vId = document.getElementById('id').value;
-    var vNome = document.getElementById('NomeFantasia').value;
-    var vEstados = document.getElementById('Estados').value;
-    var vDataRegistro = document.getElementById('dataregistro').value;
-    var vConnectionStatus = document.getElementById('connectionstatus').value;
-
+    var vDescricao = document.getElementById('descricao').value;
+    var vCategoria = document.getElementById('categoria').value;
+    var vDataInicial = document.getElementById('dataInicial').value;
+    var vDataFinal = document.getElementById('dataFinal').value;
     $.ajax({
-        url: "/Empresa/ObtemDadosConsultaAvancada",
-        type: "POST",
-        data: { id: vId, nome: vNome, estados: vEstados, dataregistro: vDataRegistro, connectionstatus: vConnectionStatus },
+        url: "/jogo/ObtemDadosConsultaAvancada",
+        data: {
+            descricao: vDescricao,
+            categoria: vCategoria,
+            dataInicial: vDataInicial,
+            dataFinal: vDataFinal
+        },
         success: function (dados) {
-            if (dados.erro !== undefined && dados.erro) {
+            if (dados.erro != undefined) {
                 alert(dados.msg);
-            } else {
+            }
+            else {
                 document.getElementById('resultadoConsulta').innerHTML = dados;
             }
         },
-        error: function (xhr, status, error) {
-            console.error("Erro na requisição AJAX:", error);
-            alert("Erro ao obter dados da consulta avançada.");
-        }
     });
+
 }
+
+

@@ -1,158 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\",
+  "WorkspaceRootPath": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\testwork\\desktop\\git\\atmotrack_web_page\\atmotrack_web_page\\views\\empresa\\pvgridem.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\views\\empresa\\pvgridem.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\testwork\\desktop\\git\\atmotrack_web_page\\atmotrack_web_page\\views\\equipamento\\pvgrideq.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\views\\equipamento\\pvgrideq.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\testwork\\desktop\\git\\atmotrack_web_page\\atmotrack_web_page\\dao\\equipamentodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\dao\\equipamentodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\testwork\\desktop\\git\\atmotrack_web_page\\atmotrack_web_page\\controllers\\equipamentocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\controllers\\equipamentocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\testwork\\desktop\\git\\atmotrack_web_page\\atmotrack_web_page\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\testwork\\desktop\\git\\atmotrack_web_page\\atmotrack_web_page\\views\\equipamento\\buscaavancada.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\views\\equipamento\\buscaavancada.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\testwork\\desktop\\git\\atmotrack_web_page\\atmotrack_web_page\\views\\empresa\\buscaavancada.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\views\\empresa\\buscaavancada.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\testwork\\desktop\\git\\atmotrack_web_page\\atmotrack_web_page\\views\\equipamento\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\views\\equipamento\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\testwork\\desktop\\git\\atmotrack_web_page\\atmotrack_web_page\\views\\equipamento\\form.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\views\\equipamento\\form.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\testwork\\desktop\\git\\atmotrack_web_page\\atmotrack_web_page\\views\\equipamento\\exibirequipamento.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\views\\equipamento\\exibirequipamento.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\testwork\\desktop\\git\\atmotrack_web_page\\atmotrack_web_page\\views\\empresa\\exibirempresa.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\mobile\\documents\\facul\\5_semestre\\pbl\\pbl_datalloger\\atmotrack_web_page\\atmotrack_web_page\\views\\empresa\\exibirempresa.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\views\\empresa\\exibirempresa.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\testwork\\desktop\\git\\atmotrack_web_page\\atmotrack_web_page\\views\\empresa\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\views\\empresa\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\testwork\\desktop\\git\\atmotrack_web_page\\atmotrack_web_page\\views\\empresa\\form.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\mobile\\documents\\facul\\5_semestre\\pbl\\pbl_datalloger\\atmotrack_web_page\\atmotrack_web_page\\views\\empresa\\form.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\views\\empresa\\form.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\testwork\\desktop\\git\\atmotrack_web_page\\atmotrack_web_page\\controllers\\empresacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\controllers\\empresacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\mobile\\documents\\facul\\5_semestre\\pbl\\pbl_datalloger\\atmotrack_web_page\\atmotrack_web_page\\views\\dashboard\\dashboard2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\views\\dashboard\\dashboard2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\testwork\\desktop\\git\\atmotrack_web_page\\atmotrack_web_page\\dao\\empresadao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\dao\\empresadao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\testwork\\desktop\\git\\atmotrack_web_page\\atmotrack_web_page\\dao\\padraodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\dao\\padraodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\testwork\\desktop\\git\\atmotrack_web_page\\atmotrack_web_page\\views\\empresa\\testecep.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\views\\empresa\\testecep.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\testwork\\desktop\\git\\atmotrack_web_page\\atmotrack_web_page\\models\\equipamentoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\models\\equipamentoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\testwork\\desktop\\git\\atmotrack_web_page\\atmotrack_web_page\\models\\padraoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\models\\padraoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\testwork\\desktop\\git\\atmotrack_web_page\\atmotrack_web_page\\dao\\helperdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\dao\\helperdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\testwork\\desktop\\git\\atmotrack_web_page\\atmotrack_web_page\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\testwork\\desktop\\git\\atmotrack_web_page\\atmotrack_web_page\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\testwork\\desktop\\git\\atmotrack_web_page\\atmotrack_web_page\\models\\equipamentobuscaavancadaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\models\\equipamentobuscaavancadaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\testwork\\desktop\\git\\atmotrack_web_page\\atmotrack_web_page\\dao\\usuariodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\dao\\usuariodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\testwork\\desktop\\git\\atmotrack_web_page\\atmotrack_web_page\\models\\usuarioviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\models\\usuarioviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\testwork\\desktop\\git\\atmotrack_web_page\\atmotrack_web_page\\models\\empresaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\models\\empresaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\testwork\\desktop\\git\\atmotrack_web_page\\atmotrack_web_page\\models\\cidadeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\models\\cidadeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\testwork\\desktop\\git\\atmotrack_web_page\\atmotrack_web_page\\dao\\dashboarddao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\dao\\dashboarddao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\testwork\\desktop\\git\\atmotrack_web_page\\atmotrack_web_page\\models\\empresabuscaavancadaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\models\\empresabuscaavancadaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\testwork\\desktop\\git\\atmotrack_web_page\\atmotrack_web_page\\controllers\\padraocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\mobile\\documents\\facul\\5_semestre\\pbl\\pbl_datalloger\\atmotrack_web_page\\atmotrack_web_page\\controllers\\padraocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\controllers\\padraocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\testwork\\desktop\\git\\atmotrack_web_page\\atmotrack_web_page\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\mobile\\documents\\facul\\5_semestre\\pbl\\pbl_datalloger\\atmotrack_web_page\\atmotrack_web_page\\controllers\\empresacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\controllers\\empresacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\testwork\\desktop\\git\\atmotrack_web_page\\atmotrack_web_page\\controllers\\helpercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\controllers\\helpercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\mobile\\documents\\facul\\5_semestre\\pbl\\pbl_datalloger\\atmotrack_web_page\\atmotrack_web_page\\models\\logeventoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\models\\logeventoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\testwork\\desktop\\git\\atmotrack_web_page\\atmotrack_web_page\\models\\estadoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\models\\estadoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\mobile\\documents\\facul\\5_semestre\\pbl\\pbl_datalloger\\atmotrack_web_page\\atmotrack_web_page\\dao\\empresadao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\dao\\empresadao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\testwork\\desktop\\git\\atmotrack_web_page\\atmotrack_web_page\\views\\usuario\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\views\\usuario\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\testwork\\desktop\\git\\atmotrack_web_page\\atmotrack_web_page\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\testwork\\desktop\\git\\atmotrack_web_page\\atmotrack_web_page\\views\\dashboard\\dashboard1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\views\\dashboard\\dashboard1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\testwork\\desktop\\git\\atmotrack_web_page\\atmotrack_web_page\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\DAO\\MQTTService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AtmoTrack_web_page\\DAO\\MQTTService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|c:\\users\\mobile\\documents\\facul\\5_semestre\\pbl\\pbl_datalloger\\atmotrack_web_page\\atmotrack_web_page\\controllers\\equipamentocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C149BCCB-9815-4278-A57A-77EBE09FB113}|AtmoTrack_web_page\\AtmoTrack_web_page.csproj|solutionrelative:atmotrack_web_page\\controllers\\equipamentocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -162,21 +42,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 269,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 5,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "BuscaAvancada.cshtml",
-              "DocumentMoniker": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Empresa\\BuscaAvancada.cshtml",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Views\\Empresa\\BuscaAvancada.cshtml",
-              "ToolTip": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Empresa\\BuscaAvancada.cshtml",
-              "RelativeToolTip": "AtmoTrack_web_page\\Views\\Empresa\\BuscaAvancada.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHkAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-08T00:57:09.968Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Bookmark",
@@ -184,491 +54,118 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "site.js",
-              "DocumentMoniker": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\js\\site.js",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\wwwroot\\js\\site.js",
-              "ToolTip": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\wwwroot\\js\\site.js",
-              "RelativeToolTip": "AtmoTrack_web_page\\wwwroot\\js\\site.js",
-              "ViewState": "AgIAAE4AAAAAAAAAAAA1wHYAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-11-05T21:50:27.834Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EquipamentoDAO.cs",
-              "DocumentMoniker": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\DAO\\EquipamentoDAO.cs",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\DAO\\EquipamentoDAO.cs",
-              "ToolTip": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\DAO\\EquipamentoDAO.cs",
-              "RelativeToolTip": "AtmoTrack_web_page\\DAO\\EquipamentoDAO.cs",
-              "ViewState": "AgIAAIEAAAAAAAAAAAArwKMAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T19:24:02.697Z",
+              "DocumentIndex": 0,
+              "Title": "ExibirEmpresa.cshtml",
+              "DocumentMoniker": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Empresa\\ExibirEmpresa.cshtml",
+              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Views\\Empresa\\ExibirEmpresa.cshtml",
+              "ToolTip": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Empresa\\ExibirEmpresa.cshtml",
+              "RelativeToolTip": "AtmoTrack_web_page\\Views\\Empresa\\ExibirEmpresa.cshtml",
+              "ViewState": "AgIAAD8AAAAAAAAAAIAwwEkAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T22:39:40.134Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "pvGridEq.cshtml",
-              "DocumentMoniker": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Equipamento\\pvGridEq.cshtml",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Views\\Equipamento\\pvGridEq.cshtml",
-              "ToolTip": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Equipamento\\pvGridEq.cshtml",
-              "RelativeToolTip": "AtmoTrack_web_page\\Views\\Equipamento\\pvGridEq.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Title": "Form.cshtml",
+              "DocumentMoniker": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Empresa\\Form.cshtml",
+              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Views\\Empresa\\Form.cshtml",
+              "ToolTip": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Empresa\\Form.cshtml",
+              "RelativeToolTip": "AtmoTrack_web_page\\Views\\Empresa\\Form.cshtml",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAUwGcAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-20T03:37:35.347Z",
+              "WhenOpened": "2024-11-25T22:39:02.118Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "pvGridEm.cshtml",
-              "DocumentMoniker": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Empresa\\pvGridEm.cshtml",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Views\\Empresa\\pvGridEm.cshtml",
-              "ToolTip": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Empresa\\pvGridEm.cshtml",
-              "RelativeToolTip": "AtmoTrack_web_page\\Views\\Empresa\\pvGridEm.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAXAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Dashboard2.cshtml",
+              "DocumentMoniker": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Dashboard\\Dashboard2.cshtml",
+              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Views\\Dashboard\\Dashboard2.cshtml",
+              "ToolTip": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Dashboard\\Dashboard2.cshtml",
+              "RelativeToolTip": "AtmoTrack_web_page\\Views\\Dashboard\\Dashboard2.cshtml",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAUwA0AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-08T00:37:49.404Z",
+              "WhenOpened": "2024-11-25T22:38:48.351Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "EquipamentoController.cs",
-              "DocumentMoniker": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Controllers\\EquipamentoController.cs",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Controllers\\EquipamentoController.cs",
-              "ToolTip": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Controllers\\EquipamentoController.cs",
-              "RelativeToolTip": "AtmoTrack_web_page\\Controllers\\EquipamentoController.cs",
-              "ViewState": "AgIAAFgAAAAAAAAAAADgv34AAAAQAAAAAAAAAA==",
+              "Title": "PadraoController.cs",
+              "DocumentMoniker": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\Controllers\\PadraoController.cs",
+              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Controllers\\PadraoController.cs",
+              "ToolTip": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\Controllers\\PadraoController.cs",
+              "RelativeToolTip": "AtmoTrack_web_page\\Controllers\\PadraoController.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAIAwwDsAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T19:36:28.635Z",
+              "WhenOpened": "2024-11-25T22:38:37.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EmpresaController.cs",
+              "DocumentMoniker": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\Controllers\\EmpresaController.cs",
+              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Controllers\\EmpresaController.cs",
+              "ToolTip": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\Controllers\\EmpresaController.cs",
+              "RelativeToolTip": "AtmoTrack_web_page\\Controllers\\EmpresaController.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAYwDgAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T22:38:11.101Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "BuscaAvancada.cshtml",
-              "DocumentMoniker": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Equipamento\\BuscaAvancada.cshtml",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Views\\Equipamento\\BuscaAvancada.cshtml",
-              "ToolTip": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Equipamento\\BuscaAvancada.cshtml",
-              "RelativeToolTip": "AtmoTrack_web_page\\Views\\Equipamento\\BuscaAvancada.cshtml",
-              "ViewState": "AgIAADsAAAAAAAAAAAAYwFkAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-08T02:16:14.796Z",
+              "Title": "LogEventoViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\Models\\LogEventoViewModel.cs",
+              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Models\\LogEventoViewModel.cs",
+              "ToolTip": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\Models\\LogEventoViewModel.cs",
+              "RelativeToolTip": "AtmoTrack_web_page\\Models\\LogEventoViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T22:37:54.855Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EmpresaDAO.cs",
+              "DocumentMoniker": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\DAO\\EmpresaDAO.cs",
+              "RelativeDocumentMoniker": "AtmoTrack_web_page\\DAO\\EmpresaDAO.cs",
+              "ToolTip": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\DAO\\EmpresaDAO.cs",
+              "RelativeToolTip": "AtmoTrack_web_page\\DAO\\EmpresaDAO.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAYwFgAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T22:35:09.393Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Equipamento\\Index.cshtml",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Views\\Equipamento\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Equipamento\\Index.cshtml",
-              "RelativeToolTip": "AtmoTrack_web_page\\Views\\Equipamento\\Index.cshtml",
-              "ViewState": "AgIAAHIAAAAAAAAAAAAAAIQAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-19T19:36:57.032Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Form.cshtml",
-              "DocumentMoniker": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Equipamento\\Form.cshtml",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Views\\Equipamento\\Form.cshtml",
-              "ToolTip": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Equipamento\\Form.cshtml",
-              "RelativeToolTip": "AtmoTrack_web_page\\Views\\Equipamento\\Form.cshtml",
-              "ViewState": "AgIAAIAAAAAAAAAAAAAAAB4AAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-24T04:03:54.748Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ExibirEmpresa.cshtml",
-              "DocumentMoniker": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Empresa\\ExibirEmpresa.cshtml",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Views\\Empresa\\ExibirEmpresa.cshtml",
-              "ToolTip": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Empresa\\ExibirEmpresa.cshtml",
-              "RelativeToolTip": "AtmoTrack_web_page\\Views\\Empresa\\ExibirEmpresa.cshtml",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAAAJAAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-08T02:29:30.903Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ExibirEquipamento.cshtml",
-              "DocumentMoniker": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Equipamento\\ExibirEquipamento.cshtml",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Views\\Equipamento\\ExibirEquipamento.cshtml",
-              "ToolTip": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Equipamento\\ExibirEquipamento.cshtml",
-              "RelativeToolTip": "AtmoTrack_web_page\\Views\\Equipamento\\ExibirEquipamento.cshtml",
-              "ViewState": "AgIAAHgAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-08T18:00:07.643Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Empresa\\Index.cshtml",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Views\\Empresa\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Empresa\\Index.cshtml",
-              "RelativeToolTip": "AtmoTrack_web_page\\Views\\Empresa\\Index.cshtml",
-              "ViewState": "AgIAAGYAAAAAAAAAAIBJwJgAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-08T02:28:43.239Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "EmpresaDAO.cs",
-              "DocumentMoniker": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\DAO\\EmpresaDAO.cs",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\DAO\\EmpresaDAO.cs",
-              "ToolTip": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\DAO\\EmpresaDAO.cs",
-              "RelativeToolTip": "AtmoTrack_web_page\\DAO\\EmpresaDAO.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAADgvykAAAAMAAAAAAAAAA==",
+              "Title": "EquipamentoController.cs",
+              "DocumentMoniker": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\Controllers\\EquipamentoController.cs",
+              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Controllers\\EquipamentoController.cs",
+              "ToolTip": "C:\\Users\\Mobile\\Documents\\facul\\5_semestre\\PBL\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\Controllers\\EquipamentoController.cs",
+              "RelativeToolTip": "AtmoTrack_web_page\\Controllers\\EquipamentoController.cs",
+              "ViewState": "AgIAAI8AAAAAAAAAAAAYwMMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T00:29:34.568Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Form.cshtml",
-              "DocumentMoniker": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Empresa\\Form.cshtml",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Views\\Empresa\\Form.cshtml",
-              "ToolTip": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Empresa\\Form.cshtml",
-              "RelativeToolTip": "AtmoTrack_web_page\\Views\\Empresa\\Form.cshtml",
-              "ViewState": "AgIAAC0AAAAAAAAAAIBJwAAAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-08T02:28:55.468Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "EmpresaController.cs",
-              "DocumentMoniker": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Controllers\\EmpresaController.cs",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Controllers\\EmpresaController.cs",
-              "ToolTip": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Controllers\\EmpresaController.cs",
-              "RelativeToolTip": "AtmoTrack_web_page\\Controllers\\EmpresaController.cs",
-              "ViewState": "AgIAAIoAAAAAAAAAAAAQwK4AAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T01:50:25.223Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "PadraoDAO.cs",
-              "DocumentMoniker": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\DAO\\PadraoDAO.cs",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\DAO\\PadraoDAO.cs",
-              "ToolTip": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\DAO\\PadraoDAO.cs",
-              "RelativeToolTip": "AtmoTrack_web_page\\DAO\\PadraoDAO.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAArwFUAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T19:42:41.266Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "TesteCep.cshtml",
-              "DocumentMoniker": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Empresa\\TesteCep.cshtml",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Views\\Empresa\\TesteCep.cshtml",
-              "ToolTip": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Empresa\\TesteCep.cshtml",
-              "RelativeToolTip": "AtmoTrack_web_page\\Views\\Empresa\\TesteCep.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-08T18:07:30.309Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "EquipamentoViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Models\\EquipamentoViewModel.cs",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Models\\EquipamentoViewModel.cs",
-              "ToolTip": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Models\\EquipamentoViewModel.cs",
-              "RelativeToolTip": "AtmoTrack_web_page\\Models\\EquipamentoViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T22:07:39.268Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "PadraoViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Models\\PadraoViewModel.cs",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Models\\PadraoViewModel.cs",
-              "ToolTip": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Models\\PadraoViewModel.cs",
-              "RelativeToolTip": "AtmoTrack_web_page\\Models\\PadraoViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T22:30:07.635Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "HelperDAO.cs",
-              "DocumentMoniker": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\DAO\\HelperDAO.cs",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\DAO\\HelperDAO.cs",
-              "ToolTip": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\DAO\\HelperDAO.cs",
-              "RelativeToolTip": "AtmoTrack_web_page\\DAO\\HelperDAO.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAiwEEAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T17:55:43.948Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "AtmoTrack_web_page\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAFAAAAAAAAAAAAASwF8AAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-08T02:57:54.218Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "UsuarioController.cs",
-              "DocumentMoniker": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Controllers\\UsuarioController.cs",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Controllers\\UsuarioController.cs",
-              "ToolTip": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Controllers\\UsuarioController.cs",
-              "RelativeToolTip": "AtmoTrack_web_page\\Controllers\\UsuarioController.cs",
-              "ViewState": "AgIAAHwAAAAAAAAAAAAUwGkAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T00:50:19.829Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "EquipamentoBuscaAvancadaViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Models\\EquipamentoBuscaAvancadaViewModel.cs",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Models\\EquipamentoBuscaAvancadaViewModel.cs",
-              "ToolTip": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Models\\EquipamentoBuscaAvancadaViewModel.cs",
-              "RelativeToolTip": "AtmoTrack_web_page\\Models\\EquipamentoBuscaAvancadaViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T02:19:50.806Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "UsuarioDAO.cs",
-              "DocumentMoniker": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\DAO\\UsuarioDAO.cs",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\DAO\\UsuarioDAO.cs",
-              "ToolTip": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\DAO\\UsuarioDAO.cs",
-              "RelativeToolTip": "AtmoTrack_web_page\\DAO\\UsuarioDAO.cs",
-              "ViewState": "AgIAAFAAAAAAAAAAAADwv2EAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T19:24:02.684Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "UsuarioViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Models\\UsuarioViewModel.cs",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Models\\UsuarioViewModel.cs",
-              "ToolTip": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Models\\UsuarioViewModel.cs",
-              "RelativeToolTip": "AtmoTrack_web_page\\Models\\UsuarioViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T02:21:27.268Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "EmpresaViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Models\\EmpresaViewModel.cs",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Models\\EmpresaViewModel.cs",
-              "ToolTip": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Models\\EmpresaViewModel.cs",
-              "RelativeToolTip": "AtmoTrack_web_page\\Models\\EmpresaViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T01:54:46.542Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "CidadeViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Models\\CidadeViewModel.cs",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Models\\CidadeViewModel.cs",
-              "ToolTip": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Models\\CidadeViewModel.cs",
-              "RelativeToolTip": "AtmoTrack_web_page\\Models\\CidadeViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T22:29:18.997Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "DashboardDAO.cs",
-              "DocumentMoniker": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\DAO\\DashboardDAO.cs",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\DAO\\DashboardDAO.cs",
-              "ToolTip": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\DAO\\DashboardDAO.cs",
-              "RelativeToolTip": "AtmoTrack_web_page\\DAO\\DashboardDAO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T00:31:03.41Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "EmpresaBuscaAvancadaViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Models\\EmpresaBuscaAvancadaViewModel.cs",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Models\\EmpresaBuscaAvancadaViewModel.cs",
-              "ToolTip": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Models\\EmpresaBuscaAvancadaViewModel.cs",
-              "RelativeToolTip": "AtmoTrack_web_page\\Models\\EmpresaBuscaAvancadaViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T01:53:13.184Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "PadraoController.cs",
-              "DocumentMoniker": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Controllers\\PadraoController.cs",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Controllers\\PadraoController.cs",
-              "ToolTip": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Controllers\\PadraoController.cs",
-              "RelativeToolTip": "AtmoTrack_web_page\\Controllers\\PadraoController.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAQwB8AAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T01:48:59.352Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "DashboardController.cs",
-              "DocumentMoniker": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Controllers\\DashboardController.cs",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Controllers\\DashboardController.cs",
-              "ToolTip": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Controllers\\DashboardController.cs",
-              "RelativeToolTip": "AtmoTrack_web_page\\Controllers\\DashboardController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T19:24:02.71Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "HelperController.cs",
-              "DocumentMoniker": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Controllers\\HelperController.cs",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Controllers\\HelperController.cs",
-              "ToolTip": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Controllers\\HelperController.cs",
-              "RelativeToolTip": "AtmoTrack_web_page\\Controllers\\HelperController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T17:55:35.709Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "MQTTService.cs",
-              "DocumentMoniker": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\DAO\\MQTTService.cs",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\DAO\\MQTTService.cs",
-              "ToolTip": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\DAO\\MQTTService.cs",
-              "RelativeToolTip": "AtmoTrack_web_page\\DAO\\MQTTService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T00:31:07.964Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "EstadoViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Models\\EstadoViewModel.cs",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Models\\EstadoViewModel.cs",
-              "ToolTip": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Models\\EstadoViewModel.cs",
-              "RelativeToolTip": "AtmoTrack_web_page\\Models\\EstadoViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T00:12:06.739Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Usuario\\Index.cshtml",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Views\\Usuario\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Usuario\\Index.cshtml",
-              "RelativeToolTip": "AtmoTrack_web_page\\Views\\Usuario\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-19T19:38:22.472Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "AtmoTrack_web_page\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T18:25:09.954Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "Dashboard1.cshtml",
-              "DocumentMoniker": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Dashboard\\Dashboard1.cshtml",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Views\\Dashboard\\Dashboard1.cshtml",
-              "ToolTip": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Dashboard\\Dashboard1.cshtml",
-              "RelativeToolTip": "AtmoTrack_web_page\\Views\\Dashboard\\Dashboard1.cshtml",
-              "ViewState": "AgIAAJQBAAAAAAAAAAAqwKgBAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-05T00:23:52.803Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Login\\Index.cshtml",
-              "RelativeDocumentMoniker": "AtmoTrack_web_page\\Views\\Login\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Testwork\\Desktop\\Git\\AtmoTrack_web_page\\AtmoTrack_web_page\\Views\\Login\\Index.cshtml",
-              "RelativeToolTip": "AtmoTrack_web_page\\Views\\Login\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-05T22:34:47.417Z",
+              "WhenOpened": "2024-11-25T22:34:52.201Z",
               "EditorCaption": ""
             }
           ]

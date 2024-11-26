@@ -96,5 +96,34 @@ namespace AtmoTrack_web_page.DAO
                 DataAlteracao = Convert.ToDateTime(row["DataAlteracao"])
             };
         }
+
+        public string ConsultaUsuario(string email, string senha)
+        {
+            string resposta = "ok";
+
+            // A consulta SQL agora usa parâmetros
+            string sql = "SELECT Email, Senha FROM [dbo].[Usuario] WHERE Email = @Email AND Senha = @Senha";
+
+            // Criação dos parâmetros para proteger contra injeção de SQL
+            SqlParameter[] parametros = new SqlParameter[]
+            {
+        new SqlParameter("@Email", SqlDbType.NVarChar) { Value = email },
+        new SqlParameter("@Senha", SqlDbType.NVarChar) { Value = senha }
+            };
+
+            // Chama a execução da consulta
+            DataTable tabela = HelperDAO.ExecutaSelect(sql, parametros);
+
+            // Se não encontrar o usuário, retorna null
+            if (tabela.Rows.Count == 0)
+            {
+                return null;
+            }
+            else
+            {
+                return resposta;
+            }
+        }
+
     }
 }

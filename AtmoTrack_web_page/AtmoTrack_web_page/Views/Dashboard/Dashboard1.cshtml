@@ -27,7 +27,8 @@
         <div class="container-grafico__grafico">
             <canvas id="chartDashboard1"></canvas>
         </div>
-        <div class="container-grafico__legenda">
+        <div style="display:flex; flex-direction: column;width: 30%;">
+            <div class="container-grafico__legenda">
             <table>
                 <caption>Legenda</caption>
                 <tr>
@@ -35,35 +36,20 @@
                     <th>Descrição</th>
                 </tr>
                 <tr>
-                    <td>LM</td>
-                    <td>Valor de luminosidade em %</td>
-                </tr>
-                <tr>
                     <td>TP</td>
                     <td>Valor de temperatura em °C</td>
                 </tr>
-                <tr>
-                    <td>UD</td>
-                    <td>Valor de Umidade em %</td>
-                </tr>
             </table>
-        </div>
 
-    </div>
-    <div class="legenda_dashboard">
-        <div class="container-dados-reais" id="container-dados-reais-luminosidade">
-            <label class="dados_label">Luminosidade</label>
-            <div class="dados-value" id="luminosity-value"></div>
         </div>
         <div class="container-dados-reais" id="container-dados-reais-temperatura">
             <label class="dados_label">Temperatura</label>
             <div class="dados-value" id="temperature-value"></div>
         </div>
-        <div class="container-dados-reais" id="container-dados-reais-umidade">
-            <label class="dados_label">Umidade</label>
-            <div class="dados-value" id="humidity-value"></div>
         </div>
+        
     </div>
+    
 </section>
 <div id="alerta" class="alert d-none" role="alert">
     <span id="alerta-mensagem"></span>
@@ -81,6 +67,7 @@
         async function fetchDataDashboard1(dataObject) {
             const response = await fetch(`/Dashboard/GetData?dataObject=${dataObject}`);
             const data = await response.json();
+            console.log("Dados recebidos da API:", data);
             return data.contextResponses[0].contextElement.attributes[0].values;
         }
 
@@ -93,40 +80,23 @@
                 values.push(item.attrValue);
             });
 
+            console.log("Labels gerados:", labels);
+    console.log("Valores gerados:", values);
+
             return { labels, values };
         }
 
         async function updateChart() {
-            const apiDataLuminosity = await fetchDataDashboard1("luminosity");
-            const { labels: labels1, values: valuesLuminosity } = processAPIData(apiDataLuminosity);
-
             const apiDataTemperature = await fetchDataDashboard1("temperature");
-            const { values: valuesTemperature } = processAPIData(apiDataTemperature);
+            const { labels, values: valuesTemperature } = processAPIData(apiDataTemperature);
 
-            const apiDataHumidity = await fetchDataDashboard1("humidity");
-            const { values: valuesHumidity } = processAPIData(apiDataHumidity);
-
-            document.getElementById('luminosity-value').textContent = valuesLuminosity[valuesLuminosity.length - 1] || 'N/A';
             document.getElementById('temperature-value').textContent = valuesTemperature[valuesTemperature.length - 1] || 'N/A';
-            document.getElementById('humidity-value').textContent = valuesHumidity[valuesHumidity.length - 1] || 'N/A';
 
             if (valuesTemperature[valuesTemperature.length - 1] >= 40) {
                 mudaCorTemperatura();
             } else {
                 alertaTemperatura.classList.add('container-dados-reais');
                 alertaTemperatura.classList.remove('alert-dados');
-            }
-            if (valuesLuminosity[valuesLuminosity.length - 1] <= 20) {
-                mudaCorLuminosidade();
-            } else {
-                alertaLuminosidade.classList.add('container-dados-reais');
-                alertaLuminosidade.classList.remove('alert-dados');
-            }
-            if (valuesHumidity[valuesHumidity.length - 1] >= 40) {
-                mudaCorUmidade();
-            } else{
-                alertaUmidade.classList.add('container-dados-reais');
-                alertaUmidade.classList.remove('alert-dados');
             }
 
            if (!chart) {
@@ -135,27 +105,13 @@
                 chart = new Chart(ctx, {
                     type: 'line',
                     data: {
-                        labels: labels1,
+                        labels: labels,
                         datasets: [
-                            {
-                                label: 'LM',
-                                data: valuesLuminosity,
-                                fill: false,
-                                borderColor: 'rgba(75, 192, 192, 1)',
-                                tension: 0.1
-                            },
                             {
                                 label: 'TP',
                                 data: valuesTemperature,
                                 fill: false,
                                 borderColor: 'rgba(255, 99, 132, 1)',
-                                tension: 0.1
-                            },
-                            {
-                                label: 'UD',
-                                data: valuesHumidity,
-                                fill: false,
-                                borderColor: 'rgba(54, 162, 235, 1)',
                                 tension: 0.1
                             }
                         ]
@@ -178,13 +134,16 @@
                         }
                     }
                 });
+
+                console.log("Atualizando gráfico com labels:", labels);
+                console.log("Atualizando gráfico com valores:", valuesTemperature);
             } else {
                 // Atualizar os dados do gráfico existente
-                chart.data.labels = labels1;
-                chart.data.datasets[0].data = valuesLuminosity;
-                chart.data.datasets[1].data = valuesTemperature;
-                chart.data.datasets[2].data = valuesHumidity;
+                chart.data.labels = labels;
+                chart.data.datasets[0].data = valuesTemperature;
                 chart.update(); // Atualizar o gráfico com novos dados
+
+                console.log("Criando gráfico pela primeira vez.");
             }
         }
 
@@ -286,7 +245,7 @@
     .container-grafico__legenda {
         display: flex;
         flex-direction: column;
-        width: 30%;
+        width: 100%;
         background: linear-gradient(135deg, #222, #333);
         padding: 20px;
         border-radius: 8px;
@@ -354,19 +313,18 @@
     .container-dados-reais{
         display: flex;
         flex-direction: row;
-        width: 25%;
+        width: 100%;
         align-items: center;
         padding: 1em;
         border-radius: 1em ;
         background: linear-gradient(135deg, #1d2731, #253544);
-
+        margin-top: 1em;
 
     }
 
     .alert-dados {
         display: flex;
         flex-direction: row;
-        width: 25%;
         align-items: center;
         padding: 1em;
         border-radius: 1em;

@@ -39,7 +39,7 @@ CREATE TABLE tbEmpresa (
 	Bairro NVARCHAR(50),
 	UF NVARCHAR(2),
 	Numero NVARCHAR(50),
-	Tipo NVARCHAR(50),
+	NomeService NVARCHAR(50),
     DataRegistro DATETIME,
     DataAlteracao DATETIME,
 );
@@ -63,3 +63,7 @@ CREATE TABLE tbEquipamento (
     DataAlteracao DATETIME  
 );
 
+ 
+SELECT * 
+FROM tbEquipamento eq 
+INNER JOIN tbEmpresa ep ON ep.id = eq.EmpresaId;

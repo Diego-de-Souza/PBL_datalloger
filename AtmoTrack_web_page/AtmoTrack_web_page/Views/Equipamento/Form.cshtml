@@ -33,9 +33,9 @@
 
         <div class="row">
             <div class="col-md-6">
-                <label for="EmpresaId" class="col-form-label">Estado</label>
+                <label for="EmpresaId" class="col-form-label">Serviço</label>
                 <select asp-for="EmpresaId" class="form-control" asp-items="ViewBag.Empresas">
-                    <option value="">Selecione uma Empresa</option>
+                    <option value="">Selecione um Serviço</option>
                 </select>
                 <span asp-validation-for="EmpresaId" class="text-danger"></span>
             </div>
@@ -121,24 +121,6 @@
             </div>
         </div>
         <br />
-
-        @if (ViewBag.cadastroEquipamento != "I")
-        {
-            <div class="row">
-                <!-- Data de Registro -->
-                <div class="col-md-6">
-                    <label for="DataRegistro" class="col-form-label">Data de Registro</label>
-                    <input type="date" name="DataRegistro" value="@Model.DataRegistro.ToString("yyyy-MM-dd")" class="form-control" />
-
-                </div>
-                <!-- Data de Alteração -->
-                <div class="col-md-6">
-                    <label for="DataAlteracao" class="col-form-label">Data de Alteração</label>
-                    <input type="date" name="DataAlteracao" value="@(Model.DataAlteracao.HasValue ? Model.DataAlteracao.Value.ToString("yyyy-MM-dd") : "")" class="form-control" />
-                </div>
-            </div>
-            <br />
-        }
 
         <!-- Botão de Submit -->
         <div class="row">

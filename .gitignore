@@ -6,3 +6,8 @@
 /AtmoTrack_web_page/.vs/AtmoTrack_web_page/FileContentIndex/8cb22f36-ec8d-4abe-bf08-fdd395ae8ff6.vsidx
 /AtmoTrack_web_page/.vs/AtmoTrack_web_page/FileContentIndex/31a1291c-38ff-46c0-b066-ea54d2c6977e.vsidx
 *.vsidx
+/AtmoTrack_web_page/AtmoTrack_web_page/DAO/LogServiceDAO.cs
+/AtmoTrack_web_page/AtmoTrack_web_page/Models/LogEventoViewModel.cs
+/AtmoTrack_web_page/AtmoTrack_web_page/obj/Debug/net6.0/AtmoTrack_web_page.AssemblyInfo.cs
+/AtmoTrack_web_page/AtmoTrack_web_page/obj/Debug/net6.0/AtmoTrack_web_page.AssemblyInfoInputs.cache
+/AtmoTrack_web_page/AtmoTrack_web_page/MongoSettings.cs

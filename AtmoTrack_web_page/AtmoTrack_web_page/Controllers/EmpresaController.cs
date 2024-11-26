@@ -64,7 +64,7 @@ namespace AtmoTrack_web_page.Controllers
                 ModelState.AddModelError("Cidade", "Selecione uma cidade válida.");
 
             if (string.IsNullOrEmpty(empresa.Tipo))
-                ModelState.AddModelError("Tipo", "Preencha o tipo.");
+                ModelState.AddModelError("Tipo", "Preencha o nome da service.");
 
             if (string.IsNullOrEmpty(empresa.Cep))
             {

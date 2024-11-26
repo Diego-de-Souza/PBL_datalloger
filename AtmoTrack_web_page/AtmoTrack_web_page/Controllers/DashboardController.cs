@@ -1,4 +1,5 @@
 ﻿using AtmoTrack_web_page.DAO;
+using AtmoTrack_web_page.Models;
 using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
@@ -13,8 +14,9 @@ namespace AtmoTrack_web_page.Controllers
         {
             _dashboardDAO = new DashboardDAO();
         }
+        private EmpresaDAO _empresaDAO = new EmpresaDAO();
 
-        public IActionResult Dashboard1()
+        public IActionResult Dashboard1(EmpresaViewModel Model)
         {
             if (User.Identity.IsAuthenticated)
             {
@@ -31,7 +33,7 @@ namespace AtmoTrack_web_page.Controllers
         {
             try
             {
-                var data = await _dashboardDAO.GetLuminosityDataAsync(dataObject);
+                var data = await _dashboardDAO.GetTemperatureDataAsync(dataObject);
                 return Content(data, "application/json");
             }
             catch (HttpRequestException e)
@@ -44,7 +46,8 @@ namespace AtmoTrack_web_page.Controllers
         {
             if (User.Identity.IsAuthenticated)
             {
-                return View();
+                var listaEmpresas = _empresaDAO.Listagem();
+                return View(listaEmpresas);
             }
             else
             {
@@ -64,14 +67,6 @@ namespace AtmoTrack_web_page.Controllers
             if (unidade == "temperatura")
             {
                 mensagem = $"Alerta! A temperatura está acima do set!";
-            }
-            else if (unidade == "luminosidade")
-            {
-                mensagem = $"Alerta! A luminosidade está abaixo do ideal.";
-            }
-            else if (unidade == "umidade")
-            {
-                mensagem = $"Alerta! A umidade está muito elevada.";
             }
 
             var lampadaResposta = await _dashboardDAO.SetLampStateAsync(lampState);

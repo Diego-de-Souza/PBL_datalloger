@@ -1,20 +1,27 @@
-﻿@{
-    ViewData["Title"] = "Dashboard2";
-}
-<h2>Dashboard - MQTT Data</h2>
-<div id="dataDisplay">Esperando dados MQTT...</div>
+﻿  @model List<EmpresaViewModel>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/3.1.18/signalr.min.js"></script>
-<script type="text/javascript">
-    const connection = new signalR.HubConnectionBuilder()
-        .withUrl("/mqtthub")
-        .build();
+<div class="container mt-5">
+    <div class="card shadow-lg border-0">
+        <div class="card-body">
+            <h3 class="card-title text-center mb-4 text-primary">Selecione o Serviço</h3>
 
-    connection.on("ReceiveData", function (data) {
-        document.getElementById("dataDisplay").innerText = data;
-    });
+            <form asp-controller="Dashboard" asp-action="Dashboard1" method="post" class="needs-validation" novalidate>
+                <div class="mb-3">
+                    <label for="Tipo" class="form-label">Serviço</label>
+                    <select id="Tipo" name="Tipo" class="form-select" required>
+                        <option value="" selected disabled>Selecione um Serviço</option>
+                        @foreach (var empresa in Model)
+                        {
+                            <option value="@empresa.Tipo">@empresa.Tipo</option>
+                        }
+                    </select>
+                    <div class="invalid-feedback">Por favor, selecione uma empresa.</div>
+                </div>
 
-    connection.start().catch(function (err) {
-        return console.error(err.toString());
-    });
-</script>
+                <button type="submit" class="btn btn-primary w-100">
+                    <i class="bi bi-arrow-right-circle"></i> Abrir Dashboard
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

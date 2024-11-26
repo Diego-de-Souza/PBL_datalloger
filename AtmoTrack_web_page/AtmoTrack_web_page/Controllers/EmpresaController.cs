@@ -154,20 +154,20 @@ namespace AtmoTrack_web_page.Controllers
             }
         }
 
-        public IActionResult ObtemDadosConsultaAvancada(int id, string nome, string estados, DateTime dataregistro, string connectionstatus)
+        public IActionResult ObtemDadosConsultaAvancada(int id, string nome, string estado, DateTime dataregistro, string connectionstatus)
         {
             try
             {
                 EmpresaDAO dao = new EmpresaDAO();
                 if (string.IsNullOrEmpty(nome))
                     nome = "";
-                if (string.IsNullOrEmpty(estados))
-                    estados = "";
+                if (string.IsNullOrEmpty(estado))
+                    estado = "";
                 if (dataregistro.Date == Convert.ToDateTime(dataregistro))
                     dataregistro = SqlDateTime.MinValue.Value;
                 if (string.IsNullOrEmpty(connectionstatus))
                     connectionstatus = "";
-                var lista = dao.ConsultaAvancadaEmpresa(id, nome, estados, dataregistro, connectionstatus);
+                var lista = dao.ConsultaAvancadaEmpresa(id, nome, estado, dataregistro, connectionstatus);
                 return PartialView("pvGridEm", lista);
             }
             catch (Exception erro)

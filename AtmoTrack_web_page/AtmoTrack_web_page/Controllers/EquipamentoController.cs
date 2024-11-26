@@ -154,6 +154,7 @@ namespace AtmoTrack_web_page.Controllers
                 var listaEmpresas = empresaDAO.Listagem();
                 var listaBusca = listaequipamentos.Select(equipamento => new EquipamentoBuscaAvancadaViewModel
                 {
+                    Id = equipamento.Id,
                     Nome = equipamento.Nome,
                     NomeFantasia = listaEmpresas
                         .Where(empresa => empresa.Id == equipamento.EmpresaId)
@@ -173,11 +174,15 @@ namespace AtmoTrack_web_page.Controllers
                 return View("Error", new ErrorViewModel(erro.Message));
             }
         }
-        public IActionResult ObtemDadosConsultaAvancada(string nome, string empresaId, string nomefantasia, DateTime lastupdate)
+        public IActionResult ObtemDadosConsultaAvancada(int? id, string nome, string empresaId, string nomefantasia, DateTime lastupdate)
         {
             try
             {
                 EquipamentoDAO dao = new EquipamentoDAO();
+                if (id == 0)
+                {
+                    id = null;
+                }
                 if (string.IsNullOrEmpty(nome))
                     nome = "";
                 if (string.IsNullOrEmpty(empresaId))
@@ -186,7 +191,7 @@ namespace AtmoTrack_web_page.Controllers
                     nomefantasia = "";
                 if (lastupdate.Date == Convert.ToDateTime(lastupdate))
                     lastupdate = SqlDateTime.MinValue.Value;
-                var lista = dao.ConsultaAvancadaEquipamento(nome, empresaId, nomefantasia, lastupdate);
+                var lista = dao.ConsultaAvancadaEquipamento(id, nome, empresaId, nomefantasia, lastupdate);
                 return PartialView("pvGridEq", lista);
             }
             catch (Exception erro)

@@ -82,7 +82,7 @@ namespace AtmoTrack_web_page.DAO
                 Id = Convert.ToInt32(row["Id"]),
                 RazaoSocial = row["RazaoSocial"].ToString(),
                 NomeFantasia = row["NomeFantasia"].ToString(),
-                CNPJ = row["Endereco"].ToString(),
+                CNPJ = row["CNPJ"].ToString(),
                 InscricaoEstadual = row["InscricaoEstadual"].ToString(),
                 WebSite = row["WebSite"].ToString(),
                 Telefone1 = row["Telefone1"].ToString(),

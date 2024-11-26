@@ -133,9 +133,10 @@ namespace AtmoTrack_web_page.DAO
                 DataAlteracao = Convert.ToDateTime(row["DataAlteracao"])
             };
         }
-        public List<EquipamentoBuscaAvancadaViewModel> ConsultaAvancadaEquipamento(string nome, string empresaId, string nomefantasia, DateTime lastupdate)
+        public List<EquipamentoBuscaAvancadaViewModel> ConsultaAvancadaEquipamento(int? id, string nome, string empresaId, string nomefantasia, DateTime lastupdate)
         {
             SqlParameter[] p = {
+                new SqlParameter("Id", id),
                 new SqlParameter("Nome", nome),
                 new SqlParameter("EmpresaId", empresaId),
                 new SqlParameter("NomeFantasia", nomefantasia),
@@ -155,6 +156,7 @@ namespace AtmoTrack_web_page.DAO
         protected virtual EquipamentoBuscaAvancadaViewModel MontaModelo(DataRow registro)
         {
             var eq = new EquipamentoBuscaAvancadaViewModel();
+            eq.Id = Convert.ToInt32(registro["id"]);
             eq.Nome = registro["Nome"].ToString();
             if (registro["EmpresaId"] != DBNull.Value)
                 eq.EmpresaId = Convert.ToInt32(registro["EmpresaId"]);

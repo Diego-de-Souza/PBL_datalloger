@@ -59,6 +59,7 @@ GO
 
 CREATE OR ALTER PROCEDURE spConsultaAvancada_tbEquipamento
 (
+	@Id INT = NULL,
     @Nome NVARCHAR(100) = NULL,
     @EmpresaId INT = NULL,
     @NomeFantasia NVARCHAR(100) = NULL,
@@ -75,6 +76,7 @@ BEGIN
     INNER JOIN 
         tbEmpresa ON tbEquipamento.EmpresaId = tbEmpresa.Id
     WHERE 
+		(tbEquipamento.Id = @Id OR @Id IS NULL) AND
         (tbEquipamento.Nome LIKE '%' + ISNULL(@Nome, '') + '%' OR @Nome IS NULL) AND
         (tbEmpresa.NomeFantasia LIKE '%' + ISNULL(@NomeFantasia, '') + '%' OR @NomeFantasia IS NULL) AND
         (tbEmpresa.Id = @EmpresaId OR @EmpresaId IS NULL) AND

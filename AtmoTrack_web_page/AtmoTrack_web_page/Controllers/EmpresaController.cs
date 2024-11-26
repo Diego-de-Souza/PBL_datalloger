@@ -154,11 +154,15 @@ namespace AtmoTrack_web_page.Controllers
             }
         }
 
-        public IActionResult ObtemDadosConsultaAvancada(int id, string nome, string estado, DateTime dataregistro, string connectionstatus)
+        public IActionResult ObtemDadosConsultaAvancada(int? id, string nome, string estado, DateTime dataregistro, string connectionstatus)
         {
             try
             {
                 EmpresaDAO dao = new EmpresaDAO();
+                if (id == 0)
+                {
+                    id = null;
+                }
                 if (string.IsNullOrEmpty(nome))
                     nome = "";
                 if (string.IsNullOrEmpty(estado))

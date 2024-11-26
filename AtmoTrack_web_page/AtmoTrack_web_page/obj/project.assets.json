@@ -1636,11 +1636,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Testwork\\Desktop\\Git\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\AtmoTrack_web_page.csproj",
+      "projectUniqueName": "C:\\Users\\Testwork\\Desktop\\Atmotrack\\AtmoTrack_web_page\\AtmoTrack_web_page\\AtmoTrack_web_page.csproj",
       "projectName": "AtmoTrack_web_page",
-      "projectPath": "C:\\Users\\Testwork\\Desktop\\Git\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\AtmoTrack_web_page.csproj",
+      "projectPath": "C:\\Users\\Testwork\\Desktop\\Atmotrack\\AtmoTrack_web_page\\AtmoTrack_web_page\\AtmoTrack_web_page.csproj",
       "packagesPath": "C:\\Users\\Testwork\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Testwork\\Desktop\\Git\\PBL_datalloger\\AtmoTrack_web_page\\AtmoTrack_web_page\\obj\\",
+      "outputPath": "C:\\Users\\Testwork\\Desktop\\Atmotrack\\AtmoTrack_web_page\\AtmoTrack_web_page\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

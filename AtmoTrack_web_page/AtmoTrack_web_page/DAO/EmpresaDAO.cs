@@ -100,7 +100,7 @@ namespace AtmoTrack_web_page.DAO
             };
         }
 
-        public List<EmpresaBuscaAvancadaViewModel> ConsultaAvancadaEmpresa(int id, string nome, string estados, DateTime dataregistro, string connectionstatus)
+        public List<EmpresaBuscaAvancadaViewModel> ConsultaAvancadaEmpresa(int? id, string nome, string estados, DateTime dataregistro, string connectionstatus)
         {
             SqlParameter[] p = {
                 new SqlParameter("Id", id),

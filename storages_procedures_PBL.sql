@@ -18,29 +18,6 @@ as begin
 end;
 GO
 
-/*procedure para consultar dados em uma determinada tabela no banco*/
-create procedure [dbo].[spConsultaAvancadaJogos]
-(
- @descricao varchar(max),
- @categoria int,
- @dataInicial datetime,
- @dataFinal datetime)
-as
-begin
-declare @categIni int
-declare @categFim int
-
-set @categIni = case @categoria when 0 then 0 else @categoria end
-set @categFim = case @categoria when 0 then 999999 else @categoria end
- select jogos.*, Categorias.descricao as 'DescricaoCategoria'
-from Jogos
-inner join Categorias on jogos.categoriaId = categorias.id
-where jogos.descricao like '%' + @descricao + '%' and
- jogos.data_aquisicao between @dataInicial and @dataFinal and
- jogos.categoriaID between @categIni and @categFim;
-end;
-GO
-
 /*procedure para consultar dados em uma determinada tabela no banco e retornar uma listagem*/
 create procedure spListagem (@tabela varchar(max), @ordem varchar(max))
 as begin

@@ -112,16 +112,21 @@ namespace AtmoTrack_web_page.Controllers
                             var empresaParaServico = _empresaDAO.Consulta(model.EmpresaId);
 
                             // Aguarda a conclusão de CriaServico antes de prosseguir
-                            var resultadoServico = await CriaServico(empresaParaServico.NomeService);
+                            //var resultadoServico = await CriaServico(empresaParaServico.NomeService);
 
-                            if (resultadoServico?.Value?.ToString() != "ok")
-                            {
-                                throw new Exception("Erro ao criar o serviço IoT.");
-                            }
+                            //if (resultadoServico?.Value?.ToString() != "ok")
+                            //{
+                            //    throw new Exception("Erro ao criar o serviço IoT.");
+                            //}
                         }
                     }
                     else
                     {
+                        if(NomeServiceRegistro == "U")
+                        {
+                           var dadosAExtrair =  _usuarioDAO.Consulta(model.Id);
+                            model.DataRegistro = dadosAExtrair.DataRegistro;
+                        }
                         DAO.AlterDinamico(model);
                     }
 

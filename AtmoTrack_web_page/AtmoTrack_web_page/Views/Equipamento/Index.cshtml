@@ -52,6 +52,12 @@
     </div>
 </body>
 
+<script>
+    function apaga(id) {
+        if (confirm('Apaga mesmo?'))
+            location.href = "/equipamento/Delete?id=" + id;
+    }
+</script>
 <style>
     th {
         color: #0DCAF0;

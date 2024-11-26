@@ -20,6 +20,7 @@ namespace AtmoTrack_web_page.DAO
         protected string ValoresInsert { get; set; }
         protected string SetCampos { get; set; }
         protected string Condicoes { get; set; }
+        protected Boolean alteracao { get; set; }
 
         public virtual void InsertDinamico(T model)
         {

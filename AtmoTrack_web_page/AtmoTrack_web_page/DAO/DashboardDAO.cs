@@ -74,7 +74,7 @@ namespace AtmoTrack_web_page.DAO
                 ""services"": [
                     {
                         ""apikey"": ""TEF"",
-                        ""cbroker"": ""http://4.228.58.59:1026"",
+                        ""cbroker"": ""http://74.163.88.52:1026"",
                         ""entity_type"": ""Thing"",
                         ""resource"": ""@fiwareService""
                     }
@@ -99,8 +99,8 @@ namespace AtmoTrack_web_page.DAO
             var jsonContent = @"{
                 ""devices"": [
                     {
-                        ""device_id"": ""lamp003t"",
-                        ""entity_name"": ""urn:ngsi-ld:Lamp:002t"",
+                        ""device_id"": ""lamp001"",
+                        ""entity_name"": ""urn:ngsi-ld:Lamp:001"",
                         ""entity_type"": ""Lamp"",
                         ""protocol"": ""PDI-IoTA-UltraLight"",
                         ""transport"": ""MQTT"",
@@ -110,7 +110,7 @@ namespace AtmoTrack_web_page.DAO
                         ],
                         ""attributes"": [
                             { ""object_id"": ""s"", ""name"": ""state"", ""type"": ""Text"" },
-                            { ""object_id"": ""l"", ""name"": ""temperature"", ""type"": ""Integer"" }
+                            { ""object_id"": ""t"", ""name"": ""temperature"", ""type"": ""float"" }
                         ]
                     }
                 ]
@@ -137,14 +137,14 @@ namespace AtmoTrack_web_page.DAO
                 ""dataProvided"": {
                     ""entities"": [
                         {
-                            ""id"": ""urn:ngsi-ld:Lamp:002t"",
+                            ""id"": ""urn:ngsi-ld:Lamp:001"",
                             ""type"": ""Lamp""
                         }
                     ],
                     ""attrs"": [""on"", ""off""]
                 },
                 ""provider"": {
-                    ""http"": { ""url"": ""http://4.228.58.59:4041"" },
+                    ""http"": { ""url"": ""http://74.163.88.52:4041"" },
                     ""legacyForwarding"": true
                 }
             }";
@@ -172,7 +172,7 @@ namespace AtmoTrack_web_page.DAO
                 ""subject"": {
                     ""entities"": [
                         {
-                            ""id"": ""urn:ngsi-ld:Lamp:002t"",
+                            ""id"": ""urn:ngsi-ld:Lamp:001"",
                             ""type"": ""Lamp""
                         }
                     ],
@@ -180,7 +180,7 @@ namespace AtmoTrack_web_page.DAO
                 },
                 ""notification"": {
                     ""http"": {
-                        ""url"": ""http://4.228.58.59:8666/notify""
+                        ""url"": ""http://74.163.88.52:8666/notify""
                     },
                     ""attrs"": [ ""temperature"" ],
                     ""attrsFormat"": ""legacy""
@@ -199,13 +199,13 @@ namespace AtmoTrack_web_page.DAO
 
         public async Task<string> CreateOrionAsync(string fiwareService)
         {
-            var request = new HttpRequestMessage(HttpMethod.Post, "http://4.228.58.59:1026/v2/entities");
+            var request = new HttpRequestMessage(HttpMethod.Post, "http://74.163.88.52:1026/v2/entities");
             request.Headers.Add("fiware-service", fiwareService);
             request.Headers.Add("fiware-servicepath", "/");
 
             // Define o conteúdo JSON para a requisição
             var jsonContent = @"{
-                                  ""id"": ""urn:ngsi-ld:entity:002t"",
+                                  ""id"": ""urn:ngsi-ld:entity:001"",
                                   ""type"": ""iot"",
                                   ""temperature"": {
                                   ""type"": ""float"",

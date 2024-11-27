@@ -12,7 +12,6 @@ namespace AtmoTrack_web_page.DAO
             CamposInsert = "Id, Nome, Email, Senha, Endereco, Cep, Telefone, TelefoneComercial, Empresa, Cargo, Estado, Cidade, Bairro, Uf, Numero, DataRegistro, DataAlteracao";
             ValoresInsert = "@Id, @Nome, @Email, @Senha, @Endereco, @Cep, @Telefone, @TelefoneComercial, @Empresa, @Cargo, @Estado, @Cidade, @Bairro, @Uf, @Numero, @DataRegistro, @DataAlteracao";
             SetCampos = "Nome = @Nome, Email = @Email, Senha = @Senha, Endereco = @Endereco, Cep = @Cep, Telefone = @Telefone, TelefoneComercial = @TelefoneComercial, Empresa = @Empresa, Cargo = @Cargo, Estado = @Estado, Cidade = @Cidade, Bairro = @Bairro, Uf = @Uf, Numero = @Numero, DataRegistro = @DataRegistro, DataAlteracao = @DataAlteracao";
-            //SetCampos = "Nome = @Nome, Email = @Email, Senha = @Senha, Endereco = @Endereco, Cep = @Cep, Telefone = @Telefone, TelefoneComercial = @TelefoneComercial, Empresa = @Empresa, Cargo = @Cargo, Estado = @Estado, Cidade = @Cidade, Bairro = @Bairro, Uf = @Uf, Numero = @Numero, DataAlteracao = @DataAlteracao";
             Condicoes = "WHERE Id = @Id";
 
         }

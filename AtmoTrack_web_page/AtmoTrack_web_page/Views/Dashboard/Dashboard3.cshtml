@@ -11,7 +11,7 @@
             <div class="container-dados__subitens-value">14,66°C</div>
         </div>
         <div class="container-dados__subitens">
-            <div class ="container-dados__subitens-value tempoData"></div>
+            <div class="container-dados__subitens-value tempoData"></div>
         </div>
         <div class="container-dados__subitens">
             <label>Constante de ganho</label>
@@ -61,9 +61,9 @@
                 <div class="dados-value" id="temperature-value"></div>
             </div>
         </div>
-        
+
     </div>
-    
+
 </section>
 <div id="alerta" class="alert d-none" role="alert">
     <span id="alerta-mensagem"></span>
@@ -79,7 +79,7 @@
     let chart; // Variável global para o gráfico
 
     document.addEventListener("DOMContentLoaded", async function () {
-        
+
         async function fetchDataDashboard1(dataObject) {
             try {
                 const response = await fetch(`/Dashboard/GetData?dataObject=${dataObject}`);
@@ -121,11 +121,11 @@
                 alertaTemperatura.classList.remove('alert-dados');
             }
 
-           if (!chart) {
+            if (!chart) {
                 // Criar o gráfico pela primeira vez
                 const ctx = document.getElementById('chartDashboard1').getContext('2d');
                 chart = new Chart(ctx, {
-                    type: 'line',
+                    type: 'bar',
                     data: {
                         labels: labels,
                         datasets: [
@@ -133,15 +133,17 @@
                                 label: 'TP',
                                 data: valuesTemperature,
                                 fill: false,
-                                borderColor: 'rgba(255, 99, 132, 1)',
+                                borderColor: 'rgba(255, 99, 132, 1)', // Cor atual (vermelho)
+                                backgroundColor: 'rgba(255, 165, 0, 0.2)', // Laranja forte claro (fundo)
                                 tension: 0.1
                             },
                             {
                                 label: 'SetPoint',
                                 data: Array(labels.length).fill(currentSetPoint || 0), // Preenche com SetPoint
                                 fill: false,
-                                borderColor: 'rgba(54, 162, 235, 1)',
+                                borderColor: 'rgba(54, 162, 235, 1)', // Cor atual (azul)
                                 borderDash: [5, 5], // Linha tracejada para diferenciar
+                                backgroundColor: 'rgba(54, 162, 235, 0.2)', // Cor de fundo opcional (azul claro)
                                 tension: 0.1
                             }
                         ]

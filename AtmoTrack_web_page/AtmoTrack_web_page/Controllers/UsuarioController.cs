@@ -10,7 +10,7 @@ namespace AtmoTrack_web_page.Controllers
         {
             DAO = new UsuarioDAO();
             GeraProximoId = true;
-            NomeServiceRegistro = "U";
+            TipoRegistro = "U";
         }
 
         public override void ValidaDados(UsuarioViewModel usuario, string operacao, string statusId)
@@ -84,65 +84,6 @@ namespace AtmoTrack_web_page.Controllers
             if (string.IsNullOrEmpty(usuario.Cargo))
                 ModelState.AddModelError("Cargo", "Preencha o cargo.");
         }
-        /*public IActionResult ExibeConsultaAvancada()
-        {
-            try
-            {
-                UsuarioBuscaAvancadaViewModel usuarioBusca = new UsuarioBuscaAvancadaViewModel();
-
-                UsuarioDAO usuarioDAO = new UsuarioDAO();
-                var listaUsuarios = usuarioDAO.Listagem();
-                EmpresaDAO empresaDAO = new EmpresaDAO();
-                var listaEmpresas = empresaDAO.Listagem();
-                var listaBusca = listaUsuarios.Select(usuario => new UsuarioBuscaAvancadaViewModel
-                {
-                    Id = usuario.Id,
-                    Nome = usuario.Nome,
-                    Email = usuario.Email,
-                    NomeFantasia = listaEmpresas
-                        .Where(empresa => empresa.Id == usuario.EmpresaId)
-                        .Select(empresa => empresa.NomeFantasia)
-                        .FirstOrDefault(),
-                    Estado = listaEmpresas
-                        .Where(empresa => empresa.Id == usuario.EmpresaId)
-                        .Select(empresa => empresa.Estado)
-                        .FirstOrDefault(),
-                    DataRegistro = usuario.DataRegistro
-                }).ToList();
-
-                return View("BuscaAvancada", listaBusca);
-            }
-            catch (Exception erro)
-            {
-                return View("Error", new ErrorViewModel(erro.Message));
-            }
-        }*/
-        /*public IActionResult ObtemDadosConsultaAvancada(int id, string nome, string email, string estados, DateTime dataregistro, string nomeFantasia)
-        {
-            try
-            {
-                UsuarioDAO dao = new UsuarioDAO();
-
-                if (string.IsNullOrEmpty(nome))
-                    nome = "";
-                if (string.IsNullOrEmpty(email))
-                    email = "";
-                if (string.IsNullOrEmpty(estados))
-                    estados = "";
-                if (dataregistro.Date == Convert.ToDateTime("01/01/0001"))
-                    dataregistro = SqlDateTime.MinValue.Value;
-                if (string.IsNullOrEmpty(nomeFantasia))
-                    nomeFantasia = "";
-
-                var lista = dao.ConsultaAvancadaUsuario(id, nome, email, estados, dataregistro, nomeFantasia);
-
-                return PartialView("pvGridUs", lista);
-            }
-            catch (Exception erro)
-            {
-                return Json(new { erro = true, msg = erro.Message });
-            }
-        }*/
 
     }
 }

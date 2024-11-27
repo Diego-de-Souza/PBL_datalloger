@@ -13,7 +13,7 @@ namespace AtmoTrack_web_page.Controllers
         {
             DAO = new EmpresaDAO();
             GeraProximoId = true;
-            NomeServiceRegistro = "E";
+            TipoRegistro = "E";
         }
 
         public override void ValidaDados(EmpresaViewModel empresa, string operacao, string statusId)
@@ -152,11 +152,15 @@ namespace AtmoTrack_web_page.Controllers
             }
         }
 
-        public IActionResult ObtemDadosConsultaAvancada(int id, string nome, string estados, DateTime dataregistro, string connectionstatus)
+        public IActionResult ObtemDadosConsultaAvancada(int? id, string nome, string estados, DateTime dataregistro, string connectionstatus)
         {
             try
             {
                 EmpresaDAO dao = new EmpresaDAO();
+                if (id == 0)
+                {
+                    id = null;
+                }
                 if (string.IsNullOrEmpty(nome))
                     nome = "";
                 if (string.IsNullOrEmpty(estados))

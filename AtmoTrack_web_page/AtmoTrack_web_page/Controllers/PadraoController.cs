@@ -14,7 +14,7 @@ namespace AtmoTrack_web_page.Controllers
         protected string NomeViewIndex { get; set; } = "index";
         protected string NomeViewForm { get; set; } = "Form";
         protected string NomeViewCadastro { get; set; } = "BuscaAvancada";
-        protected string NomeServiceRegistro { get; set; }
+        protected string TipoRegistro { get; set; }
 
         private UsuarioDAO _usuarioDAO = new UsuarioDAO();
         private EmpresaDAO _empresaDAO = new EmpresaDAO();
@@ -47,7 +47,7 @@ namespace AtmoTrack_web_page.Controllers
         }
         public virtual IActionResult Create()
         {
-            if (User.Identity.IsAuthenticated || NomeServiceRegistro == "U")
+            if (User.Identity.IsAuthenticated || TipoRegistro == "U")
             {
                 try
                 {
@@ -56,7 +56,7 @@ namespace AtmoTrack_web_page.Controllers
                     T model = Activator.CreateInstance<T>();
                     PreencheDadosParaView("I", model);
 
-                    if (NomeServiceRegistro == "Q")
+                    if (TipoRegistro == "Q")
                     {
                         var empresas = _equipamentoDAO.GetAllEmpresas().Select(e => new SelectListItem
                         {
@@ -107,22 +107,22 @@ namespace AtmoTrack_web_page.Controllers
                     if (Operacao == "I")
                     {
                         DAO.InsertDinamico(model);
-                        if (NomeServiceRegistro == "Q")
+                        if (TipoRegistro == "Q")
                         {
                             var empresaParaServico = _empresaDAO.Consulta(model.EmpresaId);
 
-                            // Aguarda a conclusão de CriaServico antes de prosseguir
-                            //var resultadoServico = await CriaServico(empresaParaServico.NomeService);
+                            //Aguarda a conclusão de CriaServico antes de prosseguir
+                            var resultadoServico = await CriaServico(empresaParaServico.NomeService);
 
-                            //if (resultadoServico?.Value?.ToString() != "ok")
-                            //{
-                            //    throw new Exception("Erro ao criar o serviço IoT.");
-                            //}
+                            if (resultadoServico?.Value?.ToString() != "ok")
+                            {
+                                throw new Exception("Erro ao criar o serviço IoT.");
+                            }
                         }
                     }
                     else
                     {
-                        if(NomeServiceRegistro == "U")
+                        if(TipoRegistro == "U")
                         {
                            var dadosAExtrair =  _usuarioDAO.Consulta(model.Id);
                             model.DataRegistro = dadosAExtrair.DataRegistro;
@@ -152,7 +152,7 @@ namespace AtmoTrack_web_page.Controllers
                         return RedirectToAction(NomeViewIndex);
                     else
                     {
-                        if (NomeServiceRegistro == "Q")
+                        if (TipoRegistro == "Q")
                         {
                             var empresas = _equipamentoDAO.GetAllEmpresas().Select(e => new SelectListItem
                             {
@@ -206,15 +206,15 @@ namespace AtmoTrack_web_page.Controllers
                         return NotFound();
                     }
 
-                    if (NomeServiceRegistro == "U")
+                    if (TipoRegistro == "U")
                     {
                         viewRetorno = "VisualizarUsuario";
                     }
-                    else if (NomeServiceRegistro == "E")
+                    else if (TipoRegistro == "E")
                     {
                         viewRetorno = "ExibirEmpresa";
                     }
-                    else if (NomeServiceRegistro == "Q")
+                    else if (TipoRegistro == "Q")
                     {
                         var empresaId = _equipamentoDAO.ConsultaEmpresa(model.EmpresaId);
 

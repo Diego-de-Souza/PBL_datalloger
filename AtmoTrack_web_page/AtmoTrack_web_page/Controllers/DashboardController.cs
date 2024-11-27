@@ -55,6 +55,17 @@ namespace AtmoTrack_web_page.Controllers
             }
         }
 
+        public IActionResult Dashboard3(EmpresaViewModel Model)
+        {
+            if (User.Identity.IsAuthenticated)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Index", "Login");
+            }
+        }
 
         [HttpPost]
         public async Task<JsonResult> AtivaAlarme(string unidade)

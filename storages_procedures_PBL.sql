@@ -36,9 +36,10 @@ GO
 
 CREATE OR ALTER PROCEDURE spConsultaAvancada_tbEquipamento
 (
+	@Id INT = NULL,
     @Nome NVARCHAR(100) = NULL,
     @EmpresaId INT = NULL,
-    @NomeFantasia NVARCHAR(100) = NULL,
+@NomeFantasia NVARCHAR(100) = NULL,
     @LastUpdate DATETIME = NULL
 )
 AS
@@ -52,10 +53,11 @@ BEGIN
     INNER JOIN 
         tbEmpresa ON tbEquipamento.EmpresaId = tbEmpresa.Id
     WHERE 
+		(tbEquipamento.Id = @Id OR @Id IS NULL) AND
         (tbEquipamento.Nome LIKE '%' + ISNULL(@Nome, '') + '%' OR @Nome IS NULL) AND
         (tbEmpresa.NomeFantasia LIKE '%' + ISNULL(@NomeFantasia, '') + '%' OR @NomeFantasia IS NULL) AND
         (tbEmpresa.Id = @EmpresaId OR @EmpresaId IS NULL) AND
-        (tbEquipamento.LastUpdate >= @LastUpdate OR @LastUpdate IS NULL)
+        (@LastUpdate IS NULL OR tbEquipamento.LastUpdate >= @LastUpdate);
 END;
 GO
 
@@ -70,7 +72,7 @@ CREATE OR ALTER PROCEDURE spConsultaAvancada_tbEmpresa
 )
 AS
 BEGIN
-    SELECT 
+    SELECT DISTINCT(tbEmpresa.Id),
         tbEmpresa.*,
         tbEquipamento.ConnectionStatus
     FROM 
@@ -85,6 +87,7 @@ BEGIN
         (tbEquipamento.ConnectionStatus LIKE '%' + ISNULL(@ConnectionStatus, '') + '%' OR @ConnectionStatus IS NULL);
 END;
 GO
+
 
 use PBL_EC5;
 

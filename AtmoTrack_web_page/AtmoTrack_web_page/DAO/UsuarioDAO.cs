@@ -1,6 +1,7 @@
 ﻿using AtmoTrack_web_page.Models;
 using System.Data;
 using System.Data.SqlClient;
+using System.Reflection;
 
 namespace AtmoTrack_web_page.DAO
 {
@@ -9,9 +10,9 @@ namespace AtmoTrack_web_page.DAO
         protected override void SetTabela()
         {
             Tabela = "tbUsuario";
-            CamposInsert = "Id, Nome, Email, Senha, Endereco, Cep, Telefone, TelefoneComercial, Empresa, Cargo, Estado, Cidade, Bairro, Uf, Numero, DataRegistro, DataAlteracao";
-            ValoresInsert = "@Id, @Nome, @Email, @Senha, @Endereco, @Cep, @Telefone, @TelefoneComercial, @Empresa, @Cargo, @Estado, @Cidade, @Bairro, @Uf, @Numero, @DataRegistro, @DataAlteracao";
-            SetCampos = "Nome = @Nome, Email = @Email, Senha = @Senha, Endereco = @Endereco, Cep = @Cep, Telefone = @Telefone, TelefoneComercial = @TelefoneComercial, Empresa = @Empresa, Cargo = @Cargo, Estado = @Estado, Cidade = @Cidade, Bairro = @Bairro, Uf = @Uf, Numero = @Numero, DataRegistro = @DataRegistro, DataAlteracao = @DataAlteracao";
+            CamposInsert = "Id, Nome, Email, Senha, Endereco, Cep, Telefone, TelefoneComercial, Empresa, Cargo, Estado, Cidade, Bairro, Uf, Numero, DataRegistro, DataAlteracao, FotoUsuario";
+            ValoresInsert = "@Id, @Nome, @Email, @Senha, @Endereco, @Cep, @Telefone, @TelefoneComercial, @Empresa, @Cargo, @Estado, @Cidade, @Bairro, @Uf, @Numero, @DataRegistro, @DataAlteracao, @FotoUsuario";
+            SetCampos = "Nome = @Nome, Email = @Email, Senha = @Senha, Endereco = @Endereco, Cep = @Cep, Telefone = @Telefone, TelefoneComercial = @TelefoneComercial, Empresa = @Empresa, Cargo = @Cargo, Estado = @Estado, Cidade = @Cidade, Bairro = @Bairro, Uf = @Uf, Numero = @Numero, DataRegistro = @DataRegistro, DataAlteracao = @DataAlteracao, FotoUsuario = @FotoUsuraio";
             Condicoes = "WHERE Id = @Id";
 
         }
@@ -19,7 +20,11 @@ namespace AtmoTrack_web_page.DAO
 
         protected override SqlParameter[] CriaParametros(UsuarioViewModel us)
         {
-            SqlParameter[] parametros = new SqlParameter[17];
+            object imgByte = us.FotoUsuarioEmByte;
+            if (imgByte == null)
+                imgByte = DBNull.Value;
+
+            SqlParameter[] parametros = new SqlParameter[18];
 
             parametros[0] = new SqlParameter("@Id", SqlDbType.Int) { Value = us.Id };
             parametros[1] = new SqlParameter("@Nome", SqlDbType.NVarChar, 100) { Value = (object)us.Nome ?? DBNull.Value };
@@ -38,6 +43,7 @@ namespace AtmoTrack_web_page.DAO
             parametros[14] = new SqlParameter("@Numero", SqlDbType.NVarChar, 50) { Value = (object)us.Numero };
             parametros[15] = new SqlParameter("@DataRegistro", SqlDbType.DateTime) { Value = (object)us.DataRegistro ?? DBNull.Value };
             parametros[16] = new SqlParameter("@DataAlteracao", SqlDbType.DateTime) { Value = (object)us.DataAlteracao ?? DBNull.Value };
+            parametros[17] = new SqlParameter("@FotoUsuario", SqlDbType.VarBinary) { Value = imgByte };
 
 
             return parametros;
@@ -69,7 +75,9 @@ namespace AtmoTrack_web_page.DAO
 
             if (registro["DataAlteracao"] != DBNull.Value)
                 us.DataAlteracao = Convert.ToDateTime(registro["DataAlteracao"]);
-            
+
+            if (registro["FotoUsuario"] != DBNull.Value)
+                us.FotoUsuarioEmByte = registro["FotoUsuario"] as byte[];
 
             return us;
         }
@@ -93,7 +101,8 @@ namespace AtmoTrack_web_page.DAO
                 Uf = row["Uf"].ToString(),
                 Numero = row["Numero"].ToString(),
                 DataRegistro = Convert.ToDateTime(row["DataRegistro"]),
-                DataAlteracao = Convert.ToDateTime(row["DataAlteracao"])
+                DataAlteracao = Convert.ToDateTime(row["DataAlteracao"]),
+                FotoUsuarioEmByte = row["FotoUsuario"] as byte[]
             };
         }
 

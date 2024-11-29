@@ -1,5 +1,6 @@
 ﻿using AtmoTrack_web_page.DAO;
 using AtmoTrack_web_page.Models;
+using System.Reflection;
 using System.Text.RegularExpressions;
 
 namespace AtmoTrack_web_page.Controllers
@@ -83,6 +84,25 @@ namespace AtmoTrack_web_page.Controllers
 
             if (string.IsNullOrEmpty(usuario.Cargo))
                 ModelState.AddModelError("Cargo", "Preencha o cargo.");
+
+
+            if (usuario.FotoUsuario == null && operacao == "I")
+                ModelState.AddModelError("FotoUsuario", "Escolha uma imagem.");
+            if (usuario.FotoUsuario != null && usuario.FotoUsuario.Length / 1024 / 1024 >= 2)
+                ModelState.AddModelError("FotoUsuario", "Foto limitada a 2 mb.");
+
+            if (ModelState.IsValid)
+            {
+                if (operacao == "A" && usuario.FotoUsuario == null)
+                {
+                    UsuarioViewModel usuario1 = DAO.Consulta(usuario.Id);
+                    usuario.FotoUsuarioEmByte = usuario1.FotoUsuarioEmByte;
+                }
+                else
+                {
+                    usuario.FotoUsuarioEmByte = HelperController.ConvertImageToByte(usuario.FotoUsuario);
+                }
+            }
         }
 
     }

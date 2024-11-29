@@ -20,6 +20,20 @@ namespace AtmoTrack_web_page.Models
         public string Bairro { get; set; }
         public string Uf {  get; set; }
 
+        public IFormFile FotoUsuario { get; set; }
+        public byte[] FotoUsuarioEmByte { get; set; }
+
+        public string FotoUsuarioEmBase64
+        {
+            get
+            {
+                if (FotoUsuarioEmByte != null)
+                    return Convert.ToBase64String(FotoUsuarioEmByte);
+                else
+                    return string.Empty;
+            }
+        }
+
 
         [NotMapped] // Essa propriedade não será salva no banco de dados
         public string ConfirmacaoSenha { get; set; }

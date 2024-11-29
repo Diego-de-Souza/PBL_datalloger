@@ -1,4 +1,5 @@
-
+use PBL_EC5;
+go
 /* Procedures de CRUD do site da AtmoTrack com o banco de dados*/
 	/*procedure para deletar dados no em uma determinada tabela do banco*/
 	create procedure spDelete(@id int, @tabela varchar(max))
@@ -89,5 +90,5 @@ END;
 GO
 
 
-use PBL_EC5;
+
 

@@ -13,5 +13,17 @@ namespace AtmoTrack_web_page.Controllers
             else
                 return true;
         }
+
+        public static byte[] ConvertImageToByte(IFormFile file)
+        {
+            if (file != null)
+                using (var ms = new MemoryStream())
+                {
+                    file.CopyTo(ms);
+                    return ms.ToArray();
+                }
+            else
+                return null;
+        }
     }
 }

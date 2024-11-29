@@ -14,6 +14,7 @@
             <table class="table">
                 <tr>
                     <th>Ações</th>
+                    <th>Foto</th>
                     <th>Id</th>
                     <th>Nome</th>
                     <th>Email</th>
@@ -40,11 +41,16 @@
                                 <img src="/images/view.png" class="image" />
                             </a>
                         </td>
+                        <td>
+                            <img id="imgPreview" src="data:image/jpeg;base64,@us.FotoUsuarioEmBase64"
+                            class="img-responsive" width="50">
+                        </td>
                         <td>@us.Id</td>
                         <td>@us.Nome</td>
                         <td>@us.Email</td>
                         <td>@us.Empresa</td>
                         <td>@us.Cargo</td>
+
                     </tr>
                 }
             </table>

@@ -6,7 +6,8 @@
 
 <h2 class="text-center mb-4">Cadastro de Usuário</h2>
 
-<form asp-action="Salvar">
+<!--<form asp-action="Salvar">-->
+<form action="Salvar" method="post" enctype="multipart/form-data">
     <input type="hidden" value="@ViewBag.Operacao" name="Operacao" />
     <input type="hidden" value="@Model.DataRegistro" name="Operacao" />
     <div class="container">
@@ -131,6 +132,16 @@
         </div>
         <br />
 
+        <div class="row">
+            <div class="col-md-6">
+                <input type="file" name="FotoUsuario" id="FotoUsuario" onchange="exibirImagem()" class="btn btn-secondary">
+                <br />
+                <img id="imgPreview" src="data:image/jpeg;base64,@Model.FotoUsuarioEmBase64"
+                     class="img-responsive" width="200">
+                <span asp-validation-for="FotoUsuario" class="text-danger"></span>
+            </div>
+        </div>
+
         <!-- Botão de Submit -->
         <div class="row">
             <div class="col-md-12 text-center">
@@ -148,4 +159,12 @@
         e.target.value = value;
     });
 
+
+    function exibirImagem() {
+        var oFReader = new FileReader();
+        oFReader.readAsDataURL(document.getElementById("FotoUsuario").files[0]);
+        oFReader.onload = function (oFREvent) {
+            document.getElementById("imgPreview").src = oFREvent.target.result;
+        };
+    }
 </script>

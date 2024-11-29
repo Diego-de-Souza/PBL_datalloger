@@ -2,7 +2,7 @@ CREATE DATABASE PBL_EC5;
 
 USE PBL_EC5;
 
-CREATE TABLE tbUsuario (
+create TABLE tbUsuario (
     Id INT PRIMARY KEY NOT NULL, 
     Nome NVARCHAR(100) NOT NULL,
     Email NVARCHAR(50) NOT NULL,
@@ -20,6 +20,7 @@ CREATE TABLE tbUsuario (
 	Numero NVARCHAR(50),
     DataRegistro DATETIME,
     DataAlteracao DATETIME,
+	FotoUsuario image not null,
 );
 GO
 

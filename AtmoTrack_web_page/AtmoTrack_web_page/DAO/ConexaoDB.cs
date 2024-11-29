@@ -6,7 +6,7 @@ namespace AtmoTrack_web_page.DAO
     {
         public static SqlConnection GetConexao()
         {
-            string strCon = "Data Source=.;Initial Catalog=PBL_EC5;user id=sa; password=123456";
+            string strCon = "Data Source = DESKTOP-2C0F335\\SQLEXPRESS ;Initial Catalog=PBL_EC5;user id=sa; password=123456";
             try
             {
                 SqlConnection conexao = new SqlConnection(strCon);
